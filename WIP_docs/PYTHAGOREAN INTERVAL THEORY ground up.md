@@ -114,6 +114,7 @@
     * Edge lengths (a:b \= 16:9).  
   * Major Seventh (15:8):  
     * Edge lengths (a:b \= 15:8).  
+        
 * **Geometric Representation**  
   * Any shape (e.g., triangle, square, tetrahedron) can be used, with edge lengths scaled to match the interval ratio, ensuring base-consistent, integer-based calculations without π.
 
@@ -323,21 +324,6 @@
 * **Mathematical relationship: \-5/3 is negative reciprocal of 3/5, not inverse of 5/3**  
 * **CLARIFICATION NEEDED: The connection is metaphorical/analogical rather than mathematically rigorous**  
 * **The numerical coincidence (5/3 appears in both) is noted, but the physical interpretation requires additional justification**
-
----
-
-## **SECTION 8: Frame Conflation Warning**
-
-### **Claim: Using √3, √2, π conflates EODI frames**
-
-**Analysis:**
-
-* **√2 arises naturally in squares (diagonal to side ratio)**  
-* **√3 arises naturally in equilateral triangles and hexagons**  
-* **π arises in circles**  
-* **These constants are inherent to the geometric objects themselves**  
-* **OBSERVATION: The "frame conflation" concern may be philosophical rather than mathematical**  
-* **Geometrically, these ratios exist independent of frame interpretation**
 
 ---
 
