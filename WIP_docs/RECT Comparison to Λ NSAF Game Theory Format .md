@@ -187,7 +187,7 @@ That distinction keeps everything consistent—and actually makes both framework
 
 RECT as a Λ-Projected Effective Theory of Relational Decision-Making  
 1\. Scope and Intent  
-Relational Empathy–Coherence Theory (RECT) is reinterpreted here not as a foundational ontology, but as a Λ-projected effective theory: a linear, halting approximation of deeper relational dynamics described by the Λ Principle of Irreducibility and the NSAF (Non-Scale-Attachable Frame) framework.  
+Relational Empathy–Coherence Theory (RECT) is reinterpreted here not as a foundational ontology, but as a Λ-projected effective theory: a linear, halting approximation of deeper relational dynamics described by the Λ Principle of Irreducibility and the NSAF (Neilsen-Semita Atttractor Framework).  
 RECT is therefore treated as:  
 A pragmatic, utilitarian model for managing agent and societal behavior within constrained linear decision frames, while explicitly acknowledging its domain of validity and failure modes.
 
