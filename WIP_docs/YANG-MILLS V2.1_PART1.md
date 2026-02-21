@@ -3622,5 +3622,311 @@ Step 7 is now genuinely “assembly”:
 
 ---
 
-**We can also go one level deeper and do an internal “dependency graph” of the traversal as written (which statements *actually* depend on which premises), and mark exactly where independence/mixing sneaks in—so the writeup can be made perfectly honest without weakening the overall project.**
+**dependency graph in two layers:**
+
+1. **Main “Traversal Proof” as written in Sections 1–8 (prime commutators → area law → OS → gap)**
+
+2. **Your YM++ locked-plan proof spine (Steps 1–7; Paths 3.1–3.4, etc.) that was designed to avoid the “hidden mixing” trap**
+
+**Then I’ll mark exactly where an implicit premise is currently doing work (so we can either (i) make it explicit and conditional, or (ii) reroute the traversal through Path 1 / Path 3 machinery).**
+
+---
+
+# **A. Dependency graph: Traversal Proof (Sections 1–8)**
+
+## **A0. Foundations (axioms/objects)**
+
+**Nodes**
+
+* **A0.1 Compact simple non-Abelian gauge group GGG**
+
+* **A0.2 Euclidean YM measure at scale aaa: local, gauge-invariant, reflection-positive (OS at lattice level)**
+
+* **A0.3 Wilson loops W(C)W(C)W(C), holonomies, plaquettes**
+
+* **A0.4 (Stated later) “admissible renormalization scheme”: gauge invariance \+ OS \+ RG consistency**
+
+**Edges**
+
+* **These are the root premises used everywhere below.**
+
+---
+
+## **A1. Structural obstruction layer**
+
+**Node**
+
+* **T3.1 “Prime Loop Decoherence / irreducible commutator cycles exist and cannot be eliminated by gauge choice/local deformation.”**
+
+**Stated dependencies (explicit)**
+
+* **A0.1 (non-Abelian \+ simple)**
+
+* **A0.3 (holonomy/plaquettes)**
+
+**Hidden dependency (conceptual, but *not* yet quantitative)**
+
+* **a precise *invariant* definition of “irreducible commutator cycle” and what equivalences it is stable under (gauge, refinement, local deformation).**  
+   **Right now it’s used as a structural “there exists an obstruction,” which is fine for a narrative theorem, but it becomes load-bearing later when “counting/multiplying” happens.**
+
+---
+
+## **A2. Discretization compatibility layer**
+
+**Nodes**
+
+* **Sec 4 “Discretization while preserving irreducibility” (lattice reg \+ preservation requirement)**
+
+**Edges**
+
+* **(A1 → A2): You assert the commutator-irreducibility persists under lattice regularization in a way compatible with OS positivity.**
+
+**This is *plausible* as a compatibility requirement, but it’s mostly a “we assume the discretization respects the obstruction” statement unless pinned down as a lemma.**
+
+---
+
+## **A3. Decoherence / area-law layer (this is the choke point in the current traversal writeup)**
+
+**Nodes**
+
+* **L5.1 “Prime loop decoherence lemma”: if loop encloses more than one irreducible commutator cycle, phase alignment probability decays exponentially with area; ⟨W(C)⟩\\langle W(C)\\rangle⟨W(C)⟩ exponentially suppressed in area.**
+
+* **T5.2 “Structural area law”: ⟨W(C)⟩≤e−m0Area(C)\\langle W(C)\\rangle \\le e^{-m\_0 \\mathrm{Area}(C)}⟨W(C)⟩≤e−m0​Area(C) with m0\>0m\_0\>0m0​\>0.**
+
+**Stated dependencies (explicit)**
+
+* **L5.1 depends on:**
+
+  * **non-Abelian commutator structure**
+
+  * **compactness of GGG**
+
+  * **“existence of multiple irreducible cycles”**
+
+* **T5.2 depends on:**
+
+  * **L5.1**
+
+**Implicit dependency that is currently *doing the real work***
+
+* **H(Ind) \= “independent commutator contributions multiply / number of independent phase factors grows ∝ area / averaging produces destructive interference.”**
+
+**This is the *exact* place the traversal proof, *as written*, smuggles in a decoupling / mixing / factorization premise while also claiming “no stochastic assumptions are required.”**
+
+**So the honest graph here is:**
+
+* **(T3.1 \+ compactness) does not by itself imply (L5.1).**
+
+* **(T3.1 \+ compactness \+ H(Ind)) ⇒ L5.1 ⇒ T5.2.**
+
+**This is the single biggest dependency clarity win you asked for.**
+
+---
+
+## **A4. From area law to correlator decay**
+
+**Nodes**
+
+* **Sec 6.1 “Correlation decay from Wilson loop bounds”**
+
+**Edges**
+
+* **T5.2 ⇒ “exponential decay of suitable two-point functions”**
+
+**Hidden dependency**
+
+* **H(Bridge) \= an inequality/bridge relating loop bounds (nonlocal Wilson loop expectations) to decay of local gauge-invariant correlators (glueball-type operators, smeared field strengths, etc.).**
+
+**This bridge can be real, but it must be *named* and proved or assumed. In the traversal proof, it’s asserted in prose.**
+
+---
+
+## **A5. OS reconstruction → spectral gap**
+
+**Nodes**
+
+* **Sec 6.2 OS reflection positivity \+ spectral representation**
+
+* **T6.1 Existence of mass gap Δ\>0\\Delta\>0Δ\>0**
+
+**Edges**
+
+* **(OS positivity \+ Euclidean invariance \+ exponential decay of an OS-positive correlator) ⇒ T6.1**
+
+**This part is logically clean *conditional on having the right exponential decay premise for an OS-positive observable*.**
+
+---
+
+## **A6. Scheme-independence layer**
+
+**Nodes**
+
+* **Cor 7.1 “Exclusion of zero mass in all admissible schemes”**
+
+* **Prop 8.2 “Non-Abelian ⇔ mandatory mass gap” (with Abelian contrast T8.1)**
+
+**Edges**
+
+* **T6.1 ⇒ Cor 7.1 (plus “admissible scheme” definition)**
+
+* **(T6.1 \+ Abelian contrast) ⇒ Prop 8.2 (conceptually)**
+
+---
+
+## **Summary: Traversal Proof dependency picture**
+
+**Here’s the traversal in a compact arrow form, with *implicit premises boxed*:**
+
+**(A0 axioms)⇒T3.1 (irreducible commutator cycles)⇒H(Ind): surface factorization/independence⇒L5.1 (decoherence)⇒T5.2 (area law)⇒H(Bridge): loop→local correlator inequality⇒exp decay of OS-positive correlator⇒OS reconstruction⇒T6.1 (gap)⇒Cor 7.1.\\text{(A0 axioms)} \\Rightarrow \\text{T3.1 (irreducible commutator cycles)} \\Rightarrow \\boxed{\\text{H(Ind): surface factorization/independence}} \\Rightarrow \\text{L5.1 (decoherence)} \\Rightarrow \\text{T5.2 (area law)} \\Rightarrow \\boxed{\\text{H(Bridge): loop→local correlator inequality}} \\Rightarrow \\text{exp decay of OS-positive correlator} \\Rightarrow \\text{OS reconstruction} \\Rightarrow \\text{T6.1 (gap)} \\Rightarrow \\text{Cor 7.1}.(A0 axioms)⇒T3.1 (irreducible commutator cycles)⇒H(Ind): surface factorization/independence​⇒L5.1 (decoherence)⇒T5.2 (area law)⇒H(Bridge): loop→local correlator inequality​⇒exp decay of OS-positive correlator⇒OS reconstruction⇒T6.1 (gap)⇒Cor 7.1.**
+
+**So: the traversal is *structurally coherent*, but it is conditionally complete unless H(Ind) and H(Bridge) are either proved or explicitly assumed.**
+
+---
+
+# **B. Dependency graph: the YM++ “locked-plan” skeleton (Steps 1–7)**
+
+**This is the *other* proof spine in the same document—the one we were using to make everything quantitative and avoid handwaving.**
+
+## **B0. Metric / defect selection (Step 1a/1b/1c)**
+
+**Nodes**
+
+* **Step 1b Entropy/mixing defect tied to ρ(a)\\rho(a)ρ(a)**
+
+* **Step 1c “Character deficit as narrative metric; operator defect as proof metric”**
+
+**Edges**
+
+* **These steps choose a defect notion that is:**
+
+  * **RG-friendly**
+
+  * **composable along overlaps**
+
+  * **convertible into operator-holonomy defect**
+
+**This is the “we won’t rely on vague ‘independence’; we’ll rely on explicit contraction.”**
+
+---
+
+## **B1. Admissible transitions and kernels (Step 2\)**
+
+**Nodes**
+
+* **Define admissible local encodings/transitions TijT\_{ij}Tij​**
+
+* **Induced overlap kernels KijK\_{ij}Kij​**
+
+* **Prove locality/gauge/OS compatibility of these objects**
+
+**Edges**
+
+* **Step 1 ⇒ Step 2 (metric dictates what you build)**
+
+---
+
+## **B2. Finite loop generator family (Step 3\)**
+
+**Nodes**
+
+* **Fix cover, nerve, generator loops Γ\\GammaΓ**
+
+* **Generator length bound LΓL\_\\GammaLΓ​**
+
+**Edges**
+
+* **Step 2 ⇒ Step 3 (need overlaps to define loops)**
+
+* **This is what later lets “local contraction” become “loop contraction.”**
+
+---
+
+## **B3. Local near-trivialization and overlap mixing gap (Step 4–5; your Paths 3.1–3.2)**
+
+**Nodes**
+
+* **Local harmonic analysis lemma (“near-trivialization from concentration”)**
+
+* **Quantitative gluing on overlaps**
+
+* **Uniform local L2L^2L2-gap on overlap kernels: ∣Kij∣L02≤1−η|K\_{ij}|\_{L^2\_0}\\le 1-\\eta∣Kij​∣L02​​≤1−η**
+
+**Edges**
+
+* **Step 3 \+ Step 2 ⇒ Step 4/5**
+
+**This replaces H(Ind) with an explicit, checkable contraction bound.**
+
+---
+
+## **B4. Loop accumulation ⇒ contraction drop (Step 6; your Path 3.3)**
+
+**Nodes**
+
+* **Convert local mixing to loop mixing using generator length LΓL\_\\GammaLΓ​**
+
+* **Conclude Λmix++(a)\>0\\Lambda^{++}\_{\\mathrm{mix}}(a)\>0Λmix++​(a)\>0**
+
+**Edges**
+
+* **(Uniform overlap gap \+ finite generator loops) ⇒ loop defect lower bound**
+
+---
+
+## **B5. Loop mixing defect ⇒ operator-holonomy defect (Step 6 continuation; your Path 3.4)**
+
+**Nodes**
+
+* **Bridge mixing defect to “operator holonomy defect”**
+
+* **Get ρ(a)≤1−δ\\rho(a)\\le 1-\\deltaρ(a)≤1−δ (or equivalent)**
+
+**Edges**
+
+* **loop mixing ⇒ operator defect (explicit lemma)**
+
+---
+
+## **B6. Assembly (Step 7\)**
+
+**Nodes**
+
+* **RG persistence**
+
+* **area law (now derived with explicit contraction / peeling)**
+
+* **OS ⇒ mass gap**
+
+**Edges**
+
+* **ρ(a)≤1−δ\\rho(a)\\le 1-\\deltaρ(a)≤1−δ \+ your YM inequalities ⇒ area law ⇒ OS ⇒ gap**
+
+**This proof spine explicitly supplies what the traversal proof currently treats as “automatic.”**
+
+---
+
+# **C. What this dependency graph tells us to do next**
+
+**You asked: dependency graph first, then continue Path 1 to completion. This graph shows the clean fork:**
+
+### **Option 1 (Minimal surgery to Traversal Proof)**
+
+**Rewrite §5 as:**
+
+* **Lemma 5.1’ (Conditional): T3.1 \+ (explicit contraction/factorization premise) ⇒ decoherence ⇒ area law**  
+   **and cite it as “established later by Steps 2–6 / Path 3” (or by Path 1 if you succeed directly).**
+
+**This makes the traversal proof *honest* and internally tight.**
+
+### **Option 2 (Route everything through the locked-plan spine)**
+
+**Keep Sections 3–4 as intuition, but make the real theorem chain:**
+
+* **Steps 2–6 establish the contraction/defect,**
+
+* **Step 7 gives area law and OS gap.**
+
+**This entirely eliminates H(Ind) as an implicit assumption.**
+
+---
 
