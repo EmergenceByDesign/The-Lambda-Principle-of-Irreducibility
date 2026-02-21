@@ -1,6 +1,8 @@
 **Cover Letter (Form UNSENT)**
 
-\[THIS VERSION as of  02/21/26 as compiled from work completed in November of 2025 from associated work started approximately April 2025 \]
+\[THIS VERSION as of  02/21/26 as compiled from work completed in November of 2025 from associated work started in earnest from conversations with [**Jenny Lorraine Nielsen**](https://philpeople.org/profiles/jenny-lorraine-nielsen)
+
+ related to her independent work approximately April 2025 and explored with EmergenceByDesign \]
 
 Dear Members of the Clay Mathematics Institute Prize Committee,
 
@@ -10,8 +12,8 @@ The manuscript does not attempt to construct the continuum limit or compute the 
 
 Sincerely,
 
-Lu Semita  
-Emergence By Design
+Lu Semita (not a claim of independent work)  
+EmergenceByDesign
 
 ---
 
