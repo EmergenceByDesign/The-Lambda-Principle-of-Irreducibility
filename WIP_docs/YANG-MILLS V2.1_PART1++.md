@@ -1,6 +1,6 @@
 **Cover Letter (Form UNSENT)**
 
-\[THIS VERSION as of  02/21/26 as conpiled from work completed in November of 2025 from associated work started approximately April 2025 \]
+\[THIS VERSION as of  02/21/26 as compiled from work completed in November of 2025 from associated work started approximately April 2025 \]
 
 Dear Members of the Clay Mathematics Institute Prize Committee,
 
