@@ -2,7 +2,11 @@
 ## A Category-Theoretic Framework for Representation-Invariant Constraints, Traversability, and Local-to-Global Failure
 
 ### Author
-[Author Name]
+Lu Semita (and other Authors to be named later upon formalizing their input)
+
+### Prefatory Note
+
+This manuscript is a work in progress and is being published strictly for the limited purpose of demonstrating the existence of this work as of this date, in order to help prevent competitive claims of prior art. It is offered as a timestamped record of independent work and development, and not as a claim of exclusive ownership.
 
 ### Abstract
 
