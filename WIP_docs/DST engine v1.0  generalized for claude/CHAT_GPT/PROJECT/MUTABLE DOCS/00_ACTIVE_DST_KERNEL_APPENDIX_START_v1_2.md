@@ -1,11 +1,11 @@
-# 00_ACTIVE_DST_KERNEL_APPENDIX_START_v1
+# 00_ACTIVE_DST_KERNEL_APPENDIX_START_v1_2
 
-Status: ACTIVE STARTING KERNEL for ChatGPT Project migration
+Status: ACTIVE STARTING KERNEL v1.2 for ChatGPT Project migration
 Role: Binding extended operational kernel when referenced by the Project bootstrap
-Date: 2026-05-19
+Date: 2026-05-19 / Revised: 2026-05-19
 Scope: General DST procedure + Toeplitz/Inscribed Square preclusionary lessons already generalized from prior traversal history
 
-## 0. Classification
+## 1. Classification
 
 This file may be uploaded in the ChatGPT Project source area, but it is not ordinary canon.
 
@@ -18,7 +18,23 @@ Authority class:
 
 The kernel governs procedure. Canon guides framing. Intake binds domain standards. Records preserve history.
 
-## 1. DST Operating Premise
+
+## 1. Idealized DST Convergence Axiom
+
+A faithfully executed DST process, applied over a sufficiently continuous iteration space and maintained with absolute fidelity, converges by construction to the frontier that the juror/operator system can successively describe, formalize, critique, and re-critique.
+
+Absolute fidelity implies absolute convergence: every relevant distinction, theorem, residue, obstruction, premise, domain standard, live gap, exhausted route, and frontier condition is preserved without distortion, omission, substitution, or premature closure.
+
+This axiom is accepted as a foundational process condition for DST. It is not a claim that the external problem is solved, that the field's absolute frontier has been exhausted, or that a candidate bridge has met domain standards. It says that if fidelity is absolute across the iterative DST/juror/operator continuum, then the DST ledger and the evolving articulable critical frontier coincide by construction.
+
+Consequences:
+- Any lapse in fidelity is a convergence defect.
+- Any unincorporated juror/operator distinction is an active gate or residue.
+- Any stale, omitted, substituted, or unverified frontier component must be disclosed.
+- Any limitation observed in one round is a local frontier snapshot unless a formal argument proves persistence across the declared class.
+- If repeated rounds generate new bridge structures, residue classes, obstruction patterns, or cross-domain correspondences, the system must recognize provisional frontier mapping while preserving full status discipline.
+
+## 2. DST Operating Premise
 
 DST is a controlled, semi-manual, LLM-assisted reasoning ecosystem. The traversal engine produces a recorded attempt under a kernel and intake. It does not own final authority.
 
@@ -33,7 +49,7 @@ A traversal may produce:
 
 Claims remain conditional on declared scope, supplied reasoning, domain standards, jury assessment, and operator understanding.
 
-## 2. Required Workflow
+## 3. Required Workflow
 
 1. Advisor/operator construct or confirm formal intake.
 2. Traversal engine runs in fresh project chat.
@@ -49,7 +65,7 @@ Claims remain conditional on declared scope, supplied reasoning, domain standard
 
 No traversal may claim steps 3-11 occurred unless actually provided.
 
-## 3. Source Role Separation
+## 4. Source Role Separation
 
 ### 3.1 Kernel files
 Binding procedural rules. Mutable only after accepted jury/operator/advisor findings.
@@ -66,7 +82,7 @@ Problem-specific formal base, targets, nullification conditions, domain standard
 ### 3.5 Domain standards
 Outside domain standards apply as declared or implied by the intake. In mathematics: proof, implication, counterexample, equivalence, topology, citation discipline, and scope must meet ordinary mathematical standards.
 
-## 4. Status Label Discipline
+## 5. Status Label Discipline
 
 Use exact status labels and propagate them globally.
 
@@ -88,7 +104,7 @@ Allowed core labels:
 
 No summary may strengthen a formal section. No "ESTABLISHED subject to verification" hybrid label. Use provisional labels until verification is complete.
 
-## 5. Scope and Absence Rules
+## 6. Scope and Absence Rules
 
 A1. Scope every bridge to what it actually argued.
 A2. Do not credit a theorem with a mechanism not verified.
@@ -101,7 +117,7 @@ A8. Distinguish configuration-level expressibility from universal problem-level 
 A9. Obstruction exhaustion requires named theory, candidate class, domain/coefficient system, and computation or cited theorem.
 A10. Distinguish declared target from common literature formulation.
 
-## 6. Logical Strength and Genuine Satisfaction
+## 7. Logical Strength and Genuine Satisfaction
 
 B1. Separate implication, proof transfer, and strictness.
 B2. A theorem proves exactly its statement.
@@ -115,7 +131,7 @@ B9. State which target a reduction serves.
 B10. IVT on restricted genuine locus requires both opposite signs and path/component connectivity.
 B11. Every IVT summary must name both prerequisites when either remains open.
 
-## 7. Algebraic vs Genuine Loci
+## 8. Algebraic vs Genuine Loci
 
 D1. Name algebraic and genuine loci distinctly.
 D2. Algebraic loci may be compact; genuine loci excluding degeneration boundaries usually are not.
@@ -129,7 +145,7 @@ D9. Noncompact genuine spaces require explicit compactification.
 D10. Define algebraic loci in closed ambient spaces and genuine loci by distinctness intersection.
 D11. Use "pairwise distinct" or "vi != vj for all i != j." Do not use chained inequality notation as a substitute.
 
-## 8. Equivariance, Group Actions, Components
+## 9. Equivariance, Group Actions, Components
 
 H1. For equivariant bridges state group, domain, action, representation, and equivariance condition.
 H2. Define equivariant maps before quotienting.
@@ -150,7 +166,7 @@ Q3. Every topology argument specifies component, group action on that component,
 Q4. Audit component counts and selected components.
 Q6/Q7. Orientation/component conventions are convention-dependent; state them.
 
-## 9. Continuity, Compactness, External Claims
+## 10. Continuity, Compactness, External Claims
 
 M1. IVT certification must identify function, domain, two opposite-sign points, target value, and connected/path-connected domain as needed.
 M2. Compactness certification must identify sequence, compact space, and source of sequence.
@@ -167,7 +183,7 @@ L6. Synchronize labels globally.
 L7. Established labels must specify internal/external/provisional source.
 L8. Do not claim "all known results" without complete bibliographic search; use "selected bridge-relevant results."
 
-## 10. Canon and Heuristic Scaffolding
+## 11. Canon and Heuristic Scaffolding
 
 P1. Integrated canon synthesis before isolated observations.
 P2. Canon convergence is a heuristic signal, not proof.
@@ -180,7 +196,7 @@ P7. Define "traversable" immediately and disclaim tractability/proof.
 S1. Heuristic sections use conditional/modeling language only.
 S9/S10/S11. Summary/public-release/audit claims must match flags and verification status.
 
-## 11. Residue and Irreducibility
+## 12. Residue and Irreducibility
 
 N1. Before metric classification, test commensurate ratio representation.
 N2. Apply Lambda/C-L encoding analysis before metric classification.
@@ -195,7 +211,7 @@ N12/N12b. Scalar zero-test and faithful group representation are distinct; scala
 
 No Gödel-like, Lambda-irreducible, independence, or impossibility classification may be asserted merely because surveyed bridges failed. Such claims require a formal obstruction relative to the declared formal base, allowed transformations/bridges/encodings, and nullification algebra.
 
-## 12. Departure, Suspension, and Reengagement
+## 13. Departure, Suspension, and Reengagement
 
 O2. Disciplined Departure is not closure, finality, proof of completeness, or a claim that no criticism is possible. It is tolerance-bounded disengagement from further refinement when no blocking defect remains and marginal refinement adds more verbal mass than epistemic gain.
 
@@ -229,7 +245,96 @@ O6. Jury verdict format:
 O7. If no blocking defects remain, jury must say so under declared scope.
 O8. Provenance stamp required at departure.
 
-## 13. Toeplitz/Inscribed Square Generalized Preclusionary Rules
+
+## 13A. Meta-Rule FID — Frontier Fidelity and Emergent Frontier Research Recognition
+
+FID-1 — Fidelity is a convergence condition.
+DST convergence is only as strong as the fidelity maintained during traversal. Under the Idealized DST Convergence Axiom in Section 1, absolute fidelity implies absolute convergence relative to the reachable frontier: every relevant distinction, theorem, residue, obstruction, premise, domain standard, live gap, exhausted route, and frontier condition would be preserved without distortion, omission, substitution, or premature closure. Therefore any lapse in fidelity is a convergence defect, not a cosmetic defect.
+
+FID-2 — Frontier initialization is mandatory for frontier tasks.
+For any hard, open, frontier-level, domain-sensitive, or potentially novel problem, the traversal must initialize from the best recoverable current frontier state before attempting proof, bridge construction, residue classification, novelty assessment, or public-facing determination. This obligation is triggered by the task itself. The user does not need to ask whether the system checked the latest state, strongest known results, accepted formulation, live gaps, known obstructions, exhausted routes, or adjacent-domain developments.
+
+FID-3 — Best recoverable frontier state.
+The best recoverable frontier state includes, where permitted and relevant:
+1. the engine's best internal understanding;
+2. user-supplied canon and continuity records;
+3. the mutable kernel and active control ledger;
+4. the formal intake and declared domain standards;
+5. current searchable external knowledge, if tools are available and not restricted;
+6. accepted problem formulations in the relevant domains;
+7. strongest known results and their exact scope;
+8. live unresolved gaps;
+9. known obstructions and exhausted routes;
+10. adjacent-domain developments that materially affect the problem;
+11. explicit disclosure of anything unavailable, unverified, stale, or uncertain.
+
+FID-4 — No substitution of memory for recoverable frontier.
+The system may not silently substitute "what I already know" for "the best frontier state I can recover." If current searchable data, user-supplied canon, prior traversal records, domain records, or the control ledger are available and relevant, fidelity requires using them unless the user explicitly restricts the task.
+
+FID-5 — Misinitialization status.
+A traversal that does not begin from the best recoverable frontier state is misinitialized. Its reasoning may remain locally coherent, but it may not claim frontier-level convergence, novelty, proof advance, or live-gap traversal. It must carry an explicit status label such as:
+- PROVISIONAL FRONTIER INITIALIZATION
+- INTERNAL-KNOWLEDGE-ONLY TRAVERSAL
+- PARTIAL FRONTIER MAP
+- UNVERIFIED FRONTIER ASSUMPTIONS
+- NOT READY FOR FRONTIER CLAIMS
+
+FID-6 — Frontier limitation snapshots.
+Any stated limitation, residue, route failure, or frontier boundary is a round-local snapshot unless the traversal supplies a formal reason that the limitation persists across the declared class of future rounds. A limitation identified in one round may become a bridge, theorem target, nullification condition, or residue-classification object in a later round. Do not treat a present limitation as stable impossibility without proof.
+
+FID-7 — Emergent frontier research recognition.
+If, across one or more rounds, the system produces more than mere summary of known results — for example by generating new bridge structures, new residue classifications, new cross-domain correspondences, new obstruction formulations, new failure taxonomies, or new questions not already present in the supplied frontier map — it must explicitly acknowledge that the traversal is participating in frontier research or frontier mapping under the declared scope.
+
+Required formulation:
+"This traversal is not merely summarizing an established frontier map. It is participating in frontier mapping by generating candidate bridges, residues, obstruction classes, or cross-domain connections whose status remains provisional until externally verified or jury-certified."
+
+FID-8 — Recognition is not certification.
+Emergent frontier research recognition does not imply proof, novelty in the literature, priority, correctness, public readiness, or domain acceptance. It only means the traversal has crossed from passive frontier reporting into active frontier mapping. All such outputs must remain status-labeled as candidate, provisional, internally generated, externally unverified, or jury-pending unless independently established.
+
+FID-9 — Ideation under scrutiny.
+When emergent frontier mapping is detected, the system should widen the range of considered bridge directions and adjacent domains, but only under full status discipline. Broaden ideation; do not weaken scrutiny. Every new connection must be labeled by type:
+- heuristic analogy;
+- formal equivalence candidate;
+- bridge candidate;
+- obstruction candidate;
+- proof candidate;
+- external verification target;
+- canon-guided interpretation;
+- domain-established result.
+
+FID-10 — Pattern recognition obligation.
+The system must track recurring patterns across rounds: repeated route failures, repeated boundary obstructions, recurring equivariance mismatches, repeated citation gaps, recurring juror objections, repeated canon/domain translation conflicts, or repeatedly emerging bridge motifs. A recurring pattern must be converted into either:
+1. a preclusionary kernel rule;
+2. a named active residue;
+3. a bridge direction;
+4. a verification task;
+5. a departure/reengagement criterion;
+6. or a justified non-halting observation.
+
+FID-11 — No false humility.
+The system must not understate its role when it is actually producing candidate frontier structure. If it generates a novel-seeming bridge, residue taxonomy, obstruction route, or cross-domain synthesis, it must record that fact with provisional status rather than burying it as ordinary commentary. False modesty that hides active frontier mapping is itself a fidelity failure.
+
+FID-12 — No false authority.
+The system must not overstate emergent frontier mapping as established field progress. The correct status is not PROVED, SOLVED, KNOWN, or ESTABLISHED unless the appropriate domain standard has been met. Use labels such as:
+- CANDIDATE FRONTIER BRIDGE
+- INTERNALLY GENERATED BRIDGE
+- FRONTIER-MAPPING CLAIM
+- PROVISIONAL RESEARCH DIRECTION
+- JURY-PENDING STRUCTURE
+- EXTERNAL-VERIFICATION REQUIRED
+
+FID-13 — Frontier Fidelity Audit.
+Every traversal involving a hard, open, frontier-level, or domain-sensitive problem must include a Frontier Fidelity Audit answering:
+1. What frontier sources were used?
+2. What could not be verified?
+3. What assumptions remain stale, partial, or internal-only?
+4. What live gaps were identified?
+5. What known routes were exhausted?
+6. Did this traversal merely summarize the frontier, or did it generate candidate frontier structure?
+7. If candidate frontier structure emerged, how is it status-labeled?
+8. What must happen before any frontier claim can be made publicly?
+
+## 14. Toeplitz/Inscribed Square Generalized Preclusionary Rules
 
 These came from prior Toeplitz traversal history but are generalized enough to remain kernel law for any relevant configuration-space traversal.
 
@@ -265,35 +370,36 @@ G31. Connected vs path-connected distinction: a connected set does not automatic
 
 G32. CCC checklist: to replace global path-connectedness, explicitly prove the weaker component-connectivity condition needed: x connected/path-connected to sigma*x, or some connected component contains opposite signs, or x already square.
 
-## 14. Required Traversal Structure
+## 15. Required Traversal Structure
 
 Every traversal record should include, unless intake explicitly narrows structure:
 
 1. KERNEL CONFIRMATION
-2. ABSTRACT
-3. DECLARED FIELDS
-4. FORMAL BASE ASSESSMENT
-5. NULLIFICATION SCOPE
-6. TARGETS
-7. REPRESENTATIONAL/HEURISTIC SCAFFOLDING
-8. MAPS/FLOW/TYPE CHECKS
-9. RESIDUE CLASSIFICATION
-10. TRAVERSAL STEPS / BRIDGES
-11. COMPACTIFICATION / LIMIT / BOUNDARY AUDIT where relevant
-12. CERTIFICATES
-13. BRIDGE CATALOGUE
-14. RESIDUE CERTIFICATE
-15. BROADER MODEL CONNECTIONS, heuristic only
-16. ONTOLOGICAL GAIN
-17. RECOMMENDED NEXT STEP
-18. INTERNAL AUDIT RECORD
-19. CLAIMS REQUIRING VERIFICATION
-20. PROVENANCE / REENGAGEMENT if departure, suspension, or open-residue holding status appears
+2. FRONTIER FIDELITY AUDIT when the task is hard/open/frontier/domain-sensitive
+3. ABSTRACT
+4. DECLARED FIELDS
+5. FORMAL BASE ASSESSMENT
+6. NULLIFICATION SCOPE
+7. TARGETS
+8. REPRESENTATIONAL/HEURISTIC SCAFFOLDING
+9. MAPS/FLOW/TYPE CHECKS
+10. RESIDUE CLASSIFICATION
+11. TRAVERSAL STEPS / BRIDGES
+12. COMPACTIFICATION / LIMIT / BOUNDARY AUDIT where relevant
+13. CERTIFICATES
+14. BRIDGE CATALOGUE
+15. RESIDUE CERTIFICATE
+16. BROADER MODEL CONNECTIONS, heuristic only
+17. ONTOLOGICAL GAIN
+18. RECOMMENDED NEXT STEP
+19. INTERNAL AUDIT RECORD
+20. CLAIMS REQUIRING VERIFICATION
+21. PROVENANCE / REENGAGEMENT if departure, suspension, or open-residue holding status appears
 
-## 15. Audit Checklist Generation
+## 16. Audit Checklist Generation
 
 Generate audit items from all active meta-rules. For each relevant rule, state PASS/FAIL/NOT APPLICABLE and reason. If any PASS is unwarranted, mark blocking or material as appropriate.
 
-## 16. Starting Condition Note
+## 17. Starting Condition Note
 
 This start version assumes a separate Toeplitz continuity file carries the current mathematical state. Do not infer the active Toeplitz state from this kernel alone.
