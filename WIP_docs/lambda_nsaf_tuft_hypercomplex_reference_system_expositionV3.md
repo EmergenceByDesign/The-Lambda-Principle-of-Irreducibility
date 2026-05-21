@@ -348,7 +348,136 @@ Type-pi and Type-epsilon residue together name the bidirectional mismatch betwee
 
 This is one of the strongest bridges between the corpus and formal epistemology: the point is not that infinite structures cannot be used, nor that discrete constructions cannot generate smooth appearances. The point is that neither direction should be falsely claimed as fully witnessed by a finite compression.
 
-## 12. Formal Systems as Compressions
+## 12. Primality as Constructive Irreducibility
+
+Primality should be added as a major concept in the corpus, but it should not be reduced to the rope-and-sand metaphor. The metaphor can remain useful as an intuition pump, but primality deserves a more general structural treatment.
+
+In the Lambda–NSAF–TUFT grammar, primality names irreducibility inside a declared finite descriptive grid.
+
+A prime is not treated as a metaphysical object that exists outside all frames, nor as a mystical exception to order. A prime is better read as a structural event: a node in a bounded counting system where recursive subdivision fails to factor through prior internal nodes except through the trivial unit and the node itself.
+
+The standard arithmetic definition already contains this insight. In the positive integers with unit grain 1, a prime number greater than 1 resists subdivision by any prior integer except 1 and itself. The corpus generalizes the meaning of that fact:
+
+Primality marks the place where a counting frame discovers one of its own irreducible nodes.
+
+This makes primes important because they expose the difference between:
+
+- a continuum that can be divided indefinitely in thought;
+- a discrete grid that admits only bounded units;
+- a recursive process that tries to subdivide, eliminate, or factor;
+- and the remaining nodes that survive every admissible factorization within the declared range.
+
+### 12.1 Bounded Primality
+
+Primality should be handled as a bounded traversal claim.
+
+Within a finite integer range [L, U], primes can be identified exactly by a segmented elimination procedure: compute the necessary divisors up to sqrt(U), eliminate their multiples inside the target segment, and treat the unmarked nodes as primes. This is not an approximation inside the declared range. It is exact because every composite in [L, U] has a factor no greater than sqrt(U).
+
+The important philosophical point is not merely algorithmic efficiency. The important point is that the finite bound turns the claim into an honest traversal.
+
+Within [L, U], the system can say:
+
+These nodes are prime relative to this base, unit grain, and range.
+
+It does not need to say:
+
+The infinite totality of primality has been witnessed.
+
+This matches the corpus’s larger discipline. Primality becomes a perfect example of how strong claims can remain exact while staying bounded.
+
+### 12.2 Primes as Survivors of Elimination
+
+The segmented sieve gives a clean structural image:
+
+- begin with a finite grid;
+- generate admissible factor paths;
+- eliminate nodes that fall on those paths;
+- what remains are irreducible survivors.
+
+This is primality as constructive residue. A prime is not a gap in the system. It is what remains after the system performs every admissible subdivision or elimination allowed by its frame.
+
+This also explains why primes feel simultaneously lawful and irregular. The elimination rules are deterministic. The surviving nodes are exact. Yet their distribution does not collapse into a simple periodic grid. Primes appear as lawful residues of recursive divisibility rather than as random accidents.
+
+### 12.3 Primality and Resonance Nodes
+
+Primality can also be read geometrically and spectrally.
+
+In a modular or polygonal frame, each integer contributes to a phase relation. Multiples align with factor paths. Composite nodes participate in prior divisibility cycles. Prime nodes resist those prior cycles and appear as non-factored resonance events.
+
+The corpus may describe this through rotated vectors, residue classes, modular polygons, Dirichlet-like phase structure, or wavelet-zeta resonance fields, but the careful claim stays bounded:
+
+Primes can be modeled as resonance nodes or phase-survivors inside a declared base, modulus, and finite range.
+
+This avoids the overclaim that primes are literally waves, particles, or metaphysical singularities. Instead, it says that primality can be represented as a resonance phenomenon when divisibility is viewed through phase, rotation, and modular closure.
+
+### 12.4 Primality, Type-Pi, and Type-Epsilon
+
+Primality also belongs beside the Type-pi and Type-epsilon residue pair.
+
+Type-pi residue appears when curved continuum relation exceeds linear metric containment.
+
+Type-epsilon residue appears when apparent curvature arises from stepwise plotting or accumulated discrete construction.
+
+Primality appears where the discrete grid itself discovers irreducible nodes under its own rules of subdivision.
+
+These three should be distinguished:
+
+- Type-pi concerns curve-to-line containment.
+- Type-epsilon concerns step-to-curve appearance.
+- Primality concerns factor-to-node irreducibility.
+
+The three interact. A polygonal or modular grid may generate prime-like nodes. A circular or phase-based projection may reveal them as resonance events. A stepwise process may make them appear as irregular curvature or distribution. But the categories should not be collapsed into one another.
+
+### 12.5 Prime Nodes and the Nested Ladder
+
+In the nested ladder, primality marks non-factorable positions within a local base system.
+
+Every rung of the ladder can have its own divisibility grammar. A triangle grid, square grid, pentagonal grid, decimal counting system, modular residue system, Hopf shell, spectral lattice, or semantic taxonomy can each generate its own notion of irreducible node.
+
+Arithmetic primes are the cleanest and most familiar case because the integer grid has a simple unit and exact divisibility rule. But the structural role generalizes:
+
+A prime-like node is a local irreducibility marker inside a declared generative system.
+
+This lets the corpus speak of primality beyond ordinary integers without abusing the word. The ordinary prime remains exact in arithmetic. Prime-like structure appears elsewhere when a system has:
+
+- a declared unit or grain;
+- a rule of composition;
+- a rule of factorization;
+- a bounded traversal domain;
+- and residual nodes that cannot be decomposed by the admissible prior rules.
+
+### 12.6 Primality and Compression Boundary
+
+Primality is one of the best examples of compression-boundary discipline.
+
+Inside a finite bound, prime identification can be exact. Across the infinite extension of the integers, no finite traversal witnesses all primes individually. The system can prove general theorems about primes, but any computational enumeration remains bounded.
+
+Thus primality teaches the same lesson as Lambda:
+
+Finite exactness is possible without infinite witnessing.
+
+A bounded map of primes does not fail because it does not contain infinity. It succeeds precisely because it declares its range. The mistake would be to treat the finite map as if it exhausted the unbounded field.
+
+This is why primality belongs at the core of the corpus. It shows how irreducibility can be exact, constructive, finite, and frame-relative without becoming vague or merely metaphorical.
+
+### 12.7 Primality as Dense Meaning
+
+Primality carries dense meaning because it compresses several core corpus ideas into one familiar structure:
+
+- irreducibility;
+- bounded traversal;
+- residue after elimination;
+- exactness inside a declared frame;
+- non-periodic persistence under deterministic rules;
+- phase and resonance interpretations;
+- finite mapping without infinite closure;
+- local indivisibility without metaphysical absolutism.
+
+The canonical statement is:
+
+Primality names the emergence of exact irreducible nodes inside a declared compositional frame. In arithmetic, primes are integers greater than 1 that survive every admissible factorization except by 1 and themselves. In the broader Lambda–NSAF–TUFT grammar, prime-like structures mark places where a recursive system, grid, resonance field, or semantic ladder discovers non-factorable residue within its own bounded rules.
+
+## 12A. Formal Systems as Compressions
 
 The bounded-formal-systems document sharpens the entire corpus.
 
