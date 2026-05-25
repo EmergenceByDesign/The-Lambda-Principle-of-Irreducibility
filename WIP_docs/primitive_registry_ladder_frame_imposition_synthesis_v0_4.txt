@@ -1,4 +1,4 @@
-Primitive Registry Ladder and Frame-Imposition Synthesis v0.3
+# Primitive Registry Ladder and Frame-Imposition Synthesis v0.4
 
 Canon-adjacent protocol module for Primitive Semantic Registry / METALABE / DST landscape use
 
@@ -6,15 +6,17 @@ Status: ACTIVE-PROVISIONAL / HELD-TOWARD-LOAD-BEARING
 Claim type: Semantic registry protocol, primitive construction grammar, and PvNP modeling specification
 Formal status: Not a proof of P vs NP or a replacement for formal mathematics; a translation and audit layer for registry-dependent legibility, search, compression, and residue.
 
-Abstract
+Revision note v0.4: adds formal registry update rules expressed in hybrid paralogic gate language. The goal is to make registry updates auditable, versioned, and operational without treating the gate grammar as a completed proof system.
 
-This document formalizes the primitive registry synthesis reached after revising the square, triangle, and circle grid framings. Its central claim is that a primitive registry system is a map-making choice that determines what kinds of relation, resonance, closure, transfer, evidence, and residue become legible. A registry does not merely relabel content. It changes the grammar of admissible evidence and therefore changes what appears locally compressible, globally stable, or difficult to derive.
+## Abstract
+
+This document formalizes the primitive registry synthesis reached after revising the square, triangle, and circle grid framings, and adds a gate-level registry update protocol for operational use. Its central claim is that a primitive registry system is a map-making choice that determines what kinds of relation, resonance, closure, transfer, evidence, and residue become legible. A registry does not merely relabel content. It changes the grammar of admissible evidence and therefore changes what appears locally compressible, globally stable, or difficult to derive.
 
 The framing of consideration is imposed by an observer, instrument, organism, culture, or formal system as a registry choice. If a registry is constructed, it is still constructed from an imposed frame of consideration. This creates an infinite regress if treated as final ontology. DST therefore treats each registry as a fidelity contract within a declared frame, not as universal accounting with global fidelity.
 
 The protocol begins from one marked referent and one degree of freedom. Mature structures such as horizontal/vertical, x/y, positive/negative, inside/outside, quadrants, and coordinate grids are downstream constructions, not primitives. The ladder builds through expression, trace, return, chirality, closure, bifurcation, perpendicularity, grid formation, polygonal expansion, overlapping circle construction, solids, and higher-dimensional nesting.
 
-1. Core Correction: Do Not Start With the Completed Grid
+## 1. Core Correction: Do Not Start With the Completed Grid
 
 A mature registry must not be mistaken for a primitive. The square grid, Cartesian axes, sign symmetry, quadrants, and inside/outside partition are powerful but downstream products of construction.
 
@@ -28,7 +30,7 @@ At the root, there is no x/y, no horizontal/vertical, no positive/negative, no s
 
 Protocol rule: do not smuggle a mature coordinate system into the primitive.
 
-2. Root Primitive
+## 2. Root Primitive
 
 The root condition is:
 
@@ -45,7 +47,7 @@ R0 --E1--> R1
 
 The axis is not prior to expression. It is inferred from expression.
 
-3. Primitive Ladder of Construction
+## 3. Primitive Ladder of Construction
 
 The ladder should be represented as constructed, not assumed:
 
@@ -73,7 +75,7 @@ One degree of freedom first. Axis second. Turn third. Closure fourth. Grid later
 
 The square does not found the ladder. The ladder constructs the square.
 
-4. L-Frame and C-Frame
+## 4. L-Frame and C-Frame
 
 The primitive complement is not square versus circle. The more basic distinction is linear expression versus chiral turning.
 
@@ -86,7 +88,7 @@ If linear expression and chiral turning occur simultaneously, the trace becomes 
 
 No chirality, no closure. No closure, no enclosure. No enclosure, no inside/outside.
 
-5. Euclidean / Square Registry With Axis Mundi
+## 5. Euclidean / Square Registry With Axis Mundi
 
 The Euclidean or square grid should be treated as an axis-mundi registry constructed from primitive expression.
 
@@ -112,7 +114,7 @@ axial expression + perpendicular bifurcation + equalized bilateral measure
 
 It excels at coordinate checking, orthogonal projection, sign symmetry, rectangular containment, and Boolean-style partition. It risks flattening curvature, phase, and spectral relation into binary or coordinate forms before those frames have been declared.
 
-6. Triangle Registry and Triangular-Number Progression
+## 6. Triangle Registry and Triangular-Number Progression
 
 The triangle registry should not be treated as a square grid with diagonals added. It encodes a different construction.
 
@@ -135,7 +137,7 @@ This gives the triangle registry distinct affordances:
 
 The triangle stores relation as mutual support among three anchors, not primarily as bilateral opposition.
 
-7. Circle Registry as Sacred-Geometry / Neighbor-Circle Lattice
+## 7. Circle Registry as Sacred-Geometry / Neighbor-Circle Lattice
 
 The circle registry intended here is not a set of concentric rings. It is a compass construction.
 
@@ -163,7 +165,7 @@ Circle registry affordances:
 
 This C-frame registry translates line measure into curved return without claiming that line has captured the circle. It gives a constructive lattice where resonance nodes can be mapped between linear standard and spectral continuum.
 
-8. Hybrid Registry: Square Checks, Triangle Closes, Circle Returns
+## 8. Hybrid Registry: Square Checks, Triangle Closes, Circle Returns
 
 A useful primitive map does not marry one registry. It uses the differences between registries and records transfer cost.
 
@@ -181,7 +183,7 @@ The hybrid registry becomes powerful where these registries agree without being 
 
 Such nodes act as registry-transfer points. They are not universal truth points. They are low-residue transfer channels between declared registries.
 
-9. Registry Choice as Evidence Grammar
+## 9. Registry Choice as Evidence Grammar
 
 A stimulus field does not arrive with one universal accounting attached. An observer, sensor, culture, or formal system stores it through a registry. The registry decides what counts as evidence.
 
@@ -201,7 +203,7 @@ Therefore:
 
 Different registry. Different admissible evidence. Different search landscape. Different compression. Different residue.
 
-10. Framing, Construction, and Infinite Regress
+## 10. Framing, Construction, and Infinite Regress
 
 All framings are either imposed or constructed. If constructed, they are constructed from a prior imposed frame of consideration. This exposes an infinite regress if any one frame is treated as final ontology.
 
@@ -217,7 +219,406 @@ A registry is a fidelity contract:
 
 A registry should not be released as global fidelity. It should be released as scoped fidelity under declared construction.
 
-11. Prime / Base / P-Adic Bridge
+## 11. Registry Update Rules (Formal Gate-Level Definition)
+
+The Primitive Registry maintains an auditable, versioned record of active primitives, registry frames, scale/grain settings, evidence grammars, transfer costs, and accumulated residue. Registry updates should therefore behave like a constructive circuit rather than a loose editorial judgment.
+
+The gate language below is operational and semantic. It may reuse names from quantum logic, topology, and hybrid paralogic grammar, but its release status here is protocol-level unless a separate formal bridge is supplied. A gate name means: "this kind of operation must be checked, logged, and assigned residue." It does not mean the registry update has become a quantum computation or a proof of a mathematical conjecture.
+
+### 11.1 Registry State Object
+
+Every active registry state should contain at least these fields:
+
+```text
+REGISTRY_STATE {
+  state_id
+  parent_state_id
+  declared_holder
+  active_registry: square / triangle / circle-overlap / hybrid / other
+  primitive_unit
+  axis_or_trace_state
+  chiral_return_state
+  scale_or_grain
+  evidence_grammar
+  transfer_channels
+  residue_register
+  odome_register
+  update_history
+  release_status
+}
+```
+
+The state object does not claim global fidelity. It records the current frame of consideration and how the system stores relation at this step.
+
+### 11.2 Core Update Circuit
+
+A registry update passes through the following gate sequence:
+
+```text
+INPUT
+ -> Straightedge Validation Gate
+ -> Compass / Superposition Intake Gate
+ -> Tension Detection Gate
+ -> Threshold Crossing Gate
+ -> Coalescence or Cleaving Path
+ -> 1/f Cascade Propagation Gate
+ -> Non-Orientable Transfer Gate when needed
+ -> Residue Commit and Versioning Gate
+OUTPUT: updated REGISTRY_STATE + audit record
+```
+
+This sequence prevents a mature registry from silently absorbing an incoming primitive without declaring frame, scale, transfer cost, and residue.
+
+### 11.3 Gate 1: Input Validation Gate (Straightedge Check)
+
+Purpose:
+Verify that the incoming primitive, frame imposition, or relation claim has a declared shared unit referent.
+
+Minimum requirements:
+
+```text
+- What is the mark?
+- What is the first degree of freedom?
+- What trace, line, radius, circle, or unit anchors the construction?
+- Which registry is receiving the update?
+```
+
+Pass condition:
+The primitive can be traced to a declared unit, mark, radius, line segment, or frame anchor.
+
+Fail condition:
+The update imports a mature term such as x/y, inside/outside, positive/negative, prime, color, force, phase, or proof without declaring the registry that makes the term legible.
+
+Failure output:
+
+```text
+HIGH-RESIDUE FLAG:
+undeclared primitive unit or hidden frame imposition
+```
+
+### 11.4 Gate 2: Superposition Intake Gate (Compass / Hadamard Correspondence)
+
+Purpose:
+Register the incoming primitive before premature collapse into a single mature registry.
+
+Operation:
+Hold the primitive in provisional relation to both L-frame and C-frame encodings:
+
+```text
+L-frame possibility:
+line, axis, count, step, distinction, coordinate check
+
+C-frame possibility:
+turn, return, radius, phase, overlap, resonance, closure
+```
+
+Pass condition:
+The update preserves both possible readings until a gate determines which one, or which hybrid relation, carries the least residue.
+
+Failure condition:
+The update forces a chiral/phase relation into a line-only account, or forces a line/count relation into a circle-only account, before transfer cost has been evaluated.
+
+Output:
+
+```text
+SUPERPOSED_INTAKE_RECORD {
+  L_encoding
+  C_encoding
+  unresolved_terms
+  provisional_status: HELD
+}
+```
+
+### 11.5 Gate 3: Tension Detection Gate (Controlled-Perpendicular / 90-Degree Resolver)
+
+Purpose:
+Measure the cost of imposing the incoming primitive on the current registry.
+
+Tension types:
+
+```text
+axis tension: incoming relation does not align with current axis or trace
+closure tension: incoming relation requires closure not available in current frame
+scale tension: incoming grain conflicts with current scale
+orientation tension: handedness, phase, or direction conflicts
+translation tension: relation visible in one registry fails in another
+semantic tension: term carries different evidence grammar across domains
+```
+
+Compute a Lambda tension scalar:
+
+```text
+lambda_tension in [0, 1]
+
+0 = no observed clash / clean resonance
+1 = maximal clash / destructive frame imposition
+```
+
+Suggested qualitative scoring:
+
+```text
+0.00-0.20 = low residue / direct coalescence likely
+0.21-0.50 = mild tension / coalescence with notes
+0.51-0.75 = material tension / HELD or split recommended
+0.76-1.00 = high tension / cleaving path or odome required
+```
+
+Output:
+
+```text
+TENSION_RECORD {
+  lambda_tension
+  tension_types
+  evidence
+  recommended_path
+}
+```
+
+### 11.6 Gate 4: Threshold Crossing Decision
+
+Purpose:
+Determine whether the update joins the existing registry or splits into a parallel residue path.
+
+Decision rule:
+
+```text
+if lambda_tension <= local_threshold:
+    follow COALESCENCE UPDATE
+else:
+    follow CLEAVING PATH
+```
+
+The local threshold is registry-dependent. A square registry may tolerate coordinate tension poorly but accept orthogonal tension well. A circle-overlap registry may tolerate phase drift well but require radius/overlap continuity. A triangle registry may tolerate local branching but require closure support.
+
+### 11.7 Coalescence Update Path
+
+Purpose:
+Merge the incoming primitive into the active registry with minimum residue.
+
+Required actions:
+
+```text
+- update active primitive list
+- update scale/grain metadata
+- update evidence grammar if necessary
+- add cross-reference to prior state
+- record why coalescence did not overclaim
+```
+
+Output:
+
+```text
+COALESCED_STATE {
+  merged_primitive
+  updated_registry_state
+  residual_notes
+  release_status: FORMAL / MODEL / SEMANTIC / HELD-TOWARD-LOAD-BEARING
+}
+```
+
+### 11.8 Cleaving Path and Odome Register
+
+Purpose:
+Preserve unresolved but meaningful tension rather than forcing premature absorption.
+
+Trigger:
+
+```text
+lambda_tension > local_threshold
+```
+
+Actions:
+
+```text
+- create ODOME entry
+- split incoming relation into parallel registry interpretations
+- name what survives in each frame
+- name what fails transfer
+- assign bridge direction
+```
+
+ODOME definition:
+
+```text
+ODOME = persistent irreducible residue generated when a transfer between frames cannot be completed without destructive conflation.
+```
+
+Output:
+
+```text
+ODOME_ENTRY {
+  source_update
+  affected_registry
+  unresolved_relation
+  L_frame_reading
+  C_frame_reading
+  transfer_failure
+  bridge_direction
+  release_status: HELD / PARADOX-CONTAINED / AUDIT-REQUIRED
+}
+```
+
+### 11.9 Gate 5: 1/f Cascade Propagation Gate
+
+Purpose:
+Propagate update effects across scale without flattening high-frequency residue into low-frequency stability.
+
+Operational interpretation:
+
+```text
+low-frequency components = stable, load-bearing, broad-scale relation
+high-frequency components = local detail, unresolved residue, finer nesting
+```
+
+Update rule:
+
+```text
+- stable components remain at current registry level
+- unstable or high-resolution residue propagates to finer registry levels
+- repeated broad resonance may propagate upward as a candidate load-bearing pattern
+```
+
+This gate implements scale humility. It prevents the system from treating local noise as global structure or global pattern as local proof.
+
+Output:
+
+```text
+CASCADE_RECORD {
+  stable_component
+  high_frequency_residue
+  propagated_levels
+  updated_grain
+  scale_notes
+}
+```
+
+### 11.10 Gate 6: Non-Orientable Transfer Gate (Klein / Clifford Correspondence)
+
+Purpose:
+Handle cases where a relation must invert frame dominance, pass between nested levels, or preserve superposition across a registry boundary.
+
+Use this gate when:
+
+```text
+- inside/outside reverses under transfer
+- L-frame and C-frame swap dominance
+- local orientation cannot be preserved globally
+- the relation requires lift, twist, and reattachment
+- a registry transition changes what counts as evidence
+```
+
+Output:
+
+```text
+TRANSFER_RECORD {
+  source_registry
+  target_registry
+  orientation_change
+  preserved_relation
+  lost_relation
+  residue
+  odome_links
+}
+```
+
+This gate does not erase contradiction. It records how the contradiction changes when the frame is lifted, twisted, or reattached.
+
+### 11.11 Gate 7: Residue Commit and Versioning
+
+Purpose:
+Commit the update to an auditable state history.
+
+Required fields:
+
+```text
+version_id
+previous_version_id
+timestamp_or_sequence_id
+operator_or_system_actor
+incoming_update
+gate_path_taken
+lambda_tension
+threshold_used
+coalescence_or_cleaving_result
+odome_count
+residue_summary
+release_status
+reopen_condition
+```
+
+No update is complete until its residue has been committed. A clean coalescence still records residue as zero or minimal.
+
+### 11.12 Efficiency Rule: Least Cumulative Residue
+
+When multiple update paths are possible, prefer the path with the least cumulative residue, not the path that makes the result sound most decisive.
+
+```text
+least_residue_path = path that preserves the primitive relation,
+                     declares frame and scale,
+                     minimizes odome generation,
+                     and avoids false global closure
+```
+
+This is the operational embodiment of frame humility.
+
+### 11.13 Minimal Pseudocode
+
+```text
+function update_registry(registry_state, incoming_primitive):
+    validation = straightedge_check(incoming_primitive)
+    if validation.fail:
+        return high_residue_flag(validation)
+
+    intake = superposition_intake(incoming_primitive, registry_state)
+    tension = detect_lambda_tension(intake, registry_state)
+
+    if tension.value <= registry_state.local_threshold:
+        update = coalesce(intake, registry_state, tension)
+    else:
+        odome = create_odome(intake, registry_state, tension)
+        update = cleave(intake, registry_state, odome)
+
+    cascade = propagate_1f(update)
+
+    if requires_nonorientable_transfer(update):
+        transfer = nonorientable_transfer(update)
+        update = attach_transfer(update, transfer)
+
+    return commit_version(update, cascade, residue_summary(update))
+```
+
+### 11.14 Audit Checklist for Registry Updates
+
+```text
+[ ] Shared unit referent declared?
+[ ] One-degree primitive path preserved?
+[ ] Mature registry terms avoided until constructed?
+[ ] L-frame and C-frame readings both considered?
+[ ] Lambda tension recorded?
+[ ] Threshold stated?
+[ ] Coalescence or cleaving path justified?
+[ ] Odome entry created where transfer fails?
+[ ] 1/f scale propagation recorded?
+[ ] Non-orientable transfer used only when needed?
+[ ] Version record committed?
+[ ] Release status assigned without overclaim?
+```
+
+### 11.15 Registry Update Release Statement
+
+Every completed update should end with a scoped release statement:
+
+```text
+This update modifies [registry_state] by adding or revising [primitive/relation].
+The update passed through [gate path].
+Lambda tension was [value] under [threshold].
+Residue was committed as [residue summary / odome id].
+The release status is [status].
+This update does not claim global fidelity beyond the declared registry frame.
+```
+
+
+## 12. Prime / Base / P-Adic Bridge
 
 Prime artifacts provide a mathematical foothold for the registry principle.
 
@@ -238,7 +639,7 @@ Counting can be read reciprocally:
 
 Primality appears as the irreducible residue of the counting ladder when outward enumeration is continually tested against inward divisibility.
 
-12. Color, Metrology, and Sensing Registries
+## 13. Color, Metrology, and Sensing Registries
 
 Color gives an everyday example of registry-dependent legibility.
 
@@ -250,7 +651,7 @@ Likewise, prime artifacts are divisibility registered through base/modular measu
 
 This does not make color, number, or measurement unreal. It makes them registry-real: real as stored, compared, named, measured, and reused inside a declared observer/instrument frame.
 
-13. PvNP Application
+## 14. PvNP Application
 
 The PvNP game should model the primitive experience of search/verification asymmetry rather than claim to solve the formal P vs NP problem.
 
@@ -275,7 +676,7 @@ The game should therefore model:
 - certificate checking once a path is declared,
 - transfer residue between registries.
 
-14. Implementation Specification for PvNP Simulation
+## 15. Implementation Specification for PvNP Simulation
 
 Registry selection should affect dynamics, not merely visual background.
 
@@ -293,7 +694,7 @@ coincidence between square nodes, triangle nodes, circle centers, and circle-int
 
 Those coincidence points become high-value registry-transfer nodes.
 
-15. Protocol Block: Primitive Registry Analysis
+## 16. Protocol Block: Primitive Registry Analysis
 
 Use this whenever applying the primitive registry ladder.
 
@@ -311,7 +712,7 @@ Use this whenever applying the primitive registry ladder.
 12. Residue: What does not survive transfer?
 13. Release status: formal / model / heuristic / analogical / semantic / speculative / HELD.
 
-16. DST Release Hygiene
+## 17. DST Release Hygiene
 
 This protocol should preserve the primitive without overstating the bridge.
 
@@ -330,7 +731,7 @@ Say: primality is a factor-reproduction irreducibility relation; base/modular re
 Do not say: color is merely subjective illusion.
 Say: color is spectrum registered through a sensing and naming taxonomy.
 
-17. Formal Synthesis Statement
+## 18. Formal Synthesis Statement
 
 A primitive registry system begins with one mark and one possible expression. Repeated expression produces trace and then axis. Return introduces reciprocity. Turning introduces chirality. Stepwise turning produces polygonal closure; continuous turning produces circular closure. Bifurcation introduces a second expression, and only after that expression stabilizes as perpendicular does square-grid logic become available. Thus horizontal/vertical, positive/negative, x/y, inside/outside, and quadrants are not primitive givens; they are downstream products of a constructed registry.
 
@@ -338,7 +739,7 @@ The triangle grid arises from minimal closure and triangular-number progression,
 
 All framings are imposed or constructed from prior impositions. A high-fidelity semantic protocol does not deny this regress; it records it. Each registry is released as a scoped fidelity contract, not universal accounting. The task is to keep the primitive marker visible, trace the operation, watch the invariant, record residue, and transfer only what survives.
 
-18. Compact Maxims
+## 19. Compact Maxims
 
 One degree of freedom first.
 Axis second.
@@ -366,7 +767,7 @@ Different artifact.
 No forced literal sameness.
 No loss of semantic continuity.
 
-19. Landscape Cartographer Compatibility
+## 20. Landscape Cartographer Compatibility
 
 This module should be treated as canon-adjacent unless formally absorbed. Its proper Landscape Cartographer status is HELD-TOWARD-LOAD-BEARING.
 
