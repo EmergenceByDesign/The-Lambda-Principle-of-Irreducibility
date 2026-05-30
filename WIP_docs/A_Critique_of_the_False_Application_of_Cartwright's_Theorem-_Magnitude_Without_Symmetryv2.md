@@ -98,7 +98,7 @@ The misattribution, in NSAF terms, is a \*rung mismatch\*: invoking a tool calib
 
 \#\# VI. The TUFT Diagnosis
 
-The Traversal Under Formal Topology (TUFT) framework is concerned with how formal systems traverse their own boundaries — how a formal system's internal operations relate to the structures that lie at or beyond the limits of its expressibility. In TUFT terms, Cartwright's Theorem is a boundary-approach theorem: it describes how interior formal operations (the Taylor series, the coefficient control) relate to boundary behavior (the function's values as |z| → 1).
+The (TUFT) framework is concerned with how formal systems traverse their own boundaries — how a formal system's internal operations relate to the structures that lie at or beyond the limits of its expressibility. In TUFT terms, Cartwright's Theorem is a boundary-approach theorem: it describes how interior formal operations (the Taylor series, the coefficient control) relate to boundary behavior (the function's values as |z| → 1).
 
 The TUFT diagnosis of the misattribution is this: the theorem's degradation structure is a \*formal artifact of the specific topology of the boundary\*, not a universal law of boundary approach. The unit disk's boundary is topologically S¹ — compact, connected, without boundary, homogeneous. The theorem's clean scalar degradation factor (1−r)^{2p} is a consequence of this specific topological type. A boundary of different topological type — say, a stratified space, a space with corners, a non-compact boundary, or a boundary with varying local topology — would generate a different formal artifact, one that cannot be read off from the Cartwright formula.
 
