@@ -15,12 +15,12 @@ Eigenstates: Solutions to the geometric/dynamical equations on the fibration (Ho
 3\. Dynamical simulation of coupled Thomas/Aizawa attractors → energy density plots.  
 4\. Topological invariants (linking numbers, Hopf invariant) quantifying charge/spin.
 
-1\. Electron-like configuration.  A Beltrami eigenmode on S³ with hedgehog-like or toroidal topology in projection. Magnetic moment \+ spin from S¹ fiber rotation. Visualize as a "topological clock" or precessing helical field (matches your earlier GIF references: electron clock, neutrino oscillation via phase in complex time).
+1\. Electron-like configuration.  A Beltrami eigenmode on S³ with WHAT SOME MAY REFER TO AS A MAPPING AS AN ANIMAL REFERENCE THE AUTHOR DOESN’T LIKE THE TERMINOLOGY AND DESCRIPTION THEREOF)-like or toroidal topology in projection. Magnetic moment \+ spin from S¹ fiber rotation. Visualize as a "topological clock" or precessing helical field (matches your earlier GIF references: electron clock, neutrino oscillation via phase in complex time).
 
 2\. Field profiles: Energy density |F|² or |V|² isosurfaces showing localized, stable solitonic structures. Topological charge from fibration winding → quantized electric charge emerges via Gauss law on the base \+ torsion. Angular momentum from vortex lines (SU(1)/U(1) strings).
 
 3\. Dynamics: Time evolution via the flow on attractors (Thomas → irreducible oscillations; Aizawa → envelope). Interactions via fiber bundle reconnection or phase shifts (explains decay, oscillations, hadronization as string-like flux tubes).
 
-4\. Comparison to you diagram\*\*: our defects map to Hopf/TUFT shells — e.g., d=0,1,2 as different winding modes; "Erizo" (hedgehog) as S³ Beltrami; vortices as fiber projections. The triangle reflects Thomas-3 irreducibility.
+4\. Comparison to your diagram: our defects map to Hopf/TUFT shells — e.g., d=0,1,2 as different winding modes; "Erizo" (hedgehog) as S³ Beltrami; vortices as fiber projections. The triangle reflects Thomas-3 irreducibility.
 
 the [pedagogical guide](https://alternaterealitygame.org/private/ARGpaths/GEOMETER/NSAF_PEDAGOGICAL_GUIDE.html) (geometric primitives → Hopf \+ attractors → particle spectrum via shells/resonances). The "configurations" are \*\*not\*\* arbitrary but intrinsic eigen-structures of the fibration \+ dynamics — just like atomic orbitals in Schrödinger, but topological/geometric first.  
