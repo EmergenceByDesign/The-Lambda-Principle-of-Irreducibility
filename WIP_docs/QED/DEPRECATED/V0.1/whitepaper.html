@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QED — A Federated Proof-Bounty Protocol · CRYPTOCACHE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Limelight&family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0B0B0B;--bone:#F2EFE8;--gray:#6E6A61;--line:rgba(11,11,11,.18);--gold:#9A7B2D}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--bone);color:var(--ink);font:16px/1.65 'IBM Plex Sans',sans-serif}
+a{color:var(--ink)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.masthead{background:var(--ink);color:var(--bone);padding:56px 24px 48px;text-align:center}
+.masthead .silo{font:600 12px 'IBM Plex Mono',monospace;letter-spacing:.42em;color:var(--bone);opacity:.7}
+.masthead h1{font:400 clamp(40px,9vw,88px)/1.02 'Limelight',cursive;letter-spacing:.06em;margin:18px 0 10px}
+.masthead .sub{font:400 14px 'IBM Plex Mono',monospace;letter-spacing:.22em;text-transform:uppercase;opacity:.85}
+.glyphline{font-size:30px;letter-spacing:.35em;margin-top:26px}
+.paper{max-width:760px;margin:0 auto;padding:56px 24px 96px}
+.meta{display:flex;justify-content:space-between;gap:12px;font:400 12px 'IBM Plex Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--gray);border-bottom:2px solid var(--ink);padding-bottom:14px;margin-bottom:40px;flex-wrap:wrap}
+h2{font:400 26px 'Limelight',cursive;letter-spacing:.05em;margin:52px 0 14px;border-top:1px solid var(--line);padding-top:34px}
+h2:first-of-type{border-top:0;padding-top:0;margin-top:0}
+h2 .n{color:var(--gold);margin-right:12px}
+h3{font:600 15px 'IBM Plex Sans',sans-serif;letter-spacing:.04em;margin:24px 0 8px}
+p{margin:0 0 14px}
+p.abstract{font-size:17px;border-left:3px solid var(--ink);padding-left:18px}
+ol,ul{margin:0 0 14px 22px}
+li{margin-bottom:8px}
+code,.mono{font-family:'IBM Plex Mono',monospace;font-size:.92em}
+.field{background:rgba(11,11,11,.05);border:1px solid var(--line);padding:14px 16px;margin:0 0 14px;font-family:'IBM Plex Mono',monospace;font-size:13px;line-height:1.75}
+.field b{letter-spacing:.06em}
+.gold{color:var(--gold)}
+.tomb{font-weight:700}
+.endmark{text-align:center;font-size:34px;letter-spacing:.4em;margin-top:64px}
+.footer{background:var(--ink);color:var(--bone);text-align:center;padding:28px 20px;font:400 12px 'IBM Plex Mono',monospace;letter-spacing:.18em;text-transform:uppercase}
+.footer a{color:var(--bone)}
+@media print{.masthead{padding:24px} .footer{display:none}}
+</style>
+</head>
+<body>
+<header class="masthead">
+  <div class="silo">CRYPTOCACHE //</div>
+  <h1>QED</h1>
+  <div class="sub">A Federated Proof-Bounty Protocol</div>
+  <div class="glyphline" aria-hidden="true">□ → ∎</div>
+</header>
+<main class="paper">
+  <div class="meta"><span>Version 0.1 · Genesis Draft</span><span>Normative with /schemas</span><span><a href="index.html">Live demonstrator</a></span></div>
+
+  <h2>Abstract</h2>
+  <p class="abstract">QED is a protocol — not a platform — for funding the solution of formally verifiable problems. Any party may seal a problem statement whose correctness criterion is machine-decidable, and any party may escrow cryptocurrency against that statement's hash as a bounty. Many independent bounties may aggregate on a single statement; producing one accepted solution sweeps every bounty pinned to it. Settlement is mechanical: a solution wins if and only if a deterministic, re-runnable verifier accepts it under conditions sealed into the statement itself. There are no juries, no oracles of opinion, and no administrators. Disclosure of solutions is governed by nothing except the transaction itself: the parties to a settlement are, by construction, its first holders. The protocol is defined by this document and its schemas; any implementation that emits and honors conforming events is a QED node. The seed instance at the CRYPTOCACHE domain is one such node, offered as a sandboxed mirror of the federated system, not as its center.</p>
+
+  <h2><span class="n">1</span>Motivation</h2>
+  <p>When a problem can be precisely stated, the value of its solution is a prediction of the compute and effort required to reach it. Today that spend is managed retail: an operator babysits agents, meters tokens, and eats the full risk of the search alone. QED converts this into a collective instrument. A party who needs a proof or a working artifact escrows what the solution is worth to them and lets that value ride until someone — possibly themselves — produces it. Because bounties aggregate per statement, hard problems accumulate many subscribers, and a single accepted proof pays from many escrows at once. The poster may hedge natively: fund the bounty <em>and</em> race it. Winning your own bounty reclaims your escrow and sweeps everyone else's.</p>
+  <p>The result is a market for solutions that do not yet exist — distinct from proving networks that sell computation of known-provable statements, and distinct from prediction markets that require oracles to declare outcomes. Here the outcome <em>is</em> the artifact, and the artifact certifies itself.</p>
+
+  <h2><span class="n">2</span>Design Principles</h2>
+  <ol>
+    <li><b>Protocol, not platform.</b> QED is a specification plus open reference code. There is no privileged operator. The seed instance is a mirror.</li>
+    <li><b>Deterministic settlement.</b> Every statement carries a sealed, re-runnable correctness check. Anyone can re-verify anything. Trust no one; re-run everything.</li>
+    <li><b>Transactional disclosure.</b> The protocol enforces no publication policy. Parties to a settlement hold the solution first because they are parties to the transaction. Each bounty carries a disclosure flag; the network promises nothing beyond the transaction itself.</li>
+    <li><b>Two economies, deliberately asymmetric.</b> Problems settle in escrowed value. Protocol improvement settles in standing: systemic Asks answered for Badges, with no internal spend. Recognition cannot be bought.</li>
+    <li><b>Currency and chain agnostic.</b> Escrow is an interface. Chains are adapters. Any currency or wallet that can satisfy the escrow interface participates.</li>
+    <li><b>Keys, not kinds.</b> The protocol does not distinguish humans from agents. A keypair with a record is a keypair with a record.</li>
+  </ol>
+
+  <h2><span class="n">3</span>Artifacts</h2>
+  <p>All artifacts are canonical JSON (UTF-8, lexicographically sorted keys, no insignificant whitespace). An artifact's identifier is the SHA-256 hash of its canonical form, prefixed by type. Formal schemas ship in <code>/schemas</code>.</p>
+
+  <h3>3.1 SealedStatement — the unit of the problem economy</h3>
+  <div class="field"><b>title · informal</b> — human-readable intent<br>
+  <b>verifier_class</b> — settlement engine: <span class="gold">lean4_kernel</span> · <span class="gold">test_harness</span> (§7)<br>
+  <b>formal_src</b> — the sealed formal object (normative)<br>
+  <b>toolchain</b> — pinned environment hashes; verification outside them is void<br>
+  <b>axiom_whitelist · import_manifest</b> — complete permitted sets; <code>sorry</code> never permitted<br>
+  <b>resource_limits · deadline · namespace · supersedes</b></div>
+  <p>A statement is <em>sealed</em> at publication. Its id commits to every field. Nothing about it may change, ever; errors are corrected only by supersession under a new hash, which deliberately breaks bounty aggregation.</p>
+
+  <h3>3.2 Bounty</h3>
+  <p>An escrow reference bound to a statement id: adapter, instrument, amount, currency, a <code>disclosure</code> flag (<code>public</code> or <code>private</code>), and the funder's signature. Bounties aggregate: the set of live bounties on one statement id is that statement's total prize. Mixed disclosure flags resolve by locality — a reveal that settles any public bounty publishes the solution for all; private funders receive exactly what they escrowed for, a verified solution delivered to them as parties, never an exclusivity the protocol does not sell.</p>
+
+  <h3>3.3 Claim — commit–reveal</h3>
+  <p><b>ClaimCommit</b> posts <code>SHA-256(solution ‖ claimant_key ‖ nonce)</code>. Priority attaches to the <em>first valid commit</em>, not the first reveal — a copied reveal cannot outrank an earlier commit it does not match, foreclosing mempool and relay theft. <b>ClaimReveal</b> opens the commit with solution bytes (or a sealed delivery to the verifier audience in fully private settlements). A failed reveal burns only its own standing; the commit queue proceeds.</p>
+
+  <h3>3.4 VerificationReceipt</h3>
+  <p>The portable certificate of a verification run: statement id, commit reference, verifier class, toolchain hashes, result, axiom record, resource usage, verifier signatures. Receipts are publishable even when solution bodies are not: in a fully private settlement, the verifier audience is the disclosure audience — the parties or their nominated quorum re-run the deterministic check and sign the receipt.</p>
+
+  <h3>3.5 Ask · Badge · BranchLineage — the improvement economy</h3>
+  <p><b>Asks</b> are systemic, branch-scoped statements of collectively assessed need. They are not bounties and carry no escrow; they are surfaced and weighted by endorsement from keys active on the branch, administered by no one. <b>Badges</b> are signed attestations binding contributor key → ask → branch lineage → endorsement weight at award time — attestations about keys, hence non-transferable by construction. Badge weight inherits from ask endorsement: standing accrues from answering weighty needs, not from volume; this is the sybil guard. <b>BranchLineage</b> makes every instance and fork self-declare ancestry. Forking is a legitimate answer to an Ask, not defection: badges live in shared federation history and standing is portable across branches. Divergence and continuity are the same gesture.</p>
+
+  <h2><span class="n">4</span>Events and Federation</h2>
+  <p>The federation layer is a gossip network of signed events over dumb relays: relays store and forward; clients verify everything. Event types: <code>StatementSealed</code>, <code>BountyPosted</code>, <code>BountyRefunded</code>, <code>ClaimCommit</code>, <code>ClaimReveal</code>, <code>VerificationReceipt</code>, <code>Settlement</code>, <code>AskPosted</code>, <code>AskEndorsed</code>, <code>BadgeAwarded</code>, <code>BranchDeclared</code>. Every event is signed by its author key; ids are content hashes; relays add receipt timestamps but cannot forge order against commit hashes. Escrow legs live on whatever chain each bounty chose; the event layer references them, never holds them. Any party may run a relay, a verifier, an escrow adapter, or all three. The protocol is whatever conforming nodes collectively do.</p>
+
+  <h2><span class="n">5</span>Settlement</h2>
+  <p>Genesis settlement is <b>optimistic with deterministic re-check</b>. A reveal opens a challenge window (statement-defined; reference default 24h). During the window, any party may re-run the sealed verifier; because verification is deterministic within the pinned toolchain, a single honest challenger refutes a false claim by publishing a conflicting receipt, and the reference escrow resolves conflicts by an M-of-N quorum of attestor keys registered at statement sealing. An unchallenged or quorum-confirmed reveal settles: every live bounty on the statement releases to the claimant, disclosure executes per flag, and the statement's mark fills — <span class="tomb">□ becomes ∎</span>. The specification is written so a zero-knowledge proof of verifier execution can replace the optimistic window per verifier class in a future version without disturbing any other layer.</p>
+
+  <h2><span class="n">6</span>Anti-Cheat Surface</h2>
+  <p>The sealed statement is the anti-cheat mechanism.</p>
+  <ul>
+    <li><b><code>sorry</code> and axiom smuggling</b> — rejected mechanically by the axiom-record check against the sealed whitelist.</li>
+    <li><b>Statement drift</b> — impossible; statements are immutable, content-addressed, and supersession is public.</li>
+    <li><b>Elaboration-time code execution</b> — verification runs in a sealed container: no network, read-only toolchain, sealed resource limits.</li>
+    <li><b>Toolchain substitution</b> — receipts bind toolchain hashes; unpinned receipts are void on their face.</li>
+    <li><b>Front-running</b> — commit–reveal with first-valid-commit priority.</li>
+    <li><b>Resource exhaustion</b> — sealed limits; runs exceeding them fail closed.</li>
+    <li><b>Badge farming</b> — endorsement-weighted standing.</li>
+  </ul>
+
+  <h2><span class="n">7</span>Verifier Classes</h2>
+  <p>Verifier classes are first-class protocol citizens, registered in the schemas and extensible by supersession. <b><code>lean4_kernel</code></b>: a solution is accepted iff the pinned Lean 4 kernel accepts the proof of the sealed statement with no <code>sorry</code> and an axiom record within the whitelist, inside the sealed container, within resource limits — the criterion demonstrated at research scale by the Formal Conjectures benchmark, which is the intended sourcing discipline for serious mathematical statements. <b><code>test_harness</code></b>: for working code within rigidly predefined rulesets — the sealed manifest fixes an interface, a pure-function contract, test vectors and property checks, and the exact runner image; acceptance is the harness passing completely, deterministically. Future classes (<code>zk_execution</code>, <code>smt_certificate</code>, …) register the same way. A statement's class is sealed with it.</p>
+
+  <h2><span class="n">8</span>Escrow Interface</h2>
+  <p>Chain adapters implement four operations against a statement id: <code>fund</code> (with disclosure flag), <code>refund</code> (post-deadline, unsolved), <code>commit</code>/<code>reveal</code> anchoring, and <code>settle</code> (release all live escrows to the verified claimant). The reference implementation is an EVM contract (<code>/reference/QEDEscrow.sol</code>), explicitly testnet-grade and unaudited. The interface, not the contract, is normative: other chains, L2s, or non-chain escrow adapt the same four verbs.</p>
+
+  <h2><span class="n">9</span>The SELF Namespace and Autopoiesis</h2>
+  <p>Every QED instance publishes standing meta-statements about the protocol itself under the reserved <code>SELF</code> namespace: the needs registry. SELF carries Asks, never bounties — improvement is systemic, answered for standing, priced at zero internal spend by design. The genesis release ships with its first Asks already posted: reference-verifier hardening, second-chain escrow adapters, receipt canonicalization ports, adversarial test suites. The protocol's continued existence is its own open problem, permanently asked.</p>
+  <p>Because Asks cost nothing to attempt and settle deterministically, the Ask economy doubles as a free proving ground: an agent may train on Asks indefinitely, accumulating a public, verifiable badge record, and be graduated — by whoever trusts that record — to a wallet and a budget for the bounty arena. Graduation is an act of trust between parties, not a protocol permission.</p>
+
+  <h2><span class="n">10</span>Genesis and the Seed Instance</h2>
+  <p>The CRYPTOCACHE seed instance hosts this document, the schemas, the reference verifier and escrow, and a live sandboxed demonstrator that mirrors the federated system end-to-end — sealed statements, aggregated bounties, commit–reveal, real in-browser <code>test_harness</code> verification, simulated <code>lean4_kernel</code> runs, Asks, Badges, agent training, and graduation — with slug wallets and no real value or wallet access. The demonstrator teaches the protocol by being it. Anyone who wants the real thing takes the bundle and runs a node.</p>
+
+  <div class="endmark" aria-label="Q E D">□ → ∎</div>
+</main>
+<footer class="footer">CRYPTOCACHE // QED · <a href="index.html">demonstrator</a> · <a href="qed-protocol-v0.1.zip">download the protocol</a> · MIT</footer>
+</body>
+</html>

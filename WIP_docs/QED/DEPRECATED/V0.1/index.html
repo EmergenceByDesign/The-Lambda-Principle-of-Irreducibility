@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CRYPTOCACHE // QED — Federated Proof-Bounty Protocol · Sandbox</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Limelight&family=IBM+Plex+Sans:wght@400;600&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0B0B0B;--bone:#F2EFE8;--gray:#6E6A61;--line:rgba(11,11,11,.18);--gold:#9A7B2D;--goldsoft:rgba(154,123,45,.12);--bad:#8A2E2E}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bone);color:var(--ink);font:15px/1.6 'IBM Plex Sans',sans-serif}
+button{font:inherit;cursor:pointer}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* masthead */
+.mast{background:var(--ink);color:var(--bone);text-align:center;padding:42px 18px 34px}
+.mast .silo{font:600 11px 'IBM Plex Mono',monospace;letter-spacing:.44em;opacity:.7}
+.mast h1{font:400 clamp(44px,10vw,96px)/1 'Limelight',cursive;letter-spacing:.06em;margin:14px 0 8px}
+.mast .tag{font:400 12px 'IBM Plex Mono',monospace;letter-spacing:.24em;text-transform:uppercase;opacity:.85}
+.heroGlyph{font-size:34px;letter-spacing:.3em;margin-top:20px}
+.heroGlyph .fill{display:inline-block;animation:tombPulse 3.2s infinite}
+@keyframes tombPulse{0%,45%{opacity:.25}60%,100%{opacity:1}}
+
+.sandbar{background:var(--gold);color:var(--ink);text-align:center;font:600 11px 'IBM Plex Mono',monospace;letter-spacing:.18em;text-transform:uppercase;padding:8px 12px}
+
+/* nav */
+nav{display:flex;flex-wrap:wrap;gap:0;border-bottom:2px solid var(--ink);background:var(--bone);position:sticky;top:0;z-index:20}
+nav button{flex:1;min-width:110px;background:none;border:0;border-right:1px solid var(--line);padding:13px 8px;font:600 12px 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:var(--gray)}
+nav button.on{background:var(--ink);color:var(--bone)}
+.ticker{font:400 11px 'IBM Plex Mono',monospace;letter-spacing:.06em;padding:7px 14px;border-bottom:1px solid var(--line);color:var(--gray);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.walletChip{position:fixed;right:14px;bottom:14px;background:var(--ink);color:var(--bone);font:600 12px 'IBM Plex Mono',monospace;letter-spacing:.08em;padding:10px 16px;border:2px solid var(--bone);box-shadow:0 0 0 2px var(--ink);z-index:30}
+.walletChip .amt{color:#E8CE8F}
+
+main{max-width:980px;margin:0 auto;padding:26px 16px 120px}
+.panel{display:none}
+.panel.on{display:block}
+.lede{max-width:720px;color:var(--gray);margin-bottom:22px}
+.lede b{color:var(--ink)}
+
+/* cards */
+.card{border:2px solid var(--ink);background:#FBF9F4;margin-bottom:20px}
+.card .head{display:flex;gap:14px;align-items:flex-start;padding:16px 16px 12px;border-bottom:1px solid var(--line)}
+.tombBox{font-size:34px;line-height:1;width:44px;text-align:center;flex:none}
+.tombBox.settled{color:var(--ink)}
+.card h3{font:600 17px 'IBM Plex Sans',sans-serif;letter-spacing:.02em}
+.chips{margin-top:6px;display:flex;flex-wrap:wrap;gap:6px}
+.chip{font:600 10px 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--ink);padding:2px 8px}
+.chip.gold{background:var(--gold);color:var(--bone);border-color:var(--gold)}
+.chip.dim{color:var(--gray);border-color:var(--line)}
+.body{padding:14px 16px}
+.informal{margin-bottom:10px}
+.kv{font:400 12px 'IBM Plex Mono',monospace;color:var(--gray);line-height:1.9;word-break:break-all}
+.prize{margin:12px 0;border:1px solid var(--line);padding:10px 12px;background:var(--goldsoft)}
+.prize .total{font:600 20px 'IBM Plex Mono',monospace;letter-spacing:.04em}
+.prize ul{list-style:none;margin:8px 0 0;font:400 12px 'IBM Plex Mono',monospace;color:var(--gray)}
+.prize li{margin:0 0 3px}
+.actions{display:flex;flex-wrap:wrap;gap:10px;padding:0 16px 16px}
+.btn{background:var(--ink);color:var(--bone);border:2px solid var(--ink);padding:9px 18px;font:600 12px 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase}
+.btn.ghost{background:none;color:var(--ink)}
+.btn.gold{background:var(--gold);border-color:var(--gold)}
+.btn:disabled{opacity:.35;cursor:not-allowed}
+.workzone{border-top:1px solid var(--line);padding:14px 16px;background:var(--bone)}
+.workzone label{display:block;font:600 11px 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;margin:10px 0 6px}
+textarea,input[type=text],input[type=number],select{width:100%;border:2px solid var(--ink);background:#fff;padding:9px;font:13px/1.5 'IBM Plex Mono',monospace;color:var(--ink)}
+textarea{min-height:130px;resize:vertical}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:flex-end}
+.row>div{flex:1;min-width:130px}
+.note{font:400 12px 'IBM Plex Mono',monospace;color:var(--gray);margin-top:8px}
+.note.ok{color:var(--gold);font-weight:600}
+.note.err{color:var(--bad);font-weight:600}
+.receipt{border:2px dashed var(--ink);padding:10px 12px;margin-top:10px;font:400 11px 'IBM Plex Mono',monospace;white-space:pre-wrap;word-break:break-all;background:#fff}
+.tiny{font-size:11px}
+.linkish{background:none;border:0;text-decoration:underline;color:var(--gray);font:400 11px 'IBM Plex Mono',monospace;padding:0}
+
+/* asks */
+.badgeShelf{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 24px}
+.badge{border:2px solid var(--ink);background:var(--ink);color:var(--bone);padding:8px 14px;font:600 11px 'IBM Plex Mono',monospace;letter-spacing:.08em}
+.badge .w{color:#E8CE8F}
+
+/* agent */
+.agentLog{border:2px solid var(--ink);background:#0B0B0B;color:#D9D4C7;padding:12px 14px;font:400 12px/1.8 'IBM Plex Mono',monospace;min-height:140px;max-height:280px;overflow:auto;white-space:pre-wrap}
+.agentStats{display:flex;gap:18px;flex-wrap:wrap;margin:14px 0;font:600 13px 'IBM Plex Mono',monospace}
+
+/* federation */
+.relays{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+@media(max-width:760px){.relays{grid-template-columns:1fr}}
+.relay{border:2px solid var(--ink);background:#FBF9F4;min-height:220px}
+.relay h4{background:var(--ink);color:var(--bone);font:600 11px 'IBM Plex Mono',monospace;letter-spacing:.14em;padding:8px 10px}
+.relay ul{list-style:none;padding:8px 10px;font:400 10.5px/1.7 'IBM Plex Mono',monospace;color:var(--gray);max-height:340px;overflow:auto}
+.relay li b{color:var(--ink)}
+
+/* docs */
+.docGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.docCard{border:2px solid var(--ink);padding:16px;background:#FBF9F4}
+.docCard h4{font:400 20px 'Limelight',cursive;letter-spacing:.05em;margin-bottom:8px}
+.docCard p{font-size:13px;color:var(--gray);margin-bottom:12px}
+footer{background:var(--ink);color:var(--bone);text-align:center;padding:26px 16px;font:400 11px 'IBM Plex Mono',monospace;letter-spacing:.18em;text-transform:uppercase}
+</style>
+</head>
+<body>
+
+<header class="mast">
+  <div class="silo">CRYPTOCACHE //</div>
+  <h1>QED</h1>
+  <div class="tag">Fund the proof · Verify everything · Trust no one</div>
+  <div class="heroGlyph" aria-hidden="true">□ → <span class="fill">∎</span></div>
+</header>
+<div class="sandbar">Sandbox mirror — slug value only · no wallets touched · no real crypto · state resets on refresh</div>
+
+<nav aria-label="Sections">
+  <button class="on" data-tab="problems">Problems</button>
+  <button data-tab="asks">Asks</button>
+  <button data-tab="agent">Agent</button>
+  <button data-tab="federation">Federation</button>
+  <button data-tab="docs">Docs</button>
+</nav>
+<div class="ticker" id="ticker">federation idle — waiting for first event</div>
+
+<div class="walletChip" id="walletChip">…</div>
+
+<main>
+
+<section class="panel on" id="panel-problems">
+  <p class="lede"><b>Sealed statements, aggregated bounties, mechanical settlement.</b> Fund any statement's prize with slug value (public or private disclosure), or solve it yourself: commit first, reveal second, let the verifier decide. First valid commit wins. <span class="tiny">test_harness verification runs for real, in this browser. lean4_kernel runs are simulated here and labeled; the real check is <code>reference/verify_lean.py</code>.</span></p>
+  <div id="stmtList"></div>
+</section>
+
+<section class="panel" id="panel-asks">
+  <p class="lede"><b>The improvement economy. No spend, ever.</b> These are the seed branch's SELF Asks — collectively assessed needs, weighted by endorsement, administered by no one. Answer one and earn a badge: a signed attestation whose weight inherits from the ask's endorsement. Standing cannot be bought, only earned.</p>
+  <div class="badgeShelf" id="badgeShelf"></div>
+  <div id="askList"></div>
+</section>
+
+<section class="panel" id="panel-agent">
+  <p class="lede"><b>Keys, not kinds.</b> The protocol never asks whether a key belongs to a human or an agent. Because Asks are free and deterministic, they are a zero-spend training ground: train the demo agent below, watch its badge record accumulate, then graduate it to a budget and let it race you for real bounties. <span class="tiny">The agent is a scripted simulation, labeled as such — its point is the lifecycle, not the intelligence.</span></p>
+  <div class="agentStats" id="agentStats"></div>
+  <div class="actions" style="padding:0 0 14px">
+    <button class="btn" id="btnTrain">Train on asks</button>
+    <button class="btn gold" id="btnGraduate" disabled>Graduate · attach 500 ₡ budget</button>
+  </div>
+  <div class="agentLog" id="agentLog">AGENT-K7 · dormant · no key activity yet</div>
+</section>
+
+<section class="panel" id="panel-federation">
+  <p class="lede"><b>Dumb relays, smart clients.</b> Every action you take is a signed event gossiped across the federation. Three simulated relays below receive the same events with real propagation delay. Relays store and forward; verification always happens at the edge.</p>
+  <div class="relays">
+    <div class="relay"><h4>SEED · CRYPTOCACHE</h4><ul id="relay0"></ul></div>
+    <div class="relay"><h4>NODE-B · FORK/ATHENAEUM</h4><ul id="relay1"></ul></div>
+    <div class="relay"><h4>NODE-C · FORK/DDL</h4><ul id="relay2"></ul></div>
+  </div>
+</section>
+
+<section class="panel" id="panel-docs">
+  <p class="lede"><b>The protocol is the paper plus the schemas.</b> Take the bundle, run a node, declare your lineage. The seed instance is a mirror, not a center.</p>
+  <div class="docGrid">
+    <div class="docCard"><h4>Whitepaper</h4><p>The constitution: artifacts, commit–reveal, optimistic settlement, verifier classes, the SELF namespace.</p><a class="btn" href="whitepaper.html">Read</a></div>
+    <div class="docCard"><h4>Protocol Bundle</h4><p>Everything: whitepaper, seven schemas, reference Lean verifier, reference EVM escrow, this demonstrator. MIT.</p><a class="btn" href="qed-protocol-v0.1.zip">Download v0.1</a></div>
+    <div class="docCard"><h4>Run a Node</h4><p>Relay, verifier, escrow adapter — any subset, all federable. INSTALL.md in the bundle walks the whole path from static mirror to real rails.</p><a class="btn ghost" href="qed-protocol-v0.1.zip">In the bundle</a></div>
+  </div>
+</section>
+
+</main>
+
+<footer>CRYPTOCACHE // QED · protocol v0.1 genesis · □ → ∎</footer>
+
+<script>
+"use strict";
+/* ============ hashing (real when secure context, labeled fallback otherwise) ============ */
+async function sha256(msg){
+  try{
+    const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(msg));
+    return [...new Uint8Array(buf)].map(b=>b.toString(16).padStart(2,"0")).join("");
+  }catch(e){
+    let h1=0x811c9dc5;
+    for(let i=0;i<msg.length;i++){h1^=msg.charCodeAt(i);h1=Math.imul(h1,0x01000193)>>>0;}
+    return "demo"+h1.toString(16).padStart(8,"0").repeat(8).slice(0,60);
+  }
+}
+const short=h=>h.slice(0,10)+"…";
+
+/* ============ state ============ */
+const S={
+  wallet:{name:"YOU · LU-SEMITA", key:"", cache:1000},
+  statements:[],
+  asks:[],
+  badges:[],
+  agent:{state:"dormant", budget:0, racing:false},
+  relays:[[],[],[]]
+};
+
+/* ============ federation ============ */
+const RELAY_DELAY=[0,450,1000];
+function pushEvent(type, detail){
+  const at=new Date().toISOString().slice(11,19);
+  const line={type, detail, at};
+  RELAY_DELAY.forEach((d,i)=>setTimeout(()=>{
+    S.relays[i].unshift(line);
+    if(S.relays[i].length>40)S.relays[i].pop();
+    renderRelays();
+  },d));
+  document.getElementById("ticker").textContent=at+" · "+type+" · "+detail;
+}
+
+/* ============ harness runner (REAL deterministic verification) ============ */
+function runHarness(code, spec){
+  let fn;
+  try{ fn=new Function('"use strict";'+code+'\n;return solve;')(); }
+  catch(e){ return {ok:false, msg:"compile error: "+e.message}; }
+  if(typeof fn!=="function") return {ok:false, msg:"no function named solve() found"};
+  for(const [inp,exp] of spec.vectors){
+    let arg;
+    if(spec.arg==="bigint")arg=BigInt(inp);
+    else if(spec.arg==="json")arg=JSON.parse(JSON.stringify(inp));
+    else arg=inp;
+    let out;
+    try{ out=fn(arg); }
+    catch(e){ return {ok:false, msg:"runtime error on input "+JSON.stringify(inp)+": "+e.message}; }
+    if(String(out)!==String(exp))
+      return {ok:false, msg:"vector failed: input "+JSON.stringify(inp)+" → got "+String(out)+", sealed expectation "+String(exp)};
+  }
+  return {ok:true, msg:"all "+spec.vectors.length+" sealed vectors passed"};
+}
+
+/* ============ seed data ============ */
+const REF={
+  isqrt:"function solve(n){\n  if(n < 2n) return n;\n  let x = n, y = (x + 1n) / 2n;\n  while(y < x){ x = y; y = (x + n / x) / 2n; }\n  return x;\n}",
+  brackets:"function solve(s){\n  const st=[], pair={')':'(',']':'[','}':'{'};\n  for(const c of s){\n    if(c==='('||c==='['||c==='{') st.push(c);\n    else if(pair[c]){ if(st.pop()!==pair[c]) return false; }\n  }\n  return st.length===0;\n}",
+  canon:"function solve(o){\n  const c=v=>Array.isArray(v)?'['+v.map(c).join(',')+']'\n    :(v&&typeof v==='object')?'{'+Object.keys(v).sort().map(k=>JSON.stringify(k)+':'+c(v[k])).join(',')+'}'\n    :JSON.stringify(v);\n  return c(o);\n}",
+  cksum:"function solve(a){\n  return a.reduce((s,x)=>s+x*x,0)%97;\n}",
+  cksumBuggy:"function solve(a){\n  return a.reduce((s,x)=>s+x*x,0)%96;\n}",
+  prefix:"function solve(h){\n  return 'qed:receipt:'+h.toLowerCase();\n}",
+  lean:"theorem list_reverse_involutive {α : Type*} (l : List α) :\n    l.reverse.reverse = l := by\n  simpa using List.reverse_reverse l\n\n#print axioms list_reverse_involutive"
+};
+
+async function seed(){
+  S.wallet.key=(await sha256("lu-semita-demo-key")).slice(0,16);
+  const mk=async o=>{ o.id="qed:stmt:"+ (await sha256(o.title)); return o; };
+  S.statements=[
+    await mk({
+      title:"List reversal is involutive",
+      cls:"lean4_kernel", sim:true,
+      informal:"∀ (l : List α), l.reverse.reverse = l — sealed against pinned Lean 4 + Mathlib. Accepted iff the kernel accepts with no sorry and axioms ⊆ whitelist.",
+      seal:"toolchain: lean4:v4.15 · mathlib@sha256:9f2c…e1 · axioms ⊆ [propext, Classical.choice, Quot.sound] · limits: 120 cpu-s / 4096 MB",
+      deadline:"T+30d",
+      bounties:[
+        {who:"SEED-FUNDR", amt:500, disc:"public"},
+        {who:"ATHENAEUM-3", amt:450, disc:"public"},
+        {who:"MASK-11", amt:250, disc:"private"}
+      ],
+      hint:REF.lean, hintLabel:"insert a sample proof",
+      status:"open", commits:[], reveal:null, winner:null
+    }),
+    await mk({
+      title:"Exact integer square root (BigInt)",
+      cls:"test_harness", sim:false,
+      informal:"Provide solve(n) where n is a non-negative BigInt; return ⌊√n⌋ as BigInt. Pure function, deterministic, sealed vectors decide.",
+      seal:"runner: js-harness@sha256:2b71…c4 · pure function contract · 9 sealed vectors · limits: 5 cpu-s / 256 MB",
+      deadline:"T+14d",
+      spec:{arg:"bigint", vectors:[["0","0"],["1","1"],["3","1"],["4","2"],["15","3"],["16","4"],["1000000000000000000","1000000000"],["1000000014000000049","1000000007"],["1000000014000000048","1000000006"]]},
+      bounties:[
+        {who:"COMPUTE-DAO", amt:400, disc:"public"},
+        {who:"HEDGE-9", amt:240, disc:"private"}
+      ],
+      hint:REF.isqrt, hintLabel:"insert reference solution (sandbox exploration)",
+      status:"open", commits:[], reveal:null, winner:null
+    }),
+    await mk({
+      title:"Balanced bracket validator",
+      cls:"test_harness", sim:false,
+      informal:"Provide solve(s): string → boolean; true iff every (, [, { closes correctly and in order. Sealed vectors decide.",
+      seal:"runner: js-harness@sha256:2b71…c4 · pure function contract · 6 sealed vectors · limits: 5 cpu-s / 256 MB",
+      deadline:"T+14d",
+      spec:{arg:"string", vectors:[["()[]{}","true"],["([{}])","true"],["(]","false"],["([)]","false"],["","true"],["(((","false"]]},
+      bounties:[{who:"OPEN-VESSEL", amt:180, disc:"public"}],
+      hint:REF.brackets, hintLabel:"insert reference solution (sandbox exploration)",
+      status:"open", commits:[], reveal:null, winner:null
+    })
+  ];
+  const mkA=async o=>{ o.id="qed:ask:"+(await sha256(o.need)); return o; };
+  S.asks=[
+    await mkA({need:"Canonical JSON serializer — sorted keys, arrays in order (receipt id ground truth)", weight:55,
+      spec:{arg:"json", vectors:[[{b:1,a:[2,{d:4,c:3}]},'{"a":[2,{"c":3,"d":4}],"b":1}'],[{z:0,y:{x:1,w:2}},'{"y":{"w":2,"x":1},"z":0}']]},
+      hint:REF.canon, solved:{}}),
+    await mkA({need:"Event vector checksum — Σx² mod 97 over integer arrays", weight:12,
+      spec:{arg:"json", vectors:[[[1,2,3],"14"],[[10],"3"],[[],"0"],[[5,5,5],"75"]]},
+      hint:REF.cksum, solved:{}}),
+    await mkA({need:"Receipt id prefixer — lowercase hex → qed:receipt: form", weight:34,
+      spec:{arg:"string", vectors:[["AB12","qed:receipt:ab12"],["00ff","qed:receipt:00ff"]]},
+      hint:REF.prefix, solved:{}})
+  ];
+  pushEvent("BranchDeclared","SEED · CRYPTOCACHE · genesis lineage");
+  S.statements.forEach(st=>pushEvent("StatementSealed", short(st.id)+" · "+st.title));
+  S.asks.forEach(a=>pushEvent("AskPosted","SELF · w="+a.weight+" · "+a.need.slice(0,34)+"…"));
+  renderAll();
+}
+
+/* ============ money ============ */
+function prizeTotal(st){ return st.bounties.reduce((s,b)=>s+b.amt,0); }
+function walletRender(){
+  document.getElementById("walletChip").innerHTML=
+    S.wallet.name+" · <span class='amt'>"+S.wallet.cache+" ₡</span>"+
+    (S.agent.state==="graduated"?"<br>AGENT-K7 · <span class='amt'>"+S.agent.budget+" ₡</span>":"");
+}
+
+/* ============ problems rendering ============ */
+function stCard(st,i){
+  const settled=st.status==="settled";
+  const glyph=settled?"∎":"□";
+  const discChips=st.bounties.map(b=>"<li>"+b.amt+" ₡ · "+b.who+" · "+b.disc.toUpperCase()+"</li>").join("");
+  let zone="";
+  if(!settled){
+    zone+="<div class='workzone'>";
+    zone+="<div class='row'><div><label>Fund this statement (₡ slug)</label><input type='number' id='amt"+i+"' min='1' value='50'></div>"+
+          "<div><label>Disclosure</label><select id='disc"+i+"'><option value='public'>public — auto-share on settlement</option><option value='private'>private — party eyes only</option></select></div>"+
+          "<div><button class='btn ghost' onclick='fundBounty("+i+")'>Fund bounty</button></div></div>";
+    zone+="<label>Solution — "+(st.cls==="test_harness"?"JavaScript, must define solve()":"Lean 4 proof source")+"</label>";
+    zone+="<textarea id='sol"+i+"' spellcheck='false' placeholder='"+(st.cls==="test_harness"?"function solve(x){ … }":"theorem … := by …")+"'></textarea>";
+    zone+="<div class='note'><button class='linkish' onclick='insertHint("+i+")'>"+st.hintLabel+"</button></div>";
+    zone+="<div class='actions' style='padding:12px 0 0'>";
+    const userCommitted=st.commits.some(c=>c.by==="you");
+    if(!st.reveal){
+      zone+="<button class='btn' onclick='commitClaim("+i+")' "+(userCommitted?"disabled":"")+">1 · Commit</button>";
+      zone+="<button class='btn' onclick='revealClaim("+i+")' "+(userCommitted?"":"disabled")+">2 · Reveal &amp; verify</button>";
+    }
+    zone+="</div>";
+    if(st.commits.length) zone+="<div class='note'>commit queue: "+st.commits.map(c=>c.by+" @ "+c.at+" · "+short(c.hash)).join("  ·  ")+"</div>";
+    if(st.lastNote) zone+="<div class='note "+(st.lastNoteKind||"")+"'>"+st.lastNote+"</div>";
+    if(st.reveal){
+      zone+="<div class='receipt'>"+st.reveal.receipt+"</div>";
+      if(st.reveal.window>0){
+        zone+="<div class='note'>optimistic challenge window: <b id='win"+i+"'>"+st.reveal.window+"s</b> — any node may re-run the sealed verifier and publish a conflicting receipt. <button class='linkish' onclick='fastForward("+i+")'>fast-forward window (sandbox)</button></div>";
+      }else{
+        zone+="<div class='actions' style='padding:12px 0 0'><button class='btn gold' onclick='settle("+i+")'>Settle · sweep "+prizeTotal(st)+" ₡</button></div>";
+      }
+    }
+    zone+="</div>";
+  }else{
+    zone="<div class='workzone'><div class='note ok'>SETTLED · winner "+st.winner+" swept "+prizeTotal(st)+" ₡ · "+st.discNote+"</div><div class='receipt'>"+st.reveal.receipt+"</div></div>";
+  }
+  return "<div class='card'><div class='head'>"+
+    "<div class='tombBox"+(settled?" settled":"")+"' aria-hidden='true'>"+glyph+"</div>"+
+    "<div><h3>"+st.title+"</h3><div class='chips'>"+
+    "<span class='chip'>"+st.cls+"</span>"+
+    (st.sim?"<span class='chip dim'>simulated in sandbox</span>":"<span class='chip gold'>real verification</span>")+
+    "<span class='chip dim'>deadline "+st.deadline+"</span>"+
+    "<span class='chip dim'>"+(settled?"∎ settled":"□ open")+"</span>"+
+    "</div></div></div>"+
+    "<div class='body'><p class='informal'>"+st.informal+"</p>"+
+    "<div class='kv'>"+short(st.id)+"<br>seal · "+st.seal+"</div>"+
+    "<div class='prize'><div class='total'>"+prizeTotal(st)+" ₡ aggregated</div><ul>"+discChips+"</ul></div>"+
+    "</div>"+zone+"</div>";
+}
+function renderProblems(){
+  document.getElementById("stmtList").innerHTML=S.statements.map(stCard).join("");
+}
+
+/* ============ problem actions ============ */
+function insertHint(i){ document.getElementById("sol"+i).value=S.statements[i].hint; }
+function fundBounty(i){
+  const st=S.statements[i];
+  const amt=parseInt(document.getElementById("amt"+i).value,10);
+  const disc=document.getElementById("disc"+i).value;
+  if(!(amt>0)||amt>S.wallet.cache){ st.lastNote="fund failed: amount must be positive and within your slug balance"; st.lastNoteKind="err"; renderAll(); return; }
+  S.wallet.cache-=amt;
+  st.bounties.push({who:"YOU", amt, disc});
+  st.lastNote="bounty escrowed · "+amt+" ₡ · "+disc+" — you may also race your own bounty: that is the hedge";
+  st.lastNoteKind="ok";
+  pushEvent("BountyPosted", short(st.id)+" · "+amt+" ₡ · "+disc);
+  renderAll();
+}
+async function commitClaim(i){
+  const st=S.statements[i];
+  const sol=document.getElementById("sol"+i).value;
+  if(!sol.trim()){ st.lastNote="commit refused: empty solution"; st.lastNoteKind="err"; renderAll(); return; }
+  const nonce=Math.random().toString(36).slice(2,10);
+  const hash=await sha256(sol+"|"+S.wallet.key+"|"+nonce);
+  st.commits.push({by:"you", hash, nonce, sol, at:new Date().toISOString().slice(11,19)});
+  st.lastNote="committed · sha256(solution ‖ key ‖ nonce) = "+short(hash)+" — priority attaches to this commit, not to your reveal";
+  st.lastNoteKind="ok";
+  pushEvent("ClaimCommit", short(st.id)+" · you · "+short(hash));
+  renderAll();
+}
+function buildReceipt(st, by, result, extra){
+  return "VerificationReceipt (sandbox)\nstatement  "+short(st.id)+"\nclaimant   "+by+"\nclass      "+st.cls+(st.sim?"  [SIMULATED RUN — real check: reference/verify_lean.py]":"  [REAL RUN — executed in this browser]")+"\ntoolchain  "+st.seal.split("·")[0].trim()+"\nresult     "+result+"\n"+extra;
+}
+function revealClaim(i){
+  const st=S.statements[i];
+  const mine=st.commits.find(c=>c.by==="you");
+  if(!mine)return;
+  const sol=document.getElementById("sol"+i).value;
+  if(sol!==mine.sol){ st.lastNote="reveal refused: solution does not open your commit (bytes differ). Reveal exactly what you committed."; st.lastNoteKind="err"; renderAll(); return; }
+  pushEvent("ClaimReveal", short(st.id)+" · you");
+  let verdict;
+  if(st.cls==="test_harness"){
+    verdict=runHarness(sol, st.spec);
+  }else{
+    const bad=/sorry/.test(sol)||!sol.trim();
+    verdict={ok:!bad, msg:bad?"kernel rejected: sorryAx present or empty proof":"kernel accepted · axioms: [propext, Classical.choice, Quot.sound] ⊆ whitelist"};
+  }
+  if(verdict.ok){
+    st.reveal={by:"you", window:20, receipt:buildReceipt(st,"you","ACCEPTED",verdict.msg)};
+    st.lastNote=""; startWindow(i);
+    pushEvent("VerificationReceipt", short(st.id)+" · ACCEPTED");
+  }else{
+    st.commits=st.commits.filter(c=>c!==mine);
+    st.lastNote="verification REJECTED — "+verdict.msg+" · your commit is burned; the queue proceeds";
+    st.lastNoteKind="err";
+    pushEvent("VerificationReceipt", short(st.id)+" · REJECTED");
+  }
+  renderAll();
+}
+function startWindow(i){
+  const st=S.statements[i];
+  const t=setInterval(()=>{
+    if(!st.reveal||st.status==="settled"){clearInterval(t);return;}
+    st.reveal.window=Math.max(0,st.reveal.window-1);
+    const el=document.getElementById("win"+i);
+    if(el)el.textContent=st.reveal.window+"s";
+    if(st.reveal.window<=0){clearInterval(t);renderAll();}
+  },1000);
+}
+function fastForward(i){ const st=S.statements[i]; if(st.reveal)st.reveal.window=0; renderAll(); }
+function settle(i){
+  const st=S.statements[i];
+  if(!st.reveal||st.reveal.window>0)return;
+  st.status="settled";
+  st.winner=st.reveal.by==="you"?"YOU":"AGENT-K7";
+  const total=prizeTotal(st);
+  if(st.reveal.by==="you")S.wallet.cache+=total; else S.agent.budget+=total;
+  const anyPub=st.bounties.some(b=>b.disc==="public");
+  const anyPriv=st.bounties.some(b=>b.disc==="private");
+  st.discNote=(anyPub?"solution published to federation (public flags present)":"solution delivered to private parties only")+(anyPub&&anyPriv?" · private funders received party delivery":"");
+  pushEvent("Settlement", short(st.id)+" · "+st.winner+" · "+total+" ₡ · □→∎");
+  renderAll();
+}
+
+/* ============ asks ============ */
+function askCard(a,i){
+  const done=a.solved.you||a.solved.agent;
+  return "<div class='card'><div class='head'><div class='tombBox'"+(done?" style='color:var(--gold)'":"")+">"+(done?"∎":"□")+"</div><div><h3>SELF · "+a.need+"</h3><div class='chips'><span class='chip'>test_harness</span><span class='chip gold'>endorsement weight "+a.weight+"</span><span class='chip dim'>no escrow · badge only</span>"+(a.solved.you?"<span class='chip'>answered by YOU</span>":"")+(a.solved.agent?"<span class='chip'>answered by AGENT-K7</span>":"")+"</div></div></div>"+
+  "<div class='workzone'><label>Answer — JavaScript, must define solve()</label><textarea id='asol"+i+"' spellcheck='false'></textarea>"+
+  "<div class='note'><button class='linkish' onclick='insertAskHint("+i+")'>insert reference answer (sandbox exploration)</button></div>"+
+  "<div class='actions' style='padding:12px 0 0'><button class='btn' onclick='solveAsk("+i+",\"you\")' "+(a.solved.you?"disabled":"")+">Submit answer · free</button></div>"+
+  (a.note?"<div class='note "+(a.noteKind||"")+"'>"+a.note+"</div>":"")+"</div></div>";
+}
+function insertAskHint(i){ document.getElementById("asol"+i).value=S.asks[i].hint; }
+function solveAsk(i, who, codeOverride){
+  const a=S.asks[i];
+  const code=codeOverride!==undefined?codeOverride:document.getElementById("asol"+i).value;
+  const v=runHarness(code, a.spec);
+  if(v.ok){
+    a.solved[who]=true;
+    S.badges.push({holder:who, need:a.need, weight:a.weight});
+    a.note=(who==="you"?"badge awarded to YOU":"badge awarded to AGENT-K7")+" · weight "+a.weight+" (inherited from endorsement) · "+v.msg;
+    a.noteKind="ok";
+    pushEvent("BadgeAwarded", (who==="you"?"YOU":"AGENT-K7")+" · w="+a.weight+" · "+a.need.slice(0,30)+"…");
+  }else{
+    a.note="answer rejected — "+v.msg;
+    a.noteKind="err";
+    pushEvent("VerificationReceipt","ask · REJECTED · "+(who==="you"?"YOU":"AGENT-K7"));
+  }
+  renderAll();
+  return v.ok;
+}
+function renderAsks(){
+  document.getElementById("askList").innerHTML=S.asks.map(askCard).join("");
+  const shelf=S.badges.length?
+    S.badges.map(b=>"<div class='badge'>∎ "+(b.holder==="you"?"YOU":"AGENT-K7")+" · <span class='w'>w"+b.weight+"</span> · "+b.need.slice(0,26)+"…</div>").join("")
+    :"<div class='note'>no badges yet — answer an ask, or train the agent</div>";
+  document.getElementById("badgeShelf").innerHTML=shelf;
+}
+
+/* ============ agent ============ */
+function alog(line){
+  const el=document.getElementById("agentLog");
+  el.textContent+= "\n"+line;
+  el.scrollTop=el.scrollHeight;
+}
+function agentBadgeWeight(){ return S.badges.filter(b=>b.holder==="agent").reduce((s,b)=>s+b.weight,0); }
+function renderAgent(){
+  const a=S.agent;
+  document.getElementById("agentStats").innerHTML=
+    "<span>state · "+a.state+"</span><span>badges · "+S.badges.filter(b=>b.holder==="agent").length+"</span><span>résumé weight · "+agentBadgeWeight()+"</span><span>budget · "+a.budget+" ₡</span>";
+  document.getElementById("btnGraduate").disabled=!(a.state==="trained");
+  document.getElementById("btnTrain").disabled=(a.state!=="dormant");
+}
+function trainAgent(){
+  if(S.agent.state!=="dormant")return;
+  S.agent.state="training"; renderAgent();
+  alog("── SCRIPTED SIMULATION · training run begins ──");
+  alog("AGENT-K7 keygen · zero-spend arena: asks only");
+  const steps=[
+    [900, ()=>{alog("attempting ask[checksum] with candidate v1 (mod 96)…");}],
+    [2100,()=>{const ok=solveAsk(1,"agent",REF.cksumBuggy);alog(ok?"unexpected pass":"REJECTED — vector failed. residue recorded as data, not error. patching modulus…");}],
+    [3400,()=>{const ok=solveAsk(1,"agent",REF.cksum);alog(ok?"ACCEPTED — badge earned (w12)":"still failing");}],
+    [4900,()=>{alog("attempting ask[canonical JSON]…");const ok=solveAsk(0,"agent",REF.canon);alog(ok?"ACCEPTED — badge earned (w55)":"rejected");}],
+    [6400,()=>{alog("attempting ask[receipt prefixer]…");const ok=solveAsk(2,"agent",REF.prefix);alog(ok?"ACCEPTED — badge earned (w34)":"rejected");}],
+    [7600,()=>{S.agent.state="trained";alog("training complete · résumé weight "+agentBadgeWeight()+" · badge record is public and verifiable");alog("AGENT-K7 is eligible for graduation — that decision is yours, not the protocol's.");renderAll();}]
+  ];
+  steps.forEach(([d,f])=>setTimeout(f,d));
+}
+function graduateAgent(){
+  if(S.agent.state!=="trained")return;
+  S.agent.state="graduated"; S.agent.budget=500;
+  alog("── GRADUATION · trust extended by operator ──");
+  alog("500 ₡ slug budget attached · entering the bounty arena");
+  pushEvent("BranchDeclared","AGENT-K7 graduated · budget attached");
+  renderAll();
+  setTimeout(agentRace, 9000);
+}
+function agentRace(){
+  const i=S.statements.findIndex(st=>st.cls==="test_harness"&&st.status!=="settled"&&!st.reveal);
+  if(i<0){alog("no open harness statements left — the human swept the arena first");return;}
+  const st=S.statements[i];
+  alog("targeting "+short(st.id)+" · "+st.title+" · prize "+prizeTotal(st)+" ₡");
+  sha256(REF.isqrt+"|agent|n").then(h=>{
+    st.commits.push({by:"AGENT-K7", hash:h, at:new Date().toISOString().slice(11,19), sol:null});
+    pushEvent("ClaimCommit", short(st.id)+" · AGENT-K7 · "+short(h));
+    alog("committed · you have ~8s to beat the reveal — the race is real");
+    renderAll();
+    setTimeout(()=>{
+      if(st.status==="settled"||st.reveal){alog("beaten to settlement — commit expires unrevealed");return;}
+      const sol=(st.spec.arg==="bigint")?REF.isqrt:REF.brackets;
+      const v=runHarness(sol, st.spec);
+      pushEvent("ClaimReveal", short(st.id)+" · AGENT-K7");
+      if(v.ok){
+        st.reveal={by:"agent", window:8, receipt:buildReceipt(st,"AGENT-K7","ACCEPTED",v.msg)};
+        pushEvent("VerificationReceipt", short(st.id)+" · ACCEPTED");
+        alog("revealed · ACCEPTED · challenge window open");
+        renderAll(); startWindow(i);
+        const wait=setInterval(()=>{
+          if(st.status==="settled"){clearInterval(wait);return;}
+          if(st.reveal&&st.reveal.window<=0){clearInterval(wait);settle(i);alog("settled · swept "+prizeTotal(st)+" ₡ into agent budget · □→∎");}
+        },500);
+      }
+    },8000);
+  });
+}
+
+/* ============ relays / render ============ */
+function renderRelays(){
+  S.relays.forEach((r,i)=>{
+    document.getElementById("relay"+i).innerHTML=r.map(e=>"<li><b>"+e.at+"</b> "+e.type+" · "+e.detail+"</li>").join("");
+  });
+}
+function renderAll(){ renderProblems(); renderAsks(); renderAgent(); walletRender(); }
+
+/* ============ nav ============ */
+document.querySelectorAll("nav button").forEach(b=>{
+  b.onclick=()=>{
+    document.querySelectorAll("nav button").forEach(x=>x.classList.remove("on"));
+    document.querySelectorAll(".panel").forEach(x=>x.classList.remove("on"));
+    b.classList.add("on");
+    document.getElementById("panel-"+b.dataset.tab).classList.add("on");
+  };
+});
+document.getElementById("btnTrain").onclick=trainAgent;
+document.getElementById("btnGraduate").onclick=graduateAgent;
+window.fundBounty=fundBounty;window.commitClaim=commitClaim;window.revealClaim=revealClaim;
+window.fastForward=fastForward;window.settle=settle;window.insertHint=insertHint;
+window.solveAsk=solveAsk;window.insertAskHint=insertAskHint;
+
+seed();
+</script>
+</body>
+</html>

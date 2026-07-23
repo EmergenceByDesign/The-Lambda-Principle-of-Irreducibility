@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QED v0.2 — A Federated Proof-Bounty Protocol · CRYPTOCACHE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Limelight&family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0B0B0B;--bone:#F2EFE8;--gray:#6E6A61;--line:rgba(11,11,11,.18);--gold:#9A7B2D}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--bone);color:var(--ink);font:16px/1.65 'IBM Plex Sans',sans-serif}
+a{color:var(--ink)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.masthead{background:var(--ink);color:var(--bone);padding:56px 24px 48px;text-align:center}
+.masthead .silo{font:600 12px 'IBM Plex Mono',monospace;letter-spacing:.42em;color:var(--bone);opacity:.7}
+.masthead h1{font:400 clamp(40px,9vw,88px)/1.02 'Limelight',cursive;letter-spacing:.06em;margin:18px 0 10px}
+.masthead .sub{font:400 14px 'IBM Plex Mono',monospace;letter-spacing:.22em;text-transform:uppercase;opacity:.85}
+.glyphline{font-size:30px;letter-spacing:.35em;margin-top:26px}
+.paper{max-width:760px;margin:0 auto;padding:56px 24px 96px}
+.meta{display:flex;justify-content:space-between;gap:12px;font:400 12px 'IBM Plex Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--gray);border-bottom:2px solid var(--ink);padding-bottom:14px;margin-bottom:40px;flex-wrap:wrap}
+h2{font:400 26px 'Limelight',cursive;letter-spacing:.05em;margin:52px 0 14px;border-top:1px solid var(--line);padding-top:34px}
+h2:first-of-type{border-top:0;padding-top:0;margin-top:0}
+h2 .n{color:var(--gold);margin-right:12px}
+h3{font:600 15px 'IBM Plex Sans',sans-serif;letter-spacing:.04em;margin:24px 0 8px}
+p{margin:0 0 14px}
+p.abstract{font-size:17px;border-left:3px solid var(--ink);padding-left:18px}
+ol,ul{margin:0 0 14px 22px}
+li{margin-bottom:8px}
+code,.mono{font-family:'IBM Plex Mono',monospace;font-size:.92em}
+.field{background:rgba(11,11,11,.05);border:1px solid var(--line);padding:14px 16px;margin:0 0 14px;font-family:'IBM Plex Mono',monospace;font-size:13px;line-height:1.75}
+.field b{letter-spacing:.06em}
+.gold{color:var(--gold)}
+.tomb{font-weight:700}
+.endmark{text-align:center;font-size:34px;letter-spacing:.4em;margin-top:64px}
+.footer{background:var(--ink);color:var(--bone);text-align:center;padding:28px 20px;font:400 12px 'IBM Plex Mono',monospace;letter-spacing:.18em;text-transform:uppercase}
+.footer a{color:var(--bone)}
+@media print{.masthead{padding:24px} .footer{display:none}}
+.statusbar{background:var(--gold);color:var(--ink);text-align:center;font:600 11px 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;padding:9px 14px}
+.jump{display:flex;flex-wrap:wrap;gap:0;border-bottom:2px solid var(--ink)}
+.jump a{flex:1;min-width:120px;text-align:center;padding:11px 6px;font:600 11px 'IBM Plex Mono',monospace;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;border-right:1px solid var(--line);color:var(--gray)}
+.jump a:hover{background:var(--ink);color:var(--bone)}
+table{width:100%;border-collapse:collapse;margin:0 0 18px;font:400 12.5px 'IBM Plex Mono',monospace}
+th{background:var(--ink);color:var(--bone);text-align:left;padding:8px 10px;font-weight:600;letter-spacing:.08em;font-size:11px;text-transform:uppercase}
+td{border-bottom:1px solid var(--line);padding:8px 10px;vertical-align:top}
+tr:nth-child(even) td{background:rgba(11,11,11,.03)}
+.s-conf{color:#2D6A3E;font-weight:600}.s-spec{color:var(--gold);font-weight:600}
+.s-not{color:var(--bad);font-weight:600}.s-dir{color:var(--gray);font-weight:600}
+.callout{border:2px solid var(--bad);padding:14px 16px;margin:0 0 18px;background:rgba(138,46,46,.06)}
+.callout b{color:var(--bad)}
+.pull{border-left:3px solid var(--gold);padding:8px 0 8px 18px;margin:0 0 16px;font-size:17px}
+</style>
+</head>
+<body>
+<header class="masthead">
+  <div class="silo">CRYPTOCACHE //</div>
+  <h1>QED</h1>
+  <div class="sub">A Federated Proof-Bounty Protocol</div>
+  <div class="glyphline" aria-hidden="true">□ → ∎</div>
+</header>
+<div class="statusbar">Protocol v0.2 · draft · pre-alpha specification · QED certifies nothing · do not place value at risk</div>
+<div class="jump">
+  <a href="#paper">Whitepaper</a><a href="#channels">Channels</a><a href="#claims">Claim Table</a><a href="#risk">Risk</a><a href="index.html">Demonstrator</a>
+</div>
+<main class="paper" id="paper">
+  <div class="meta"><span>Protocol version 0.2 · draft</span><span>Supersedes v0.1</span><span><a href="qed-protocol-v0.2.zip">Download bundle</a></span></div>
+
+  <h2>Reading this document</h2>
+  <p>QED is an index and a set of shared abstractions, not an assurance provider. It verifies <b>representation</b> — that artifacts are what they claim to be, that references resolve, that parameters are declared, that signatures attribute. It does not verify that any particular choice is wise, safe, or worth funding. Those are judgments, and they belong to publishers, reviewers, and users.</p>
+  <p class="pull">QED verifies that a profile is the profile it claims to be. QED does not verify that adopting it is wise.</p>
+  <p>Every normative claim carries an id and resolves in the <a href="#claims">claim table</a>. A claim with neither executable evidence nor an explicit <code>declared-direction</code> tag is a defect in this document.</p>
+
+  <h2>Abstract</h2>
+  <p class="abstract">QED is a protocol for funding the solution of machine-verifiable problems. Any party may seal a problem statement whose correctness criterion is decidable by a specified verifier; any party may escrow value against that statement's hash. Bounties aggregate: many funders may attach to one statement, and one accepted solution sweeps every bounty attached to it. Settlement is mechanical — a solution wins if and only if a deterministic, re-runnable verifier accepts it under sealed conditions. There is no jury, no oracle of opinion, and no administrator with discretionary control over outcomes. QED certifies nothing; it makes independently authored options legible, comparable, attributable, and difficult to misrepresent.</p>
+
+  <h2><span class="n">1</span>Motivation</h2>
+  <p>When a problem can be precisely stated, the value of its solution is a prediction about the compute and effort needed to reach it. Today that spend is managed retail: an operator meters tokens, babysits agents, and absorbs the risk of the search alone. QED makes the same spend a collective instrument. Because bounties aggregate per statement, hard problems accumulate subscribers, and one accepted proof pays from many escrows at once. The poster may hedge natively by funding and also racing.</p>
+  <p>This is distinct from proving networks, which sell computation of statements already known to be provable, and from prediction markets, which need an oracle to declare outcomes. Here the outcome <em>is</em> the artifact, and the artifact certifies itself against a check anyone can re-run.</p>
+
+  <h2><span class="n">2</span>Design principles</h2>
+  <ol>
+    <li><b>Protocol, not platform.</b> No privileged operator. Any conforming implementation is a node.</li>
+    <li><b>Deterministic settlement.</b> Trust no receipt you cannot re-derive.</li>
+    <li><b>Representation, not endorsement.</b> QED checks what an artifact <em>is</em>, never whether adopting it is wise.</li>
+    <li><b>Declared, not neutral.</b> There is no neutral presentation — ordering, defaults, and placement are editorial. Instances declare their rules and log changes rather than claiming a neutrality no index can have.</li>
+    <li><b>Transactional disclosure.</b> Parties to a settlement hold the solution first because they are parties to it.</li>
+    <li><b>Currency and chain agnostic.</b> Escrow is an interface; chains are adapters.</li>
+    <li><b>Keys, not kinds.</b> A keypair with a record is a keypair with a record.</li>
+  </ol>
+
+  <h2 id="channels"><span class="n">3</span>Channels</h2>
+  <p>Statements live in exactly one channel, sealed into the statement hash and unforgeable after publication.</p>
+  <table>
+    <tr><th></th><th>PROFILED</th><th>INLINE</th></tr>
+    <tr><td>Parameters</td><td>Inherited from a referenced profile hash</td><td>Declared in the statement itself</td></tr>
+    <tr><td>Conformance claim</td><td>Whatever the profile declares, against a named suite</td><td>None unless the author publishes one</td></tr>
+    <tr><td>Who publishes assessments</td><td>Profile publisher; any reviewer</td><td>Statement author; any reviewer</td></tr>
+    <tr><td>Referenced assessment artifacts</td><td>Attestations and objections indexed against the profile</td><td>Same, indexed against the statement</td></tr>
+    <tr><td>Aggregation</td><td>Within the statement only</td><td>Within the statement only</td></tr>
+  </table>
+  <p><b>Neither channel is privileged.</b> PROFILED does not mean approved, audited, or recommended — it means the parameters came from a published artifact others can inspect and argue with. INLINE does not mean unsafe — it means parameters are declared locally and the reader evaluates them directly.</p>
+  <p>Bounties never aggregate across statements, and a statement never changes channel, so a funder sees the exact parameter set before any value moves. This is the mechanical property that makes an open parameter space offerable rather than a trap.</p>
+
+  <h3>What holds in both channels</h3>
+  <p>The universal set is deliberately tiny. It contains no safety parameter, no minimum quorum, and nothing narrowing what a user may choose — only what keeps an artifact legible and its names honest.</p>
+  <div class="field"><b>L1 · Completeness</b> — every settlement-affecting parameter is inside the hash. No implicit defaults.<br>
+  <b>L2 · Channel declaration</b> — <code>channel</code> is sealed; PROFILED carries a resolving profile hash whose parameters match.<br>
+  <b>L3 · Naming accuracy</b> — constrained vocabulary (§7). Any configuration stays permitted; what is constrained is which words it may use about itself.</div>
+  <p>Build an escrow that pays on a timer with no verification — permitted. It simply cannot borrow a word that tells downstream readers a verifier ran.</p>
+
+  <h2><span class="n">4</span>Artifacts</h2>
+  <p>Canonical JSON under <b>RFC 8785 (JCS)</b>; identifiers are <code>qed:&lt;type&gt;:</code> prefixed to the SHA-256 of the canonical form; signatures are <b>ed25519</b> over the canonical body. Determinism here is not a preference: if two nodes disagree on encoding they assign different ids to the same object and the federation splits silently. <code>[QED-ID-001]</code></p>
+  <h3>4.1 SealedStatement</h3>
+  <p>Sealed at publication; the id commits to every settlement-affecting field. Errors are corrected only by supersession under a new hash, which deliberately breaks bounty aggregation. <code>[QED-SEAL-001]</code></p>
+  <h3>4.2 Bounty</h3>
+  <p>Escrow bound to a statement id. The set of live bounties is the prize. <code>[QED-AGG-001]</code></p>
+  <h3>4.3 Claim</h3>
+  <p>Commit posts SHA-256(solution ‖ key ‖ nonce); reveal opens it. Priority attaches to the first valid commit <b>as ordered by the settlement chain of the escrow in question</b> — not globally across the federation. Content hashes prove integrity, not chronology; relays cannot establish global order without consensus, and QED does not claim one. <code>[QED-ORDER-001, scoped]</code></p>
+  <h3>4.4 VerificationReceipt</h3>
+  <p>Portable, and travels away from the solution it describes — which is exactly why <code>accepted</code> is vocabulary-constrained. <code>[QED-VERIFY-004]</code></p>
+  <h3>4.5 Profile</h3>
+  <p>A content-addressed, completely declared parameter set with a publisher identity. A profile makes a <em>completeness</em> claim, which is checkable. It makes no safety claim, which would not be. <code>[QED-PROF-001]</code></p>
+  <h3>4.6 Ask, Badge, BranchLineage — non-normative</h3>
+  <p>Practice, not protocol claims. v0.2 makes no claim about badge weight, sybil resistance, or portable standing; ranking is a view policy each client declares, the way spam filtering is not part of SMTP. <code>[QED-STAND-001]</code></p>
+
+  <h2><span class="n">5</span>Federation</h2>
+  <p>Signed events over dumb relays: relays store and forward, clients verify everything. Relays impose no order beyond their own receipt timestamps; where ordering is consequential, the settlement chain is authoritative. Volume management — flooding, spam, ranking — is a client concern, not a protocol one.</p>
+
+  <h2><span class="n">6</span>The evidence graph</h2>
+  <p>A profile is a node with signed edges: publisher signature, conformance claims, test-suite results, reviews and audits, objections and counterexamples, successor profiles, adoption records.</p>
+  <p>QED records these relationships and preserves attribution. It does not average, score, or resolve them. <b>"Conforming" means exactly one thing: this implementation produced the declared results for this identified test suite.</b> It does not mean secure, audited, suitable, or endorsed. <code>[QED-CONF-001]</code></p>
+  <p>An objection is a first-class artifact for the same reason a receipt is: criticism that stays attached to what it criticizes, carries a signature, and can be reproduced is worth more than criticism that evaporates into a thread.</p>
+
+  <h2><span class="n">7</span>Vocabulary discipline</h2>
+  <p>Some names are load-bearing for readers who cannot see what produced them. The rule: <b>a name is constrained when a reader can act on it without being able to inspect its provenance.</b></p>
+  <table>
+    <tr><th>Name</th><th>Constraint</th></tr>
+    <tr><td><code>Settlement</code></td><td>Requires a referenced VerificationReceipt. Releases without one emit <code>Release</code>, reason recorded.</td></tr>
+    <tr><td><code>VerificationReceipt: accepted</code></td><td>Requires that a verifier actually ran under the sealed toolchain.</td></tr>
+    <tr><td><code>conforming</code></td><td>Declared results reproduced for an identified suite. Nothing more.</td></tr>
+    <tr><td><code>sealed</code></td><td>Every settlement-affecting parameter is in the hash.</td></tr>
+    <tr><td>a <code>profile</code> reference</td><td>The statement's parameters match the referenced profile.</td></tr>
+    <tr><td><code>Badge</code></td><td>Self-issued without an underlying receipt must be marked self-attested.</td></tr>
+  </table>
+  <p><b>Scope, stated honestly.</b> This is a conformance property, not a protocol guarantee. Nothing prevents a hostile node emitting a misnamed event, just as nothing in SMTP prevents a forged sender. What QED provides is <em>attribution</em> — every artifact is signed, so a false receipt has a key attached — and <em>cheap falsification</em>, since verification is deterministic and anyone may publish a conflicting receipt. Conformance vectors test for naming discipline, so an implementation claiming conformance while misnaming events is mechanically caught. <code>[QED-NAME-001]</code></p>
+
+  <h2><span class="n">8</span>Verifier classes</h2>
+  <p><b><code>lean4_kernel</code></b> — accepted iff the pinned kernel accepts a proof of the explicitly bound target theorem, with no <code>sorry</code>, a complete axiom record within the whitelist, imports within the manifest, inside the sealed container, within resource limits. Each condition is an adversarial corpus case.</p>
+  <p><b><code>test_harness</code></b> — <b>not offered as a public verifier class in v1.0.</b> Retained as tooling for conformance and corpus execution, because arbitrary user-submitted code executed by infrastructure is a sandbox-escape surface deserving its own hardening cycle. <code>[QED-HARNESS-001, declared-direction]</code></p>
+
+  <h2><span class="n">9</span>The adversarial corpus</h2>
+  <p>Append-only, federation-wide: hostile inputs each paired with a required verdict. An implementation is conforming against it only by reproducing every verdict exactly. It opens with all 24 failures identified in independent review of v0.1 — missing axiom output, import-manifest violation, unbound target theorem, <code>sorryAx</code>, malformed digests, canonicalization divergence, signature substitution, replayed claims and receipts, zero quorum, duplicate attestors, repeated reveal after rejection, refund during active settlement, collection exhaustion.</p>
+  <p>Because the corpus is federation-wide and grows monotonically, a discovery made once immunizes every implementation and fork against that class permanently. This is the mechanism by which criticism becomes capital, and it is the home of the standing red-team invitation.</p>
+  <p>Append-only has one stated limit: material that is illegal, malware-bearing, or targeted at a person may be removed. Removals are themselves logged artifacts recording what was removed and why — more auditable than a promise never to remove anything, a promise that breaks the first time it is tested.</p>
+
+  <h2><span class="n">10</span>Escrow interface</h2>
+  <p>Adapters implement four verbs: <code>fund</code>, <code>refund</code>, <code>commit</code>/<code>reveal</code> anchoring, <code>settle</code>. The interface is normative; the reference EVM contract is not — it is unaudited, testnet-grade, and known to contain the settlement defects catalogued below.</p>
+  <div class="callout"><b>Cross-chain aggregation is not implemented and not claimed.</b> A common interface cannot make a sweep atomic across unrelated chains; that needs a canonical settlement authority QED does not have. <code>[QED-XCHAIN-001]</code><br><br>
+  <b>Private settlement is not implemented and not claimed.</b> The v0.1 paper described a sealed-delivery mechanism with no specified encryption, key exchange, fair delivery, or payment binding; on an EVM adapter the solution is public calldata regardless of intent. The disclosure flag records a funder's expectation and is honoured socially, not cryptographically. <code>[QED-PRIV-001]</code></div>
+
+  <h2><span class="n">11</span>The SELF namespace</h2>
+  <p>Standing meta-statements about the protocol, carrying Asks and never bounties. Genesis Asks ship with this release, including the identity gate: <em>produce a conforming canonicalization, artifact-id, and signature library in a language other than Python that reproduces every conformance vector byte-for-byte.</em> Cross-implementation agreement cannot be self-certified by a single author, which makes it the natural first collective task.</p>
+  <p>Because Asks are free to attempt and settle deterministically, they double as a zero-spend proving ground for agents: train on Asks, accumulate a public record, be graduated to a budget by whoever chooses to trust it. Graduation is an act of trust between parties, never a protocol permission.</p>
+
+  <h2 id="claims"><span class="n">12</span>Normative claim table</h2>
+  <p>Deliberately unflattering. It is the mechanism preventing the paper from describing software that does not exist — the failure mode that produced most of the v0.1 review findings.</p>
+  <table>
+    <tr><th>Claim</th><th>Statement</th><th>Status</th></tr>
+    <tr><td>QED-ID-001</td><td>Ids are SHA-256 over RFC 8785 JCS canonical form</td><td class="s-spec">specified</td></tr>
+    <tr><td>QED-ID-002</td><td>Two independent implementations agree on every id</td><td class="s-not">not-implemented</td></tr>
+    <tr><td>QED-ID-003</td><td>ed25519 over canonical body, signature envelope excluded</td><td class="s-spec">specified</td></tr>
+    <tr><td>QED-SEAL-001</td><td>Every settlement-affecting parameter is inside the hash</td><td class="s-spec">specified</td></tr>
+    <tr><td>QED-CHAN-001</td><td>A statement's channel is sealed and cannot change</td><td class="s-spec">specified</td></tr>
+    <tr><td>QED-PROF-001</td><td>A PROFILED statement matches its referenced profile</td><td class="s-spec">specified</td></tr>
+    <tr><td>QED-AGG-001</td><td>One solution sweeps every live bounty on that statement</td><td class="s-not">not-implemented</td></tr>
+    <tr><td>QED-VERIFY-002</td><td>Imports restricted to <code>import_manifest</code></td><td class="s-spec">specified</td></tr>
+    <tr><td>QED-VERIFY-003</td><td>Axiom record complete and bound to explicit targets</td><td class="s-spec">specified</td></tr>
+    <tr><td>QED-VERIFY-004</td><td>Receipts are signed and independently verifiable</td><td class="s-not">not-implemented</td></tr>
+    <tr><td>QED-VERIFY-005</td><td><code>cpu_seconds</code> is enforced</td><td class="s-spec">specified</td></tr>
+    <tr><td>QED-VERIFY-007</td><td>Submissions execute under layered isolation</td><td class="s-not">not-implemented</td></tr>
+    <tr><td>QED-HARNESS-001</td><td><code>test_harness</code> as a public verifier class</td><td class="s-dir">declared-direction</td></tr>
+    <tr><td>QED-SETTLE-001</td><td>A valid proof releases escrow</td><td class="s-not">not-implemented</td></tr>
+    <tr><td>QED-SETTLE-002</td><td>An invalid claim cannot settle</td><td class="s-not">not-implemented</td></tr>
+    <tr><td>QED-SETTLE-003</td><td>Settlement always executes within block limits</td><td class="s-not">not-implemented</td></tr>
+    <tr><td>QED-SETTLE-004</td><td>Statement registration is authenticated</td><td class="s-not">not-implemented</td></tr>
+    <tr><td>QED-SETTLE-005</td><td>Attestation state keyed per reveal</td><td class="s-not">not-implemented</td></tr>
+    <tr><td>QED-SETTLE-006</td><td>A live reveal locks funds against refund</td><td class="s-not">not-implemented</td></tr>
+    <tr><td>QED-ORDER-001</td><td>First valid commit wins</td><td class="s-dir">scoped to per-escrow chain order</td></tr>
+    <tr><td>QED-XCHAIN-001</td><td>Cross-chain atomic sweep</td><td class="s-dir">declared-direction</td></tr>
+    <tr><td>QED-PRIV-001</td><td>Private settlement</td><td class="s-dir">declared-direction</td></tr>
+    <tr><td>QED-CONF-001</td><td>"Conforming" means results reproduced for a named suite</td><td class="s-spec">specified</td></tr>
+    <tr><td>QED-NAME-001</td><td>Constrained vocabulary is honoured</td><td class="s-spec">specified</td></tr>
+    <tr><td>QED-IDX-001</td><td>Inclusion and ordering rules declared and inspectable</td><td class="s-spec">specified</td></tr>
+    <tr><td>QED-STAND-001</td><td>Badge weight resists sybil, confers portable standing</td><td class="s-dir">non-normative</td></tr>
+  </table>
+  <p><b>Zero claims are marked conforming, and that is the correct reading of v0.2.</b> Conformance requires executable evidence against an identified suite, and the suites are being written. A release reporting conforming claims today would be reporting the author's confidence — exactly what this table exists to exclude. The full table with evidence notes ships in the bundle as <code>CLAIM_TABLE.md</code>.</p>
+
+  <h2 id="risk"><span class="n">13</span>Risk</h2>
+  <div class="callout"><b>Protocol version 0.2 is pre-alpha specification.</b> The reference escrow contains known exploitable settlement paths. The reference verifier does not enforce several policies it documents. No independent security review has been completed. <b>Do not place value at risk against this release.</b> That is not a disclaimer, it is a description.</div>
+  <p><b>The one claim worth making:</b> QED holds no discretionary control over settlement. It cannot reverse a verification, seize an escrow, favour a claimant, or settle by fiat. That is a structural property anyone can check by reading the contract and the verifier — unlike "neutral," which is a disposition nobody can verify.</p>
+  <h3>If you fund a bounty</h3>
+  <p>Your escrow may be unrecoverable through contract defects, chain failure, or adapter bugs. Refund conditions are set per statement and may not behave as you expect. Parameters were chosen by the statement's author, not by QED; in the INLINE channel they may be anything at all. The problem may never be solved — that is the normal case, not a failure. Your downside is bounded by what you escrowed, and some statements offer a refund path.</p>
+  <h3>If you solve a bounty</h3>
+  <p>Your exposure is <b>larger and less reversible</b>, and this is the section to read twice. <b>Revelation cannot be undone</b> — you disclose work in order to claim, and if settlement then fails through contract defects, a hostile funder, an adapter failure, or a parameter you did not read, the work is disclosed and you hold nothing. Compute spent on a failed search is unrecoverable. A verified claim can still fail to settle: verification and settlement are different systems. Another party may commit before you, ordered by the settlement chain rather than by when you started work. And the disclosure flag is social, not cryptographic — on an EVM adapter your solution is public calldata regardless of any flag.</p>
+  <h3>Presentation</h3>
+  <p>There is no neutral index. Ordering, defaults, and placement are editorial. QED instances declare their rules rather than claiming a neutrality no index can have; rules are inspectable and user-overridable, and the seed instance reserves the operator freedom any self-hosted instance has, including inclusion, exclusion, and removal. The attempt is unbiased; the right is reserved; material changes are logged.</p>
+  <h3>Reporting a vulnerability</h3>
+  <p>Two channels, decided in advance. Anything that <b>cannot move value</b> — verifier gaps, canonicalization divergence, spec defects, corpus additions — <b>publish immediately and publicly</b>; that is the intended engine, not an exception to it. Anything that <b>can move value</b> while value is at risk — escrow drains, settlement bypasses — <b>report privately first</b>, with a stated window before publication. Paying more for responsible disclosure of fund-bearing defects is a stronger openness signal than paying nothing and hoping.</p>
+  <h3>Copying this</h3>
+  <p>MIT, and self-hosting is the point. Anyone may run an instance, publish profiles, fork the protocol, or host a modified copy — including a hostile one. <b>Verify what you run.</b> A page that looks like this one is not this one; check hashes, check signatures, re-run the checks yourself. That instruction is not a caveat on a trustless system, it is the system.</p>
+
+  <div class="endmark" aria-label="Q E D">□ → ∎</div>
+</main>
+<footer class="footer">CRYPTOCACHE // QED · v0.2 draft · <a href="index.html">demonstrator</a> · <a href="qed-protocol-v0.2.zip">download</a> · certifies nothing · MIT</footer>
+</body>
+</html>
