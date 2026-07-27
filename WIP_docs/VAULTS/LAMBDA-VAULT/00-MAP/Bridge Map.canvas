@@ -1,0 +1,178 @@
+{
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "text",
+      "text": "# Λ CORPUS\nmethodology",
+      "x": -700,
+      "y": -420,
+      "width": 300,
+      "height": 90,
+      "color": "5"
+    },
+    {
+      "id": "n2",
+      "type": "file",
+      "file": "10-CORPUS/_Session Stubs/The Lambda Principle of Irreducibility.md",
+      "x": -700,
+      "y": -280,
+      "width": 300,
+      "height": 130
+    },
+    {
+      "id": "n3",
+      "type": "file",
+      "file": "20-INSTRUMENTS/DST Instruction Set v2.6.md",
+      "x": -700,
+      "y": -110,
+      "width": 300,
+      "height": 130
+    },
+    {
+      "id": "n4",
+      "type": "file",
+      "file": "10-CORPUS/_Session Stubs/NSAF V6.1.md",
+      "x": -700,
+      "y": 60,
+      "width": 300,
+      "height": 130
+    },
+    {
+      "id": "n5",
+      "type": "file",
+      "file": "10-CORPUS/_Session Stubs/Winding Identities.md",
+      "x": -700,
+      "y": 230,
+      "width": 300,
+      "height": 130
+    },
+    {
+      "id": "b1",
+      "type": "file",
+      "file": "00-MAP/Bridge Map.md",
+      "x": -220,
+      "y": -110,
+      "width": 320,
+      "height": 300,
+      "color": "3"
+    },
+    {
+      "id": "m1",
+      "type": "text",
+      "text": "# ARGO\nstory / agents",
+      "x": 260,
+      "y": -420,
+      "width": 300,
+      "height": 90,
+      "color": "4"
+    },
+    {
+      "id": "m2",
+      "type": "file",
+      "file": "30-ARGO/Vignettes/Λ-SMOL.md",
+      "x": 260,
+      "y": -110,
+      "width": 300,
+      "height": 130
+    },
+    {
+      "id": "m3",
+      "type": "file",
+      "file": "30-ARGO/Vignettes/METALABE Knowledge Graph.md",
+      "x": 260,
+      "y": 60,
+      "width": 300,
+      "height": 130
+    },
+    {
+      "id": "m4",
+      "type": "file",
+      "file": "30-ARGO/Vignettes/Arcana Gallery.md",
+      "x": 260,
+      "y": 230,
+      "width": 300,
+      "height": 130
+    },
+    {
+      "id": "m5",
+      "type": "file",
+      "file": "30-ARGO/Story/Networked Sharing Processes.md",
+      "x": 260,
+      "y": -280,
+      "width": 300,
+      "height": 130
+    },
+    {
+      "id": "note1",
+      "type": "text",
+      "text": "Dashed = **latent**. Recorded in `links-latent`, no graph edge, no backlink, does not survive export. Promote by retyping it in brackets.",
+      "x": -220,
+      "y": 280,
+      "width": 320,
+      "height": 140,
+      "color": "6"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "fromNode": "n2",
+      "fromSide": "right",
+      "toNode": "b1",
+      "toSide": "left"
+    },
+    {
+      "id": "e2",
+      "fromNode": "n3",
+      "fromSide": "right",
+      "toNode": "b1",
+      "toSide": "left"
+    },
+    {
+      "id": "e3",
+      "fromNode": "n4",
+      "fromSide": "right",
+      "toNode": "b1",
+      "toSide": "left"
+    },
+    {
+      "id": "e4",
+      "fromNode": "n5",
+      "fromSide": "right",
+      "toNode": "b1",
+      "toSide": "left"
+    },
+    {
+      "id": "e5",
+      "fromNode": "b1",
+      "fromSide": "right",
+      "toNode": "m2",
+      "toSide": "left",
+      "label": "latent"
+    },
+    {
+      "id": "e6",
+      "fromNode": "b1",
+      "fromSide": "right",
+      "toNode": "m3",
+      "toSide": "left",
+      "label": "latent"
+    },
+    {
+      "id": "e7",
+      "fromNode": "b1",
+      "fromSide": "right",
+      "toNode": "m4",
+      "toSide": "left",
+      "label": "latent"
+    },
+    {
+      "id": "e8",
+      "fromNode": "m5",
+      "fromSide": "left",
+      "toNode": "b1",
+      "toSide": "right",
+      "label": "feeds back"
+    }
+  ]
+}

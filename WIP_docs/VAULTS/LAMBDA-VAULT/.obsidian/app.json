@@ -1,0 +1,9 @@
+{
+  "attachmentFolderPath": "90-META/attachments",
+  "newFileLocation": "folder",
+  "newFileFolderPath": "00-MAP",
+  "alwaysUpdateLinks": true,
+  "useMarkdownLinks": false,
+  "showUnsupportedFiles": true,
+  "propertiesInDocument": "visible"
+}
