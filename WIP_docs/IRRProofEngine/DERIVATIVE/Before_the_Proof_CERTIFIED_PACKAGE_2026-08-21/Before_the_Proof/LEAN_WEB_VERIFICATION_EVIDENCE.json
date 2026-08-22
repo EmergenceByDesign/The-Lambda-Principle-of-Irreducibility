@@ -1,0 +1,3189 @@
+{
+  "evidence_format": "BeforeTheProof Lean Web LSP transcript v1",
+  "service": "Lean Web",
+  "service_url": "https://live.lean-lang.org/",
+  "websocket_endpoint": "wss://live.lean-lang.org/websocket/MathlibDemo",
+  "project": "MathlibDemo",
+  "verification_started_utc": "2026-08-22T04:04:18.019Z",
+  "verification_completed_utc": "2026-08-22T04:04:26.576Z",
+  "source_filename": "BeforeTheProof_BU_FINAL.lean",
+  "source_sha256": "18f47a8677797108da06057b00cefe5829fe9e748912c6a8441fef29d059dc5c",
+  "toolchain": "leanprover/lean4:v4.34.0-rc2",
+  "lakefile_toml": "name = \"MathlibDemo\"\ndefaultTargets = [\"MathlibDemo\", \"Solution\", \"challenge-thms\"]\n\n[leanOptions]\npp.unicode.fun = true\n\n[[require]]\nname = \"mathlib\"\ngit = \"https://github.com/leanprover-community/mathlib4\"\nrev = \"master\"\n\n[[lean_lib]]\nname = \"MathlibDemo\"\n\n[[lean_lib]]\nname = \"Challenge\"\n\n[[lean_lib]]\nname = \"Solution\"\n\n[[lean_exe]]\nname = \"challenge-thms\"\nroot = \"ChallengeThms\"\n",
+  "package_manifest": {
+    "version": "1.2.0",
+    "packagesDir": ".lake/packages",
+    "packages": [
+      {
+        "url": "https://github.com/leanprover-community/mathlib4",
+        "type": "git",
+        "subDir": null,
+        "scope": "",
+        "rev": "23a3216f0e5b7f9f5d437409db9f10b34844e6d0",
+        "name": "mathlib",
+        "manifestFile": "lake-manifest.json",
+        "inputRev": "master",
+        "inherited": false,
+        "configFile": "lakefile.lean"
+      },
+      {
+        "url": "https://github.com/leanprover-community/plausible",
+        "type": "git",
+        "subDir": null,
+        "scope": "leanprover-community",
+        "rev": "d9598f07b1bc701f1e3aae163d2681c1fd978793",
+        "name": "plausible",
+        "manifestFile": "lake-manifest.json",
+        "inputRev": "main",
+        "inherited": true,
+        "configFile": "lakefile.toml"
+      },
+      {
+        "url": "https://github.com/leanprover-community/LeanSearchClient",
+        "type": "git",
+        "subDir": null,
+        "scope": "leanprover-community",
+        "rev": "ba67e212be1197b84c1f1f6299488a10a3002713",
+        "name": "LeanSearchClient",
+        "manifestFile": "lake-manifest.json",
+        "inputRev": "main",
+        "inherited": true,
+        "configFile": "lakefile.toml"
+      },
+      {
+        "url": "https://github.com/leanprover-community/import-graph",
+        "type": "git",
+        "subDir": null,
+        "scope": "leanprover-community",
+        "rev": "d8823026ac7ef130c253089d95685f9877b95323",
+        "name": "importGraph",
+        "manifestFile": "lake-manifest.json",
+        "inputRev": "main",
+        "inherited": true,
+        "configFile": "lakefile.toml"
+      },
+      {
+        "url": "https://github.com/leanprover-community/ProofWidgets4",
+        "type": "git",
+        "subDir": null,
+        "scope": "leanprover-community",
+        "rev": "a8acbfd87375ff4abe14ce09db5b7664d383bc7f",
+        "name": "proofwidgets",
+        "manifestFile": "lake-manifest.json",
+        "inputRev": "main",
+        "inherited": true,
+        "configFile": "lakefile.lean"
+      },
+      {
+        "url": "https://github.com/leanprover-community/aesop",
+        "type": "git",
+        "subDir": null,
+        "scope": "leanprover-community",
+        "rev": "18889deb9e83ea7420ef51c160d6f88552e744e3",
+        "name": "aesop",
+        "manifestFile": "lake-manifest.json",
+        "inputRev": "master",
+        "inherited": true,
+        "configFile": "lakefile.toml"
+      },
+      {
+        "url": "https://github.com/leanprover-community/quote4",
+        "type": "git",
+        "subDir": null,
+        "scope": "leanprover-community",
+        "rev": "507746ab8f4b643ccdacb2ec4cdb5853fa9f8ab3",
+        "name": "Qq",
+        "manifestFile": "lake-manifest.json",
+        "inputRev": "master",
+        "inherited": true,
+        "configFile": "lakefile.toml"
+      },
+      {
+        "url": "https://github.com/leanprover-community/batteries",
+        "type": "git",
+        "subDir": null,
+        "scope": "leanprover-community",
+        "rev": "d54dddc581e08be364c278052863524bff7a99a9",
+        "name": "batteries",
+        "manifestFile": "lake-manifest.json",
+        "inputRev": "main",
+        "inherited": true,
+        "configFile": "lakefile.toml"
+      },
+      {
+        "url": "https://github.com/leanprover/lean4-cli",
+        "type": "git",
+        "subDir": null,
+        "scope": "leanprover",
+        "rev": "ab3a82db9fea14cf0fd7f5a2de650f4b534640af",
+        "name": "Cli",
+        "manifestFile": "lake-manifest.json",
+        "inputRev": "v4.34.0-rc2",
+        "inherited": true,
+        "configFile": "lakefile.toml"
+      }
+    ],
+    "name": "MathlibDemo",
+    "lakeDir": ".lake",
+    "fixedToolchain": false
+  },
+  "diagnostics": [
+    {
+      "fullRange": {
+        "end": {
+          "character": 5,
+          "line": 76
+        },
+        "start": {
+          "character": 0,
+          "line": 76
+        }
+      },
+      "message": "\"4.34.0-rc2\"",
+      "range": {
+        "end": {
+          "character": 5,
+          "line": 76
+        },
+        "start": {
+          "character": 0,
+          "line": 76
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    }
+  ],
+  "error_count": 0,
+  "checker_result": "ACCEPTED (zero error diagnostics)",
+  "exact_source": "import Lean\n\n/-!\nBefore the Proof - Certified Appendix exemplar\nTarget: Proposition 3.2 / C_BU (bridge-underdetermination)\n\nThis file formalizes only the dependency-level claim that a verifier whose\nresult depends solely on its declared verifier-visible input cannot distinguish\nan upstream bridge property that is not part of that input.\n-/\n\nuniverse u v w\n\nnamespace BeforeTheProof\n\nstructure VerifierInput (Problem Premises Grammar : Type u) where\n  problem : Problem\n  premises : Premises\n  grammar : Grammar\n\nstructure RegistrationChain\n    (Input : Type u) (Bridge : Type v) (Result : Type w) where\n  verifierInput : Input\n  upstreamBridge : Bridge\n  result : Result\n\n/-- A verifier-visible acceptance relation depends only on the declared input. -/\ndef Verifier (Input : Type u) (Result : Type w) := Input → Result\n\n/--\nFormal surrogate for C_BU.\nIf two chains expose the same verifier input to a verifier, their verifier-side\nresults are equal, even when a separately declared bridge predicate differs.\nThus equality of the verifier-visible traversal/result does not determine that\nupstream bridge predicate.\n-/\ntheorem bridge_underdetermination\n    {Input : Type u} {Bridge : Type v} {Result : Type w}\n    (verify : Verifier Input Result)\n    (b1 b2 : Bridge)\n    (Adequate : Bridge → Prop)\n    (hAdeq1 : Adequate b1)\n    (hAdeq2 : ¬ Adequate b2)\n    (i : Input) :\n    verify i = verify i ∧ Adequate b1 ∧ ¬ Adequate b2 := by\n  exact ⟨rfl, hAdeq1, hAdeq2⟩\n\n/--\nA two-chain presentation closer to Proposition 3.2: once the two chains have\nidentical verifier-visible input and their stored results are produced by the\nsame verifier, the results coincide; the bridge-adequacy disagreement remains\nan independent premise rather than something certified by that result.\n-/\ntheorem two_chain_bridge_underdetermination\n    {Input : Type u} {Bridge : Type v} {Result : Type w}\n    (verify : Verifier Input Result)\n    (c1 c2 : RegistrationChain Input Bridge Result)\n    (hInput : c1.verifierInput = c2.verifierInput)\n    (hResult1 : c1.result = verify c1.verifierInput)\n    (hResult2 : c2.result = verify c2.verifierInput)\n    (Adequate : Bridge → Prop)\n    (hAdeq1 : Adequate c1.upstreamBridge)\n    (hAdeq2 : ¬ Adequate c2.upstreamBridge) :\n    c1.result = c2.result ∧\n      Adequate c1.upstreamBridge ∧\n      ¬ Adequate c2.upstreamBridge := by\n  constructor\n  · calc\n      c1.result = verify c1.verifierInput := hResult1\n      _ = verify c2.verifierInput := congrArg verify hInput\n      _ = c2.result := hResult2.symm\n  · exact ⟨hAdeq1, hAdeq2⟩\n\nend BeforeTheProof\n\n-- Verification-environment receipt when executed by Lean.\n#eval Lean.versionString\n",
+  "lsp_messages": [
+    {
+      "direction": "client_to_server",
+      "at": "2026-08-22T04:04:19.571Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "method": "initialize",
+        "params": {
+          "processId": null,
+          "clientInfo": {
+            "name": "BeforeTheProof certification client",
+            "version": "1.0"
+          },
+          "rootPath": "/MathlibDemo",
+          "rootUri": "file:///MathlibDemo",
+          "capabilities": {
+            "workspace": {
+              "workspaceFolders": false
+            },
+            "textDocument": {
+              "publishDiagnostics": {
+                "relatedInformation": true
+              }
+            }
+          },
+          "workspaceFolders": null
+        }
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:21.312Z",
+      "message": {
+        "id": 1,
+        "jsonrpc": "2.0",
+        "result": {
+          "capabilities": {
+            "callHierarchyProvider": true,
+            "codeActionProvider": {
+              "codeActionKinds": [
+                "quickfix",
+                "refactor",
+                "source.organizeImports"
+              ],
+              "resolveProvider": true,
+              "workDoneProgress": false
+            },
+            "colorProvider": {
+              "workDoneProgress": false
+            },
+            "completionProvider": {
+              "resolveProvider": true,
+              "triggerCharacters": [
+                "."
+              ]
+            },
+            "declarationProvider": true,
+            "definitionProvider": true,
+            "documentHighlightProvider": true,
+            "documentSymbolProvider": true,
+            "experimental": {
+              "moduleHierarchyProvider": {},
+              "rpcProvider": {
+                "highlightMatchesProvider": {},
+                "rpcWireFormat": "v1"
+              }
+            },
+            "foldingRangeProvider": true,
+            "hoverProvider": true,
+            "inlayHintProvider": {
+              "resolveProvider": false,
+              "workDoneProgress": false
+            },
+            "referencesProvider": true,
+            "renameProvider": {
+              "prepareProvider": true
+            },
+            "semanticTokensProvider": {
+              "full": true,
+              "legend": {
+                "tokenModifiers": [
+                  "declaration",
+                  "definition",
+                  "readonly",
+                  "static",
+                  "deprecated",
+                  "abstract",
+                  "async",
+                  "modification",
+                  "documentation",
+                  "defaultLibrary"
+                ],
+                "tokenTypes": [
+                  "keyword",
+                  "variable",
+                  "property",
+                  "function",
+                  "namespace",
+                  "type",
+                  "class",
+                  "enum",
+                  "interface",
+                  "struct",
+                  "typeParameter",
+                  "parameter",
+                  "enumMember",
+                  "event",
+                  "method",
+                  "macro",
+                  "modifier",
+                  "comment",
+                  "string",
+                  "number",
+                  "regexp",
+                  "operator",
+                  "decorator",
+                  "leanSorryLike"
+                ]
+              },
+              "range": true
+            },
+            "signatureHelpProvider": {
+              "triggerCharacters": [
+                " "
+              ],
+              "workDoneProgress": false
+            },
+            "textDocumentSync": {
+              "change": 2,
+              "openClose": true,
+              "save": {
+                "includeText": true
+              },
+              "willSave": false,
+              "willSaveWaitUntil": false
+            },
+            "typeDefinitionProvider": true,
+            "workspaceSymbolProvider": true
+          },
+          "serverInfo": {
+            "name": "Lean 4 Server",
+            "version": "0.3.0"
+          }
+        }
+      }
+    },
+    {
+      "direction": "client_to_server",
+      "at": "2026-08-22T04:04:21.312Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "method": "initialized",
+        "params": {}
+      }
+    },
+    {
+      "direction": "client_to_server",
+      "at": "2026-08-22T04:04:21.312Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "method": "textDocument/didOpen",
+        "params": {
+          "textDocument": {
+            "uri": "file:///MathlibDemo/MathlibDemo.lean",
+            "languageId": "lean4",
+            "version": 1,
+            "text": "import Lean\n\n/-!\nBefore the Proof - Certified Appendix exemplar\nTarget: Proposition 3.2 / C_BU (bridge-underdetermination)\n\nThis file formalizes only the dependency-level claim that a verifier whose\nresult depends solely on its declared verifier-visible input cannot distinguish\nan upstream bridge property that is not part of that input.\n-/\n\nuniverse u v w\n\nnamespace BeforeTheProof\n\nstructure VerifierInput (Problem Premises Grammar : Type u) where\n  problem : Problem\n  premises : Premises\n  grammar : Grammar\n\nstructure RegistrationChain\n    (Input : Type u) (Bridge : Type v) (Result : Type w) where\n  verifierInput : Input\n  upstreamBridge : Bridge\n  result : Result\n\n/-- A verifier-visible acceptance relation depends only on the declared input. -/\ndef Verifier (Input : Type u) (Result : Type w) := Input → Result\n\n/--\nFormal surrogate for C_BU.\nIf two chains expose the same verifier input to a verifier, their verifier-side\nresults are equal, even when a separately declared bridge predicate differs.\nThus equality of the verifier-visible traversal/result does not determine that\nupstream bridge predicate.\n-/\ntheorem bridge_underdetermination\n    {Input : Type u} {Bridge : Type v} {Result : Type w}\n    (verify : Verifier Input Result)\n    (b1 b2 : Bridge)\n    (Adequate : Bridge → Prop)\n    (hAdeq1 : Adequate b1)\n    (hAdeq2 : ¬ Adequate b2)\n    (i : Input) :\n    verify i = verify i ∧ Adequate b1 ∧ ¬ Adequate b2 := by\n  exact ⟨rfl, hAdeq1, hAdeq2⟩\n\n/--\nA two-chain presentation closer to Proposition 3.2: once the two chains have\nidentical verifier-visible input and their stored results are produced by the\nsame verifier, the results coincide; the bridge-adequacy disagreement remains\nan independent premise rather than something certified by that result.\n-/\ntheorem two_chain_bridge_underdetermination\n    {Input : Type u} {Bridge : Type v} {Result : Type w}\n    (verify : Verifier Input Result)\n    (c1 c2 : RegistrationChain Input Bridge Result)\n    (hInput : c1.verifierInput = c2.verifierInput)\n    (hResult1 : c1.result = verify c1.verifierInput)\n    (hResult2 : c2.result = verify c2.verifierInput)\n    (Adequate : Bridge → Prop)\n    (hAdeq1 : Adequate c1.upstreamBridge)\n    (hAdeq2 : ¬ Adequate c2.upstreamBridge) :\n    c1.result = c2.result ∧\n      Adequate c1.upstreamBridge ∧\n      ¬ Adequate c2.upstreamBridge := by\n  constructor\n  · calc\n      c1.result = verify c1.verifierInput := hResult1\n      _ = verify c2.verifierInput := congrArg verify hInput\n      _ = c2.result := hResult2.symm\n  · exact ⟨hAdeq1, hAdeq2⟩\n\nend BeforeTheProof\n\n-- Verification-environment receipt when executed by Lean.\n#eval Lean.versionString\n"
+          }
+        }
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:21.581Z",
+      "message": {
+        "id": "register_lean_watcher",
+        "jsonrpc": "2.0",
+        "method": "client/registerCapability",
+        "params": {
+          "registrations": [
+            {
+              "id": "lean_watcher",
+              "method": "workspace/didChangeWatchedFiles",
+              "registerOptions": {
+                "watchers": [
+                  {
+                    "globPattern": "**/*.lean"
+                  },
+                  {
+                    "globPattern": "**/*.ilean"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "direction": "client_to_server",
+      "at": "2026-08-22T04:04:21.581Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "id": "register_lean_watcher",
+        "result": null
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:21.584Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "method": "$/lean/fileProgress",
+        "params": {
+          "processing": [
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 77
+                },
+                "start": {
+                  "character": 0,
+                  "line": 0
+                }
+              }
+            }
+          ],
+          "textDocument": {
+            "uri": "file:///MathlibDemo/MathlibDemo.lean",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:21.621Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "method": "textDocument/publishDiagnostics",
+        "params": {
+          "diagnostics": [],
+          "uri": "file:///MathlibDemo/MathlibDemo.lean",
+          "version": 1
+        }
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:21.821Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "method": "$/lean/fileProgress",
+        "params": {
+          "processing": [
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 77
+                },
+                "start": {
+                  "character": 0,
+                  "line": 0
+                }
+              }
+            }
+          ],
+          "textDocument": {
+            "uri": "file:///MathlibDemo/MathlibDemo.lean",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:21.821Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "method": "textDocument/publishDiagnostics",
+        "params": {
+          "diagnostics": [],
+          "uri": "file:///MathlibDemo/MathlibDemo.lean",
+          "version": 1
+        }
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:22.845Z",
+      "message": {
+        "id": 0,
+        "jsonrpc": "2.0",
+        "method": "workspace/inlayHint/refresh"
+      }
+    },
+    {
+      "direction": "client_to_server",
+      "at": "2026-08-22T04:04:22.845Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "id": 0,
+        "result": null
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:22.846Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "method": "$/lean/fileProgress",
+        "params": {
+          "processing": [
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 2,
+                  "line": 9
+                },
+                "start": {
+                  "character": 0,
+                  "line": 2
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 77
+                },
+                "start": {
+                  "character": 0,
+                  "line": 11
+                }
+              }
+            }
+          ],
+          "textDocument": {
+            "uri": "file:///MathlibDemo/MathlibDemo.lean",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:22.846Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "method": "$/lean/fileProgress",
+        "params": {
+          "processing": [
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 2
+                },
+                "start": {
+                  "character": 0,
+                  "line": 2
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 77
+                },
+                "start": {
+                  "character": 0,
+                  "line": 11
+                }
+              }
+            }
+          ],
+          "textDocument": {
+            "uri": "file:///MathlibDemo/MathlibDemo.lean",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:22.846Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "method": "$/lean/fileProgress",
+        "params": {
+          "processing": [
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 2
+                },
+                "start": {
+                  "character": 0,
+                  "line": 2
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 77
+                },
+                "start": {
+                  "character": 0,
+                  "line": 11
+                }
+              }
+            }
+          ],
+          "textDocument": {
+            "uri": "file:///MathlibDemo/MathlibDemo.lean",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:22.846Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "method": "$/lean/fileProgress",
+        "params": {
+          "processing": [
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 2
+                },
+                "start": {
+                  "character": 0,
+                  "line": 2
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 77
+                },
+                "start": {
+                  "character": 0,
+                  "line": 11
+                }
+              }
+            }
+          ],
+          "textDocument": {
+            "uri": "file:///MathlibDemo/MathlibDemo.lean",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:22.846Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "method": "$/lean/fileProgress",
+        "params": {
+          "processing": [
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 11
+                },
+                "start": {
+                  "character": 0,
+                  "line": 11
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 77
+                },
+                "start": {
+                  "character": 0,
+                  "line": 13
+                }
+              }
+            }
+          ],
+          "textDocument": {
+            "uri": "file:///MathlibDemo/MathlibDemo.lean",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:22.846Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "method": "$/lean/fileProgress",
+        "params": {
+          "processing": [
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 11
+                },
+                "start": {
+                  "character": 0,
+                  "line": 11
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 77
+                },
+                "start": {
+                  "character": 0,
+                  "line": 13
+                }
+              }
+            }
+          ],
+          "textDocument": {
+            "uri": "file:///MathlibDemo/MathlibDemo.lean",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:22.846Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "method": "$/lean/fileProgress",
+        "params": {
+          "processing": [
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 77
+                },
+                "start": {
+                  "character": 0,
+                  "line": 13
+                }
+              }
+            }
+          ],
+          "textDocument": {
+            "uri": "file:///MathlibDemo/MathlibDemo.lean",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:22.846Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "method": "$/lean/fileProgress",
+        "params": {
+          "processing": [
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 24,
+                  "line": 13
+                },
+                "start": {
+                  "character": 0,
+                  "line": 13
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 77
+                },
+                "start": {
+                  "character": 0,
+                  "line": 15
+                }
+              }
+            }
+          ],
+          "textDocument": {
+            "uri": "file:///MathlibDemo/MathlibDemo.lean",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:22.846Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "method": "$/lean/fileProgress",
+        "params": {
+          "processing": [
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 13
+                },
+                "start": {
+                  "character": 0,
+                  "line": 13
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 77
+                },
+                "start": {
+                  "character": 0,
+                  "line": 15
+                }
+              }
+            }
+          ],
+          "textDocument": {
+            "uri": "file:///MathlibDemo/MathlibDemo.lean",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:22.846Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "method": "$/lean/fileProgress",
+        "params": {
+          "processing": [
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 13
+                },
+                "start": {
+                  "character": 0,
+                  "line": 13
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 77
+                },
+                "start": {
+                  "character": 0,
+                  "line": 15
+                }
+              }
+            }
+          ],
+          "textDocument": {
+            "uri": "file:///MathlibDemo/MathlibDemo.lean",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:22.846Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "method": "$/lean/fileProgress",
+        "params": {
+          "processing": [
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 13
+                },
+                "start": {
+                  "character": 0,
+                  "line": 13
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 77
+                },
+                "start": {
+                  "character": 0,
+                  "line": 15
+                }
+              }
+            }
+          ],
+          "textDocument": {
+            "uri": "file:///MathlibDemo/MathlibDemo.lean",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:22.847Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "method": "$/lean/fileProgress",
+        "params": {
+          "processing": [
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 77
+                },
+                "start": {
+                  "character": 0,
+                  "line": 15
+                }
+              }
+            }
+          ],
+          "textDocument": {
+            "uri": "file:///MathlibDemo/MathlibDemo.lean",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:22.847Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "method": "$/lean/fileProgress",
+        "params": {
+          "processing": [
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 19,
+                  "line": 18
+                },
+                "start": {
+                  "character": 0,
+                  "line": 15
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 77
+                },
+                "start": {
+                  "character": 0,
+                  "line": 20
+                }
+              }
+            }
+          ],
+          "textDocument": {
+            "uri": "file:///MathlibDemo/MathlibDemo.lean",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:22.847Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "method": "$/lean/fileProgress",
+        "params": {
+          "processing": [
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 15
+                },
+                "start": {
+                  "character": 0,
+                  "line": 15
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 77
+                },
+                "start": {
+                  "character": 0,
+                  "line": 20
+                }
+              }
+            }
+          ],
+          "textDocument": {
+            "uri": "file:///MathlibDemo/MathlibDemo.lean",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:22.847Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "method": "$/lean/fileProgress",
+        "params": {
+          "processing": [
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 15
+                },
+                "start": {
+                  "character": 0,
+                  "line": 15
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 77
+                },
+                "start": {
+                  "character": 0,
+                  "line": 20
+                }
+              }
+            }
+          ],
+          "textDocument": {
+            "uri": "file:///MathlibDemo/MathlibDemo.lean",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:23.391Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "method": "$/lean/fileProgress",
+        "params": {
+          "processing": [
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 17,
+                  "line": 24
+                },
+                "start": {
+                  "character": 0,
+                  "line": 20
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 77
+                },
+                "start": {
+                  "character": 0,
+                  "line": 26
+                }
+              }
+            }
+          ],
+          "textDocument": {
+            "uri": "file:///MathlibDemo/MathlibDemo.lean",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:23.391Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "method": "$/lean/fileProgress",
+        "params": {
+          "processing": [
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 20
+                },
+                "start": {
+                  "character": 0,
+                  "line": 20
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 77
+                },
+                "start": {
+                  "character": 0,
+                  "line": 26
+                }
+              }
+            }
+          ],
+          "textDocument": {
+            "uri": "file:///MathlibDemo/MathlibDemo.lean",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:23.391Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "method": "$/lean/fileProgress",
+        "params": {
+          "processing": [
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 20
+                },
+                "start": {
+                  "character": 0,
+                  "line": 20
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 77
+                },
+                "start": {
+                  "character": 0,
+                  "line": 26
+                }
+              }
+            }
+          ],
+          "textDocument": {
+            "uri": "file:///MathlibDemo/MathlibDemo.lean",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:23.391Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "method": "$/lean/fileProgress",
+        "params": {
+          "processing": [
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 20
+                },
+                "start": {
+                  "character": 0,
+                  "line": 20
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 77
+                },
+                "start": {
+                  "character": 0,
+                  "line": 26
+                }
+              }
+            }
+          ],
+          "textDocument": {
+            "uri": "file:///MathlibDemo/MathlibDemo.lean",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:23.391Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "method": "$/lean/fileProgress",
+        "params": {
+          "processing": [
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 65,
+                  "line": 27
+                },
+                "start": {
+                  "character": 0,
+                  "line": 26
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 77
+                },
+                "start": {
+                  "character": 0,
+                  "line": 29
+                }
+              }
+            }
+          ],
+          "textDocument": {
+            "uri": "file:///MathlibDemo/MathlibDemo.lean",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:23.391Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "method": "$/lean/fileProgress",
+        "params": {
+          "processing": [
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 27
+                },
+                "start": {
+                  "character": 0,
+                  "line": 27
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 65,
+                  "line": 27
+                },
+                "start": {
+                  "character": 51,
+                  "line": 27
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 77
+                },
+                "start": {
+                  "character": 0,
+                  "line": 29
+                }
+              }
+            }
+          ],
+          "textDocument": {
+            "uri": "file:///MathlibDemo/MathlibDemo.lean",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:23.391Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "method": "$/lean/fileProgress",
+        "params": {
+          "processing": [
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 27
+                },
+                "start": {
+                  "character": 0,
+                  "line": 27
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 77
+                },
+                "start": {
+                  "character": 0,
+                  "line": 29
+                }
+              }
+            }
+          ],
+          "textDocument": {
+            "uri": "file:///MathlibDemo/MathlibDemo.lean",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:23.391Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "method": "$/lean/fileProgress",
+        "params": {
+          "processing": [
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 27
+                },
+                "start": {
+                  "character": 0,
+                  "line": 27
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 77
+                },
+                "start": {
+                  "character": 0,
+                  "line": 29
+                }
+              }
+            }
+          ],
+          "textDocument": {
+            "uri": "file:///MathlibDemo/MathlibDemo.lean",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:23.391Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "method": "$/lean/fileProgress",
+        "params": {
+          "processing": [
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 27
+                },
+                "start": {
+                  "character": 0,
+                  "line": 27
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 77
+                },
+                "start": {
+                  "character": 0,
+                  "line": 29
+                }
+              }
+            }
+          ],
+          "textDocument": {
+            "uri": "file:///MathlibDemo/MathlibDemo.lean",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:23.391Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "method": "$/lean/fileProgress",
+        "params": {
+          "processing": [
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 27
+                },
+                "start": {
+                  "character": 0,
+                  "line": 27
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 77
+                },
+                "start": {
+                  "character": 0,
+                  "line": 29
+                }
+              }
+            }
+          ],
+          "textDocument": {
+            "uri": "file:///MathlibDemo/MathlibDemo.lean",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:23.391Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "method": "$/lean/fileProgress",
+        "params": {
+          "processing": [
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 77
+                },
+                "start": {
+                  "character": 0,
+                  "line": 29
+                }
+              }
+            }
+          ],
+          "textDocument": {
+            "uri": "file:///MathlibDemo/MathlibDemo.lean",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:23.391Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "method": "$/lean/fileProgress",
+        "params": {
+          "processing": [
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 29,
+                  "line": 45
+                },
+                "start": {
+                  "character": 0,
+                  "line": 29
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 77
+                },
+                "start": {
+                  "character": 0,
+                  "line": 47
+                }
+              }
+            }
+          ],
+          "textDocument": {
+            "uri": "file:///MathlibDemo/MathlibDemo.lean",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:23.391Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "method": "$/lean/fileProgress",
+        "params": {
+          "processing": [
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 29,
+                  "line": 45
+                },
+                "start": {
+                  "character": 0,
+                  "line": 29
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 77
+                },
+                "start": {
+                  "character": 0,
+                  "line": 47
+                }
+              }
+            }
+          ],
+          "textDocument": {
+            "uri": "file:///MathlibDemo/MathlibDemo.lean",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:23.391Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "method": "$/lean/fileProgress",
+        "params": {
+          "processing": [
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 36
+                },
+                "start": {
+                  "character": 0,
+                  "line": 36
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 29,
+                  "line": 45
+                },
+                "start": {
+                  "character": 2,
+                  "line": 45
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 77
+                },
+                "start": {
+                  "character": 0,
+                  "line": 47
+                }
+              }
+            }
+          ],
+          "textDocument": {
+            "uri": "file:///MathlibDemo/MathlibDemo.lean",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:23.391Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "method": "$/lean/fileProgress",
+        "params": {
+          "processing": [
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 36
+                },
+                "start": {
+                  "character": 0,
+                  "line": 36
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 29,
+                  "line": 45
+                },
+                "start": {
+                  "character": 2,
+                  "line": 45
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 77
+                },
+                "start": {
+                  "character": 0,
+                  "line": 47
+                }
+              }
+            }
+          ],
+          "textDocument": {
+            "uri": "file:///MathlibDemo/MathlibDemo.lean",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:23.391Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "method": "$/lean/fileProgress",
+        "params": {
+          "processing": [
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 36
+                },
+                "start": {
+                  "character": 0,
+                  "line": 36
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 29,
+                  "line": 45
+                },
+                "start": {
+                  "character": 2,
+                  "line": 45
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 77
+                },
+                "start": {
+                  "character": 0,
+                  "line": 47
+                }
+              }
+            }
+          ],
+          "textDocument": {
+            "uri": "file:///MathlibDemo/MathlibDemo.lean",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:23.669Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "method": "$/lean/fileProgress",
+        "params": {
+          "processing": [
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 36
+                },
+                "start": {
+                  "character": 0,
+                  "line": 36
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 29,
+                  "line": 45
+                },
+                "start": {
+                  "character": 2,
+                  "line": 45
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 26,
+                  "line": 71
+                },
+                "start": {
+                  "character": 0,
+                  "line": 47
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 77
+                },
+                "start": {
+                  "character": 0,
+                  "line": 73
+                }
+              }
+            }
+          ],
+          "textDocument": {
+            "uri": "file:///MathlibDemo/MathlibDemo.lean",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:23.669Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "method": "$/lean/fileProgress",
+        "params": {
+          "processing": [
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 36
+                },
+                "start": {
+                  "character": 0,
+                  "line": 36
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 29,
+                  "line": 45
+                },
+                "start": {
+                  "character": 2,
+                  "line": 45
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 26,
+                  "line": 71
+                },
+                "start": {
+                  "character": 0,
+                  "line": 47
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 77
+                },
+                "start": {
+                  "character": 0,
+                  "line": 73
+                }
+              }
+            }
+          ],
+          "textDocument": {
+            "uri": "file:///MathlibDemo/MathlibDemo.lean",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:23.669Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "method": "$/lean/fileProgress",
+        "params": {
+          "processing": [
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 36
+                },
+                "start": {
+                  "character": 0,
+                  "line": 36
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 26,
+                  "line": 71
+                },
+                "start": {
+                  "character": 0,
+                  "line": 47
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 77
+                },
+                "start": {
+                  "character": 0,
+                  "line": 73
+                }
+              }
+            }
+          ],
+          "textDocument": {
+            "uri": "file:///MathlibDemo/MathlibDemo.lean",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:23.669Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "method": "textDocument/publishDiagnostics",
+        "params": {
+          "diagnostics": [],
+          "uri": "file:///MathlibDemo/MathlibDemo.lean",
+          "version": 1
+        }
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:23.669Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "method": "$/lean/fileProgress",
+        "params": {
+          "processing": [
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 36
+                },
+                "start": {
+                  "character": 0,
+                  "line": 36
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 26,
+                  "line": 71
+                },
+                "start": {
+                  "character": 0,
+                  "line": 47
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 77
+                },
+                "start": {
+                  "character": 0,
+                  "line": 73
+                }
+              }
+            }
+          ],
+          "textDocument": {
+            "uri": "file:///MathlibDemo/MathlibDemo.lean",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:23.669Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "method": "$/lean/fileProgress",
+        "params": {
+          "processing": [
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 36
+                },
+                "start": {
+                  "character": 0,
+                  "line": 36
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 26,
+                  "line": 71
+                },
+                "start": {
+                  "character": 0,
+                  "line": 47
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 77
+                },
+                "start": {
+                  "character": 0,
+                  "line": 73
+                }
+              }
+            }
+          ],
+          "textDocument": {
+            "uri": "file:///MathlibDemo/MathlibDemo.lean",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:23.669Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "method": "$/lean/fileProgress",
+        "params": {
+          "processing": [
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 26,
+                  "line": 71
+                },
+                "start": {
+                  "character": 0,
+                  "line": 47
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 77
+                },
+                "start": {
+                  "character": 0,
+                  "line": 73
+                }
+              }
+            }
+          ],
+          "textDocument": {
+            "uri": "file:///MathlibDemo/MathlibDemo.lean",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:23.946Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "method": "$/lean/fileProgress",
+        "params": {
+          "processing": [
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 53
+                },
+                "start": {
+                  "character": 0,
+                  "line": 53
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 26,
+                  "line": 71
+                },
+                "start": {
+                  "character": 2,
+                  "line": 66
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 77
+                },
+                "start": {
+                  "character": 0,
+                  "line": 73
+                }
+              }
+            }
+          ],
+          "textDocument": {
+            "uri": "file:///MathlibDemo/MathlibDemo.lean",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:23.946Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "method": "$/lean/fileProgress",
+        "params": {
+          "processing": [
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 53
+                },
+                "start": {
+                  "character": 0,
+                  "line": 53
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 26,
+                  "line": 71
+                },
+                "start": {
+                  "character": 2,
+                  "line": 66
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 77
+                },
+                "start": {
+                  "character": 0,
+                  "line": 73
+                }
+              }
+            }
+          ],
+          "textDocument": {
+            "uri": "file:///MathlibDemo/MathlibDemo.lean",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:23.946Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "method": "$/lean/fileProgress",
+        "params": {
+          "processing": [
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 53
+                },
+                "start": {
+                  "character": 0,
+                  "line": 53
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 13,
+                  "line": 66
+                },
+                "start": {
+                  "character": 2,
+                  "line": 66
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 26,
+                  "line": 71
+                },
+                "start": {
+                  "character": 2,
+                  "line": 67
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 18,
+                  "line": 73
+                },
+                "start": {
+                  "character": 0,
+                  "line": 73
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 77
+                },
+                "start": {
+                  "character": 0,
+                  "line": 76
+                }
+              }
+            }
+          ],
+          "textDocument": {
+            "uri": "file:///MathlibDemo/MathlibDemo.lean",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:23.946Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "method": "$/lean/fileProgress",
+        "params": {
+          "processing": [
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 53
+                },
+                "start": {
+                  "character": 0,
+                  "line": 53
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 13,
+                  "line": 66
+                },
+                "start": {
+                  "character": 2,
+                  "line": 66
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 26,
+                  "line": 71
+                },
+                "start": {
+                  "character": 2,
+                  "line": 67
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 73
+                },
+                "start": {
+                  "character": 0,
+                  "line": 73
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 77
+                },
+                "start": {
+                  "character": 0,
+                  "line": 76
+                }
+              }
+            }
+          ],
+          "textDocument": {
+            "uri": "file:///MathlibDemo/MathlibDemo.lean",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:23.946Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "method": "$/lean/fileProgress",
+        "params": {
+          "processing": [
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 53
+                },
+                "start": {
+                  "character": 0,
+                  "line": 53
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 26,
+                  "line": 71
+                },
+                "start": {
+                  "character": 2,
+                  "line": 67
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 73
+                },
+                "start": {
+                  "character": 0,
+                  "line": 73
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 24,
+                  "line": 76
+                },
+                "start": {
+                  "character": 0,
+                  "line": 76
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 77
+                },
+                "start": {
+                  "character": 0,
+                  "line": 77
+                }
+              }
+            }
+          ],
+          "textDocument": {
+            "uri": "file:///MathlibDemo/MathlibDemo.lean",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:23.946Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "method": "$/lean/fileProgress",
+        "params": {
+          "processing": [
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 53
+                },
+                "start": {
+                  "character": 0,
+                  "line": 53
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 36,
+                  "line": 70
+                },
+                "start": {
+                  "character": 2,
+                  "line": 67
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 26,
+                  "line": 71
+                },
+                "start": {
+                  "character": 2,
+                  "line": 71
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 24,
+                  "line": 76
+                },
+                "start": {
+                  "character": 0,
+                  "line": 76
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 77
+                },
+                "start": {
+                  "character": 0,
+                  "line": 77
+                }
+              }
+            }
+          ],
+          "textDocument": {
+            "uri": "file:///MathlibDemo/MathlibDemo.lean",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:23.946Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "method": "$/lean/fileProgress",
+        "params": {
+          "processing": [
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 53
+                },
+                "start": {
+                  "character": 0,
+                  "line": 53
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 36,
+                  "line": 70
+                },
+                "start": {
+                  "character": 4,
+                  "line": 67
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 26,
+                  "line": 71
+                },
+                "start": {
+                  "character": 2,
+                  "line": 71
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 24,
+                  "line": 76
+                },
+                "start": {
+                  "character": 0,
+                  "line": 76
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 77
+                },
+                "start": {
+                  "character": 0,
+                  "line": 77
+                }
+              }
+            }
+          ],
+          "textDocument": {
+            "uri": "file:///MathlibDemo/MathlibDemo.lean",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:23.946Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "method": "$/lean/fileProgress",
+        "params": {
+          "processing": [
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 53
+                },
+                "start": {
+                  "character": 0,
+                  "line": 53
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 26,
+                  "line": 71
+                },
+                "start": {
+                  "character": 2,
+                  "line": 71
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 24,
+                  "line": 76
+                },
+                "start": {
+                  "character": 0,
+                  "line": 76
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 77
+                },
+                "start": {
+                  "character": 0,
+                  "line": 77
+                }
+              }
+            }
+          ],
+          "textDocument": {
+            "uri": "file:///MathlibDemo/MathlibDemo.lean",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:24.570Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "method": "$/lean/fileProgress",
+        "params": {
+          "processing": [
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 53
+                },
+                "start": {
+                  "character": 0,
+                  "line": 53
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 24,
+                  "line": 76
+                },
+                "start": {
+                  "character": 0,
+                  "line": 76
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 77
+                },
+                "start": {
+                  "character": 0,
+                  "line": 77
+                }
+              }
+            }
+          ],
+          "textDocument": {
+            "uri": "file:///MathlibDemo/MathlibDemo.lean",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:24.570Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "method": "$/lean/fileProgress",
+        "params": {
+          "processing": [
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 53
+                },
+                "start": {
+                  "character": 0,
+                  "line": 53
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 24,
+                  "line": 76
+                },
+                "start": {
+                  "character": 0,
+                  "line": 76
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 77
+                },
+                "start": {
+                  "character": 0,
+                  "line": 77
+                }
+              }
+            }
+          ],
+          "textDocument": {
+            "uri": "file:///MathlibDemo/MathlibDemo.lean",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:24.570Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "method": "$/lean/fileProgress",
+        "params": {
+          "processing": [
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 53
+                },
+                "start": {
+                  "character": 0,
+                  "line": 53
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 24,
+                  "line": 76
+                },
+                "start": {
+                  "character": 0,
+                  "line": 76
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 77
+                },
+                "start": {
+                  "character": 0,
+                  "line": 77
+                }
+              }
+            }
+          ],
+          "textDocument": {
+            "uri": "file:///MathlibDemo/MathlibDemo.lean",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:24.570Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "method": "textDocument/publishDiagnostics",
+        "params": {
+          "diagnostics": [],
+          "uri": "file:///MathlibDemo/MathlibDemo.lean",
+          "version": 1
+        }
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:24.570Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "method": "$/lean/fileProgress",
+        "params": {
+          "processing": [
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 53
+                },
+                "start": {
+                  "character": 0,
+                  "line": 53
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 24,
+                  "line": 76
+                },
+                "start": {
+                  "character": 0,
+                  "line": 76
+                }
+              }
+            },
+            {
+              "kind": 1,
+              "range": {
+                "end": {
+                  "character": 0,
+                  "line": 77
+                },
+                "start": {
+                  "character": 0,
+                  "line": 77
+                }
+              }
+            }
+          ],
+          "textDocument": {
+            "uri": "file:///MathlibDemo/MathlibDemo.lean",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:24.570Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "method": "textDocument/publishDiagnostics",
+        "params": {
+          "diagnostics": [
+            {
+              "fullRange": {
+                "end": {
+                  "character": 5,
+                  "line": 76
+                },
+                "start": {
+                  "character": 0,
+                  "line": 76
+                }
+              },
+              "message": "\"4.34.0-rc2\"",
+              "range": {
+                "end": {
+                  "character": 5,
+                  "line": 76
+                },
+                "start": {
+                  "character": 0,
+                  "line": 76
+                }
+              },
+              "severity": 3,
+              "source": "Lean 4"
+            }
+          ],
+          "uri": "file:///MathlibDemo/MathlibDemo.lean",
+          "version": 1
+        }
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:24.571Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "method": "$/lean/fileProgress",
+        "params": {
+          "processing": [],
+          "textDocument": {
+            "uri": "file:///MathlibDemo/MathlibDemo.lean",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:24.571Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "method": "$/lean/fileProgress",
+        "params": {
+          "processing": [],
+          "textDocument": {
+            "uri": "file:///MathlibDemo/MathlibDemo.lean",
+            "version": 1
+          }
+        }
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:24.571Z",
+      "message": {
+        "id": 1,
+        "jsonrpc": "2.0",
+        "method": "workspace/inlayHint/refresh"
+      }
+    },
+    {
+      "direction": "client_to_server",
+      "at": "2026-08-22T04:04:24.571Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "result": null
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:24.571Z",
+      "message": {
+        "id": 2,
+        "jsonrpc": "2.0",
+        "method": "workspace/inlayHint/refresh"
+      }
+    },
+    {
+      "direction": "client_to_server",
+      "at": "2026-08-22T04:04:24.571Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "id": 2,
+        "result": null
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:24.571Z",
+      "message": {
+        "id": 3,
+        "jsonrpc": "2.0",
+        "method": "workspace/semanticTokens/refresh"
+      }
+    },
+    {
+      "direction": "client_to_server",
+      "at": "2026-08-22T04:04:24.571Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "id": 3,
+        "result": null
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:24.571Z",
+      "message": {
+        "id": 4,
+        "jsonrpc": "2.0",
+        "method": "workspace/inlayHint/refresh"
+      }
+    },
+    {
+      "direction": "client_to_server",
+      "at": "2026-08-22T04:04:24.571Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "id": 4,
+        "result": null
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:24.571Z",
+      "message": {
+        "id": 5,
+        "jsonrpc": "2.0",
+        "method": "workspace/inlayHint/refresh"
+      }
+    },
+    {
+      "direction": "client_to_server",
+      "at": "2026-08-22T04:04:24.571Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "id": 5,
+        "result": null
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:24.853Z",
+      "message": {
+        "id": 6,
+        "jsonrpc": "2.0",
+        "method": "workspace/inlayHint/refresh"
+      }
+    },
+    {
+      "direction": "client_to_server",
+      "at": "2026-08-22T04:04:24.853Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "id": 6,
+        "result": null
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:25.916Z",
+      "message": {
+        "id": 7,
+        "jsonrpc": "2.0",
+        "method": "workspace/inlayHint/refresh"
+      }
+    },
+    {
+      "direction": "client_to_server",
+      "at": "2026-08-22T04:04:25.916Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "id": 7,
+        "result": null
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:25.916Z",
+      "message": {
+        "id": 8,
+        "jsonrpc": "2.0",
+        "method": "workspace/semanticTokens/refresh"
+      }
+    },
+    {
+      "direction": "client_to_server",
+      "at": "2026-08-22T04:04:25.916Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "id": 8,
+        "result": null
+      }
+    },
+    {
+      "direction": "server_to_client",
+      "at": "2026-08-22T04:04:25.917Z",
+      "message": {
+        "id": 9,
+        "jsonrpc": "2.0",
+        "method": "workspace/inlayHint/refresh"
+      }
+    },
+    {
+      "direction": "client_to_server",
+      "at": "2026-08-22T04:04:25.917Z",
+      "message": {
+        "jsonrpc": "2.0",
+        "id": 9,
+        "result": null
+      }
+    }
+  ]
+}

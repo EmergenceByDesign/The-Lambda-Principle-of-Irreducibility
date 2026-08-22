@@ -1,0 +1,128 @@
+{
+  "manifest_format": "BeforeTheProof certification manifest v1",
+  "created_utc": "2026-08-22T04:14:01.2297721Z",
+  "document_title": "Before the Proof - Claim Decomposition, Constructive Certification, and the Separation of Formal Result from Interpretive Meaning",
+  "certified_edition_title": "Before the Proof - Certified Edition V1",
+  "author_attribution": {
+    "author": "Lu Semita",
+    "laboratory_record": "EmergenceByDesign",
+    "statement": "Independent laboratory notes and research record. Authorship attribution only; no claim of ownership, invention, discovery, priority, exclusivity, or endorsement."
+  },
+  "parent_artifact": {
+    "filename": "Before_the_Proof_V1_PUBLICATION_CLOSURE_FINAL_R2.pdf",
+    "identifier": "sha256:224888da1fd46a7f53c13ec006035bf9e3b6fa617bd244bc1ad79fae9a15d20a",
+    "sha256": "224888da1fd46a7f53c13ec006035bf9e3b6fa617bd244bc1ad79fae9a15d20a",
+    "bytes": 268744,
+    "pages": 42,
+    "preservation": {
+      "method": "The original PDF document was cloned and independently generated appendix pages were appended; the parent body was not re-typeset.",
+      "content_stream_check": "All 42 decoded parent page content streams match the corresponding pages in the certified edition by SHA-256.",
+      "render_check": "All 42 parent pages are pixel-identical to their certified-edition counterparts at the QA render scale.",
+      "substantive_change": false
+    }
+  },
+  "final_certified_edition": {
+    "filename": "Before_the_Proof_Certified_Edition_V1.pdf",
+    "sha256": "ea0014e0e16a1ce991dfa7b3bc50eba97b550015d780608fd276a95e16c0c338",
+    "bytes": 446794,
+    "pages": 50,
+    "parent_pages": 42,
+    "certified_appendix_pages": 8,
+    "render_check": "All 50 pages rendered successfully; all 8 appendix pages were visually inspected for clipping, overflow, glyph failure, and layout defects."
+  },
+  "lean_source": {
+    "filename": "BeforeTheProof_BU_FINAL.lean",
+    "sha256": "18f47a8677797108da06057b00cefe5829fe9e748912c6a8441fef29d059dc5c",
+    "bytes": 2680,
+    "origin_attachment": {
+      "filename": "BeforeTheProof_BU.bin",
+      "detected_format": "UTF-8/plain-text Lean 4 source",
+      "sha256": "3455dc20d7e8ec5f5b564738c59e5cddd1604c54e063691032eab1dd06b1e380"
+    },
+    "certification_stage_changes": [
+      "Added `import Lean` so the version constant is available.",
+      "Added `#eval Lean.versionString` to expose the execution version.",
+      "Preserved the supplied definitions, theorem statements, and proofs."
+    ],
+    "imports": [
+      "Lean"
+    ],
+    "mathlib_imported": false
+  },
+  "public_verification": {
+    "service": "Lean Web",
+    "service_url": "https://live.lean-lang.org/",
+    "websocket_endpoint": "wss://live.lean-lang.org/websocket/MathlibDemo",
+    "project": "MathlibDemo",
+    "toolchain": "leanprover/lean4:v4.34.0-rc2",
+    "lean_version": "4.34.0-rc2",
+    "lean_version_evidence": "Informational diagnostic produced by `#eval Lean.versionString`: \"4.34.0-rc2\".",
+    "mathlib_host_commit": "23a3216f0e5b7f9f5d437409db9f10b34844e6d0",
+    "mathlib_note": "Mathlib was present in the public MathlibDemo host project but was not imported by the distributed source.",
+    "theorem_identifier": "BeforeTheProof.two_chain_bridge_underdetermination",
+    "secondary_theorem_identifier": "BeforeTheProof.bridge_underdetermination",
+    "verification_started_utc": "2026-08-22T04:04:18.019Z",
+    "verification_completed_utc": "2026-08-22T04:04:26.576Z",
+    "checker_result": "ACCEPTED (zero error diagnostics)",
+    "error_count": 0,
+    "completion_signal": "Final Lean fileProgress notification reported processing: [].",
+    "evidence_filename": "LEAN_WEB_VERIFICATION_EVIDENCE.json",
+    "evidence_sha256": "17274cc00ae3579975e78738261ccbbb603664569c1b02c1be6e7332ea81ebf9"
+  },
+  "formal_jurisdiction": "Formal dependency/metalogical claim over the declared Lean objects for Proposition 3.2 / C_BU.",
+  "checked": "The encoded formal conclusion follows from the encoded premises under the encoded definitions and Lean rules: equal verifier-visible inputs processed by the same verifier yield equal stored results while the separately declared upstream bridge-adequacy assignments differ.",
+  "not_checked": [
+    "Empirical truth of premises",
+    "Semantic fidelity beyond the declared natural-language-to-Lean formalization seam",
+    "Empirical adequacy of either concrete bridge",
+    "Semantic preference",
+    "Causal correctness or attribution",
+    "Ontological truth or uniqueness",
+    "Uniqueness or completeness of a bridge",
+    "Completeness of the registry or model relative to reality",
+    "Source attribution, authorship, priority, or endorsement",
+    "Any claim outside the encoded target"
+  ],
+  "residue": "All explicitly non-formal or externally adjudicated content remains visible and requires its own typed warrant; successful Lean checking does not promote it into the formal receipt or demote it as unimportant.",
+  "formalization_correspondence": [
+    {
+      "paper_object": "C_BU",
+      "lean_object": "BeforeTheProof.two_chain_bridge_underdetermination",
+      "classification": "formal surrogate"
+    },
+    {
+      "paper_object": "Prem_BU",
+      "lean_object": "hInput, hResult1, hResult2, hAdeq1, hAdeq2",
+      "classification": "formal surrogate"
+    },
+    {
+      "paper_object": "verifier-visible tuple (P, Prem_F, Gamma_F)",
+      "lean_object": "VerifierInput.problem, .premises, .grammar; intended instantiation of Input",
+      "classification": "directly encoded"
+    },
+    {
+      "paper_object": "A_in",
+      "lean_object": "Adequate : Bridge -> Prop",
+      "classification": "directly encoded"
+    },
+    {
+      "paper_object": "common result Q",
+      "lean_object": "Result; c1.result; c2.result; verify input",
+      "classification": "formal surrogate"
+    },
+    {
+      "paper_object": "empirical, semantic, causal, methodological, and ontological bridge adjudication",
+      "lean_object": null,
+      "classification": "outside Lean jurisdiction"
+    }
+  ],
+  "hashes": {
+    "algorithm": "SHA-256",
+    "Before_the_Proof_V1_PUBLICATION_CLOSURE_FINAL_R2.pdf": "224888da1fd46a7f53c13ec006035bf9e3b6fa617bd244bc1ad79fae9a15d20a",
+    "Before_the_Proof_Certified_Edition_V1.pdf": "ea0014e0e16a1ce991dfa7b3bc50eba97b550015d780608fd276a95e16c0c338",
+    "BeforeTheProof_BU_FINAL.lean": "18f47a8677797108da06057b00cefe5829fe9e748912c6a8441fef29d059dc5c",
+    "LEAN_WEB_VERIFICATION_EVIDENCE.json": "17274cc00ae3579975e78738261ccbbb603664569c1b02c1be6e7332ea81ebf9"
+  },
+  "manifest_self_hash": "Recorded externally in SHA256SUMS.txt to avoid a self-reference cycle.",
+  "sha_scope_note": "SHA-256 identifies exact bytes. It does not certify truth, correctness, authorship, priority, ontology, interpretation, or endorsement."
+}

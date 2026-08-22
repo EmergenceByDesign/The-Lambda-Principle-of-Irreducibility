@@ -1,0 +1,39 @@
+BEFORE THE PROOF - CERTIFIED EDITION V1
+BUILD REPORT
+
+Outcome
+The certified publication package was completed. The final edition contains the complete 42-page parent paper followed by an 8-page Certified Appendix, for 50 pages total.
+
+Lean verification
+- Public service: Lean Web, https://live.lean-lang.org/
+- Project: MathlibDemo
+- Toolchain: leanprover/lean4:v4.34.0-rc2
+- Lean.versionString: "4.34.0-rc2"
+- Primary theorem: BeforeTheProof.two_chain_bridge_underdetermination
+- Distributed source SHA-256: 18f47a8677797108da06057b00cefe5829fe9e748912c6a8441fef29d059dc5c
+- Result: ACCEPTED; final processing queue empty; zero error diagnostics
+- Mathlib: present in the public host project at commit 23a3216f0e5b7f9f5d437409db9f10b34844e6d0, but not imported by the source
+
+Scope
+Lean checked only that the encoded conclusion follows from the encoded premises under the encoded definitions and Lean rules. It did not check empirical truth, semantic fidelity beyond the declared formalization seam, physical interpretation, causal attribution, ontology, completeness, authorship, priority, endorsement, or any claim outside the encoded target.
+
+Source handling
+BeforeTheProof_BU.bin was detected as plain-text Lean source. The final source adds only `import Lean` and `#eval Lean.versionString`; the supplied definitions, theorem statements, and proofs were preserved.
+
+Parent preservation and PDF QA
+- Parent PDF SHA-256: 224888da1fd46a7f53c13ec006035bf9e3b6fa617bd244bc1ad79fae9a15d20a
+- The parent was not re-typeset. Its PDF object graph was cloned and independent appendix pages were appended.
+- All 42 parent page content streams match their certified-edition counterparts.
+- All 42 parent pages were pixel-identical to their certified-edition counterparts at the QA render scale.
+- All 50 final pages rendered successfully.
+- All 8 appendix pages were visually inspected; no clipping, code overflow, broken glyphs, or layout defects remained.
+
+Artifact identity
+The final PDF was frozen before its SHA-256 was computed. The final PDF digest is stored externally in CERTIFICATION_MANIFEST.json and SHA256SUMS.txt because placing a PDF's own digest inside that PDF would change its bytes. SHA-256 identifies exact bytes only; it does not certify truth, correctness, authorship, priority, ontology, interpretation, or endorsement.
+
+Principal files
+- Before_the_Proof_Certified_Edition_V1.pdf
+- BeforeTheProof_BU_FINAL.lean
+- CERTIFICATION_MANIFEST.json
+- SHA256SUMS.txt
+- LEAN_WEB_VERIFICATION_EVIDENCE.json

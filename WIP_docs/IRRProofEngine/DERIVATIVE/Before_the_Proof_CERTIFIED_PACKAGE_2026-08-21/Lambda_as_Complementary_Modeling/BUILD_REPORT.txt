@@ -1,0 +1,45 @@
+LAMBDA AS COMPLEMENTARY MODELING - AUDITED COMPANION R2
+BUILD REPORT
+
+Outcome
+The companion publication package was rebuilt as a six-file certification set matching the established Before the Proof package roles. The final PDF contains the complete audited companion, the claim ledger, the formal/non-formal jurisdiction boundary, the Lean receipt, and the exact 179-line distributed Lean source. The R1 eight-file draft workflow is not part of this release.
+
+Lean verification
+- Public service: Lean Web, https://live.lean-lang.org/
+- Project: mathlib-stable
+- Selected toolchain: Stable Release (v4.33.0 with mathlib, cslib)
+- Lean.versionString: "4.33.0"
+- Distributed source: LambdaCompanion_Audit.lean
+- Distributed source SHA-256: 2E9A8955F424E6CA5B512524231672908B0408E0C69830B82BCC8904775FD3AE
+- Verification interval: 2026-08-22T05:49:04.748Z through 2026-08-22T05:49:45.499Z
+- Result: ACCEPTED; zero error diagnostics; zero warning diagnostics; seven informational #check/#eval outputs
+- Evidence: LEAN_WEB_VERIFICATION_EVIDENCE.json, SHA-256 96F6A0EBF739A65CF20D8600B079CB3CBF341B5EF2F2B35DA3E1978E97E18055
+
+Formal jurisdiction
+Lean checked only the encoded finite partial translation, source/target residue witnesses, registered-anchor invariant, conditional non-uniqueness conclusions from explicit counter-witnesses, and minimal compatibility witness. Lean did not check Big-Bang nucleosynthesis, the empirical accuracy of the quoted estimate, baryogenesis, the Sakharov conditions, Lambda/NSAF/TUFT physics, causal or ontological interpretation, external attribution, completeness of the prose-to-Lean seam, or the paper as a whole.
+
+Source handling
+- Preserved unaudited companion source: Lambda_as_Complementary_Modeling_Companion.pdf
+- Preserved source SHA-256: EA9810E9E14BF39EB7443C6CBCD78F78E127AC4550429EE7B16082F3A980BC03
+- Frozen parent pairing authority: Before_the_Proof_V1_PUBLICATION_CLOSURE_FINAL_R2.pdf
+- Parent SHA-256: 224888DA1FD46A7F53C13EC006035BF9E3B6FA617BD244BC1AD79FAE9A15D20A
+- The external LambdaCompanion_Audit.lean is byte-identical to the source reproduced in Appendix A and to the source submitted to Lean Web.
+
+PDF correction and QA
+- Final publication file: Lambda_as_Complementary_Modeling_AUDITED_COMPANION_R2.pdf
+- Final PDF SHA-256: E2B649C192721C84CBE6175A5D06057A52F17354CA5760320CBA8302484382F5
+- Pages: 10, US Letter
+- R2 corrects the certification-package references and publication colophon so they name exactly the six release files.
+- All ten final pages rendered successfully at 120 DPI and were visually inspected.
+- No clipping, overflow, broken glyphs, or footer/version mismatch remained after the final render.
+
+Artifact identity
+The final PDF, Lean source, verification evidence, build report, and certification manifest were frozen before SHA256SUMS.txt was generated. SHA-256 identifies exact bytes only; it does not certify truth, correctness, authorship, priority, ontology, interpretation, or endorsement.
+
+Principal files
+- Lambda_as_Complementary_Modeling_AUDITED_COMPANION_R2.pdf
+- LambdaCompanion_Audit.lean
+- BUILD_REPORT.txt
+- CERTIFICATION_MANIFEST.json
+- LEAN_WEB_VERIFICATION_EVIDENCE.json
+- SHA256SUMS.txt

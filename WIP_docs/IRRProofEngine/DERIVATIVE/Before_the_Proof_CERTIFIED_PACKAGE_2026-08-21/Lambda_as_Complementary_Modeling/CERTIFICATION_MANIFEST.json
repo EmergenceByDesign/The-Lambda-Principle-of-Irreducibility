@@ -1,0 +1,165 @@
+{
+  "manifest_format": "LambdaCompanion certification manifest v1",
+  "created_utc": "2026-08-22T05:56:17Z",
+  "document_title": "Lambda as Complementary Modeling - Registry-Relative Symmetry, Translation Residue, and the Baryon-Photon Ratio",
+  "certified_edition_title": "Lambda as Complementary Modeling - Audited Companion R2",
+  "author_attribution": {
+    "author": "Lu Semita",
+    "laboratory_record": "EmergenceByDesign",
+    "statement": "Independent laboratory notes and research record. Authorship attribution only; no claim of ownership, invention, discovery, priority, exclusivity, or endorsement."
+  },
+  "source_artifacts": [
+    {
+      "filename": "Lambda_as_Complementary_Modeling_Companion.pdf",
+      "role": "preserved unaudited companion source",
+      "sha256": "EA9810E9E14BF39EB7443C6CBCD78F78E127AC4550429EE7B16082F3A980BC03",
+      "bytes": 99583,
+      "modified": false
+    },
+    {
+      "filename": "Before_the_Proof_V1_PUBLICATION_CLOSURE_FINAL_R2.pdf",
+      "role": "frozen parent and protocol authority",
+      "sha256": "224888DA1FD46A7F53C13EC006035BF9E3B6FA617BD244BC1AD79FAE9A15D20A",
+      "bytes": 268744,
+      "modified": false
+    }
+  ],
+  "final_certified_edition": {
+    "filename": "Lambda_as_Complementary_Modeling_AUDITED_COMPANION_R2.pdf",
+    "sha256": "E2B649C192721C84CBE6175A5D06057A52F17354CA5760320CBA8302484382F5",
+    "bytes": 205567,
+    "pages": 10,
+    "render_check": "All 10 pages rendered at 120 DPI and were visually inspected; no clipping, overflow, broken glyphs, or footer/version mismatch remained."
+  },
+  "lean_source": {
+    "filename": "LambdaCompanion_Audit.lean",
+    "sha256": "2E9A8955F424E6CA5B512524231672908B0408E0C69830B82BCC8904775FD3AE",
+    "bytes": 6818,
+    "lines": 179,
+    "imports": [],
+    "mathlib_imported": false,
+    "appendix_exact_match": true
+  },
+  "public_verification": {
+    "service": "Lean Web",
+    "service_url": "https://live.lean-lang.org/",
+    "project": "mathlib-stable",
+    "selected_toolchain_label": "Stable Release (v4.33.0 with mathlib, cslib)",
+    "lean_version": "4.33.0",
+    "verification_started_utc": "2026-08-22T05:49:04.748Z",
+    "verification_completed_utc": "2026-08-22T05:49:45.499Z",
+    "checker_result": "ACCEPTED (zero error diagnostics and zero warning diagnostics)",
+    "error_count": 0,
+    "warning_count": 0,
+    "information_count": 7,
+    "persistent_source_url": "https://live.lean-lang.org/#project=mathlib-stable&codez=PQWghAUAMghgtgIwCYwAQwM6oMIHs4AOANgKZwkB2ALjAE4CeqAsrkiUQJYUDmqIqJAB4kAxgFcaCUqhFEYHOKgDWJWhXYQIAZRG4CJAFyoqACw5YAZh2kXctODE4AvEllwUijUyXQIMVWhgRKlRaEm5zAPoQGDEkDhCwuSoOdywxDBIkVC4Ibxl8AhgKVIpUIv1aIzQi2hTHY0CKDGTSgBpUeLDg0oaMXDFaER9i7JpabhIqCDCMDiQxEg6CWdUANxgU91RcC3RQ8MjVLPQKERM7HbL8gOKWzZOkfHkKDtHjAHdcCAp3EDESgBHRbqDBYXTNEjAyjDSy0fACQTEDgiBIFAFUVQgD4JUGZDAAOk0AEkQk9XKhfiFbPZHBwXDtaKg1qoOBZGAAhDjcEAc4q8ChiWQkXAYejUEyucwdfKC8i0FGOCAwNjAoKMXbGSWoYG4THZVwpByYjoIOj0XCTUHSrU%2BLQwJQmOi4NYFCjxLbNNrQeDIGDAAByWgAggAxYAAFQAqqGI%2BUTPQ5iIMB0RLEMA1Lu4qLgiJbFUQctRVCspptSinGbaIFY2JwqBq9rLNoNHCA5DwxDBJiAcyAoCRiqgaQ5nOXtpl4ESQMBNBR4K4isNULBECg8IRiqVNKB%2BMHOqIFH1UZQUlYRCAqeOyt07EgCahUBHtVxMe7HuZiDBGBkKd4II%2Bj7DNQgSFhsRCLB0CRYP4DzZACwx1C8DZvO6%2BwELgHyqDsTaUA%2BM4QP4tBClQgw%2BAAooQHAKmmRDBmcFxMh8kphABMinqBqBGAGmxsQhqg0K%2BjDcbxj5CBh6jUFxqDEtQEBsAqaxcLwAAih4oFIJDkYCHQAEokCsO4gPwz4%2BBUqgAORwrgLhlAATAADHZAAsqAAAoqQA4sYMCaQIIH0B0YSlpkxbZAgjDAbcYGOIsqAAGwOc53qAag%2FFIUJqAAIx2ahBpIu4p6UuE5YstldmoAAFFCYgcOBp6eKmHENOBixsY%2B8UEklHTpYJ1CMA5BI5XliISUV6jcKVPhZQ5ACURKpaZqD9IMy7vGQBDUQW6Cql2IiNlq5gHLotDZHQPgDFQcxsIdljWCQ%2BGzmwewIAgFCOS50mUZtNGOPR5yXAYAC8bEAN7sSBDTAwl3VpWcAnIcJQPlR04mFVJ0MgDlqAAL5GfwamyOd2QrUMJAgNdPgJGQWBcLaqBfLQKhnXECSPRAXALD0ZVaFQSCkmQDMsSQbEAD4HBE%2FjHEg5H%2BEemJi6E45qVYJSeorFxUFy3B8jwAASkR2PQitmgw7gBmIiCqAAaqkrTuIrIj0Ug2AELbubXorvzqMC1gcAgCqW%2FJrJKTwqCE%2FMvmkNpekGbQ%2BPh6IchhGMdCTFQFPzFTmJwLT1zaozzPoKzVDs5zJF1T4q5%2BgLijMccithJLmIp7LRoPI3yskKrCTbo%2B4soKRcBufCmlwFoBl0J7%2FeoAAVoM5jxD07j6SdSCN1KCwkKvd7B4pymJ6iGnRzpqD6YZEC7k%2B2p1v7qgPJ45R0PUha3M09tlL%2B4VeNq5m0FZw4uDUwZnYZm7VETwGIA9R8AB5DwP8fAYCdCnToLZFDrUEEERI44Dw909OgMIjQ7jJCyAtQCAADb2JByE5CwGgDAuh9DLRoDnU8HQqT7BZKdFEIRTCbHpqTZc1NFBHQsI4TI7NnpEPfg8aSvN%2BY5z4AAPlQDAgg%2BDq4oFrorAkTcjitzlsaHwQMVH9HIKgXRhwpYGPbgrGeuiu54NKKgExy18A%2BAcVsFWQD1b2M1trXW3ADb%2BCNi4lRVCdGmwtBQC2VtaDuw%2FmEykhUdFO3dK7BJ14kkRPsVQ32nAA4cEttklJl9jKoC0AMMmmcbr4HMHMdw1QDxExQYI7OgsjqXUpvTBwBAAFPAcFwSR3cKlVOGPpa6cVQb7iMBGeg%2BgcaoFBhyaScyFlVRoGIaS%2B4QAqLUfgjks0qpoCMMGI5RgR56C4iDR8mz9jIwiWUkyacpg1J8LMeYiwmlsBaSccY6cciKKOhwswIQIo9JgAQYZewIwvKoBMz5PhpmrPmSQRZyyUXrMqnc05yjVHqOcYcqqCBpJEoufCAg1y2I0kcIWGAHQAx6g2bEe5bjzEIFmgnGBfh1hRzMvCWeoh8HbHyG0mQdAFSqAfKo%2BB9M9HWJOIaeWItUpploJKrA%2BQNpbVoqcAGTI6amCOhgUchYRx9EGPCSamJoXMKQP9Rici%2Ba1zxfs5x30dV%2FQYnYHR8qW5ZDbsqpJZifCvXek5ZyisAD6JT1Bcp5bQDYfkVi4EFcvMoIrtT%2FKmOK9VHApV8CeiMuQa4YAOsBiuX0WjFG7Pxfgj1v06LevjvYv10tA1GODe41AYaPqRpnjG1xjyr5LTbSgpVnajpcA2AqYoIRM0%2BDfvcfU5RcCvnZt4Owgsx1ZCjcUfVUbp10A4HOri4Cl0kIsTumWhjZHIxDVeqx%2Fqb22J8MAAAOuAx8Ja%2FTlqZJY5u7bb2YhcXav9j7AM2KDdDCKbEhBYNQM7Akr54ShAsIWWg6GE77mCqsagU03GrXJt0j5W8Ga4lcISQteRJRbsUG0qNZgQkMEPRgKNpG4oGHAZUojCKyMXtkQSfx3JAnBJzAwa5PbjaPkw0QbDBwQqngI20t5qByDnC3CakAEIPTOI4z4HEVA8Qbto2EejYySBRpEAQKz7hdPuFY%2BxzenHuMWb43FATIGCRpJdm7O2WSYPSbQ3Jp5iGFN4ZYZXHyExXndPIKYVguZ8y6v0%2BRozlGTMijM9F9OUb54KgwEvT0jnUtccWnC9zi6mjLo8flxePDSg71OpJ2Dj4UO4HQGxNM%2BJ9gAB4ADcKiflZ3k5kHTOXYtZzU1MC4Tw8wRBS85gzFGwSZboxNqgTnJmWdvKdErS2z3lZi%2FCg7nmPH6aa9kQLbF2udaApgCkaABtDfUiLULOGn0SYBBwaEj8rT30xFgchBAaEAgUvsH5ycThJCyfXMoJAuFBcfP9wI4mcKoGBzQmq4itT8L9QwW1UYgSLE8pQAHlxQb6WbhJy5Y9MVovAZVUn6hUcUiMFTyIEna209IIobnFLOWpUqrwdnn36BHMqpS8luAx7nPchSqlj4aVEELNwCyHRmcA4pGr8oeKdfI24PJlNdOjr5G%2B9Ccoo9ec7TgAkFd4K0CD2KXDgQiPmlQ%2FXqlfH9BgDG%2Bt0UaiqAUdwWHPCRQfCyRoNQPQfNRAkCaqdCEP3ZBCfE5IDzsgoYw9LI50RRgKko8Z8ULM1FeMhea9Z1gUX1PGC1oL0PPFRfG8C8Z1d8OaCJdS%2FlzL3ncvLlS5ucOOwtKg8WXKOr1AFeHhYB19kPpeL5%2FIwIAnSpRBQ68BqFbwW5IsAcMQmeH8ae8To%2BgkHsnqPLgu5gOA%2BIcszghGDykMO3vaHLTEAQZEJxMD7F0BiLEhnjNqNN1st%2Bg19d0d8o0qQrMBI2R6Ao1zdFgo1H8fVUpKcxdu86cS8FlGdV8WQ28m9%2Bc9BBdAImdz9p9pJc8ohm8e9BZCCCBiDHxhdR8KCxdO9pIi8GCqoTBcCTgjAeC59ODKoTAp9AdpIRDtdyhBCTAYFvBaBxCq9J8yDRCdd6DGcTAVJIguBghpJGUQhhcx8DdZpzlXMwC59UAP1FCWdyDeBKUP0v1UBdCqoicfsSclDLh5Cg9JCWsgswhVYfAkNbtuDcw8CqoAiQIOthClCKQAB%2BKNYgwI5w6EODTBbQ9QzQ%2B%2FLgxIuKHXaQ2Q%2BQzlULXAg%2BQqS3GgxQHfZJEIffWA3HEINEU3bUBA%2FlMoofewLIcBCwbPfIJ3OuSUMoR3dI7Qx%2FE4ZPERGCd%2FT%2FM6OhNLQAgiYAwWUAvAqNCAqA6o9keAtPKNUY8BNAmvdvBvJvLAhnIXfg9grfPnFRfvQQjw6vTnWvFRevYpQgunOgwQ3gHXW4vPCXNvR4uANg%2BfaXWXNQ04vg4IkYqQm4ywrXGfToSQtQmQlicQtvDw2fcfKQjQu%2FbQ7iJlSXAwyQ4w1KU42w99KEyvTwswuw1KR8RwyqLI9Pc4rPBEDwgQ7wtiXwrgfw90ZDcI1AII0w0IrkwIjw2I%2BInkkwOk5IhDNIzEvQ8UtPZg%2BfXIxEqIpAAoq%2BJgIBUcAoTcFIBAP2BsdAEINAa9PVRiW1DcIoXU0gYMEIUGGBCQAgCQenMvEg%2FdR1S6AcCwedCQXSbkEwEIIwe0qgR0qgPvBXYGNiD07uEIZGN0y4Cwy6X07gf00DOM%2BOd7eHJETgVEKowocsPU%2BsRgAAyjIWSgHtPUEwZaRhE4S6EMrAbHV%2BbUDMcgcBE0tMtbbLWeNdagKzPMDAMiKNYssEHYoMkM5045ZtHYCQT070%2BFP0gM1RB0iQKQmc6SKMr01M5tCXEwJMlMowRM%2Bczc%2FVAkwCC0%2FM60o0yc9c2c3cgM5GVrCBbQsIgICI1cnc%2BczQAAYnOFECUAln0V3TTMPQoBnRPTkm%2FMlBED%2FIYyY3EzgPMC20RQgAgt%2FI2zywXkKwawcwQv02Qp%2FKgrcVMOWNwFcEgL1GgLqFgI2JcMs2QPjhQoIsWPAJIrY1WJgPWKaK2POLwsgr%2FK7NfF7NFAHKHIwC%2FIRwaAHGKAJC4QaQoF5gVB4E0EoGyE0RgDPJKAdggCAA",
+    "evidence_filename": "LEAN_WEB_VERIFICATION_EVIDENCE.json",
+    "evidence_sha256": "96F6A0EBF739A65CF20D8600B079CB3CBF341B5EF2F2B35DA3E1978E97E18055"
+  },
+  "formal_jurisdiction": "Encoded registry-audit relations only, relative to the declared Lean objects, premises, and proof terms.",
+  "checked": [
+    "The declared finite partial translation",
+    "Representative source-side and target-side residue witnesses",
+    "Preservation of the encoded registered anchor on the translated point",
+    "Conditional generator non-uniqueness from an explicit distinct generator witness",
+    "Conditional generated-problem non-uniqueness from an explicit distinct problem witness",
+    "Minimal compatibility when both scoped projections equal one anchor"
+  ],
+  "not_checked": [
+    "Big-Bang nucleosynthesis",
+    "Empirical accuracy of the quoted estimate",
+    "Baryogenesis or the Sakharov conditions",
+    "Lambda, NSAF, or TUFT physics",
+    "Causal attribution or ontology",
+    "External source, authorship, or priority claims",
+    "Completeness or unique fidelity of the natural-language-to-Lean formalization seam",
+    "The paper as a whole"
+  ],
+  "formalization_correspondence": [
+    {
+      "paper_object": "τ_std→Λ",
+      "lean_object": "LambdaCompanion.translate",
+      "classification": "formal surrogate"
+    },
+    {
+      "paper_object": "SrcRes(τ)",
+      "lean_object": "LambdaCompanion.SourceResidue",
+      "classification": "directly encoded"
+    },
+    {
+      "paper_object": "TgtRes(τ)",
+      "lean_object": "LambdaCompanion.TargetResidue",
+      "classification": "directly encoded"
+    },
+    {
+      "paper_object": "registered anchor invariance",
+      "lean_object": "LambdaCompanion.registered_anchor_invariant",
+      "classification": "formal surrogate"
+    },
+    {
+      "paper_object": "generator non-uniqueness from a witness",
+      "lean_object": "LambdaCompanion.solved_does_not_certify_unique_generator",
+      "classification": "formal surrogate"
+    },
+    {
+      "paper_object": "problem non-uniqueness from a witness",
+      "lean_object": "LambdaCompanion.solved_does_not_certify_unique_problem",
+      "classification": "formal surrogate"
+    },
+    {
+      "paper_object": "joint closure at a registered anchor",
+      "lean_object": "LambdaCompanion.joint_closure_witness",
+      "classification": "formal surrogate"
+    },
+    {
+      "paper_object": "empirical, physical, causal, ontological, attributional, and seam-fidelity adjudication",
+      "lean_object": null,
+      "classification": "outside Lean jurisdiction"
+    }
+  ],
+  "quality_assurance": {
+    "pdf_pages": 10,
+    "pdf_page_size": "US Letter",
+    "pdf_visual_inspection": "passed on all pages",
+    "lean_appendix_lines": 179,
+    "lean_appendix_exact_match_to_distributed_source": true,
+    "package_file_roles": 6
+  },
+  "files": [
+    {
+      "filename": "Lambda_as_Complementary_Modeling_AUDITED_COMPANION_R2.pdf",
+      "role": "principal fixed-layout publication artifact",
+      "bytes": 205567,
+      "sha256": "E2B649C192721C84CBE6175A5D06057A52F17354CA5760320CBA8302484382F5"
+    },
+    {
+      "filename": "LambdaCompanion_Audit.lean",
+      "role": "exact executable formal source",
+      "bytes": 6818,
+      "sha256": "2E9A8955F424E6CA5B512524231672908B0408E0C69830B82BCC8904775FD3AE"
+    },
+    {
+      "filename": "BUILD_REPORT.txt",
+      "role": "human-readable build, verification, and scope record",
+      "bytes": 3187,
+      "sha256": "3D1A83A47617754CE36FB94688097C828331FCC6794C8F36159C4F2A6A1CDA25"
+    },
+    {
+      "filename": "LEAN_WEB_VERIFICATION_EVIDENCE.json",
+      "role": "machine-readable public Lean verification evidence",
+      "bytes": 16455,
+      "sha256": "96F6A0EBF739A65CF20D8600B079CB3CBF341B5EF2F2B35DA3E1978E97E18055"
+    }
+  ],
+  "hashes": {
+    "algorithm": "SHA-256",
+    "Lambda_as_Complementary_Modeling_Companion.pdf": "EA9810E9E14BF39EB7443C6CBCD78F78E127AC4550429EE7B16082F3A980BC03",
+    "Before_the_Proof_V1_PUBLICATION_CLOSURE_FINAL_R2.pdf": "224888DA1FD46A7F53C13EC006035BF9E3B6FA617BD244BC1AD79FAE9A15D20A",
+    "Lambda_as_Complementary_Modeling_AUDITED_COMPANION_R2.pdf": "E2B649C192721C84CBE6175A5D06057A52F17354CA5760320CBA8302484382F5",
+    "LambdaCompanion_Audit.lean": "2E9A8955F424E6CA5B512524231672908B0408E0C69830B82BCC8904775FD3AE",
+    "LEAN_WEB_VERIFICATION_EVIDENCE.json": "96F6A0EBF739A65CF20D8600B079CB3CBF341B5EF2F2B35DA3E1978E97E18055",
+    "BUILD_REPORT.txt": "3D1A83A47617754CE36FB94688097C828331FCC6794C8F36159C4F2A6A1CDA25"
+  },
+  "manifest_self_hash": "Recorded externally in SHA256SUMS.txt to avoid a self-reference cycle.",
+  "sha_scope_note": "SHA-256 identifies exact bytes. It does not certify truth, correctness, authorship, priority, ontology, interpretation, or endorsement."
+}
