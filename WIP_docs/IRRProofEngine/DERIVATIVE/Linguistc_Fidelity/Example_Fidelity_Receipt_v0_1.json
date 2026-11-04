@@ -1,0 +1,98 @@
+{
+  "instrument": {
+    "name": "MetaLabe Linguistic Fidelity Registry",
+    "version": "v0.1-draft",
+    "status": "DRAFT_EXAMPLE"
+  },
+  "artifacts": {
+    "A": {
+      "text": "No employee shall knowingly disclose confidential information to an unauthorized third party.",
+      "authority": "declared example",
+      "jurisdiction": "example scope",
+      "finding_status": "source statement; not truth-bit",
+      "authority_semantics": "SCOPED_FINDING_NOT_TRUTH_BIT",
+      "constraints": [
+        {
+          "id": "prohibition",
+          "relation": "IMPLIES",
+          "expression": "no_disclosure"
+        },
+        {
+          "id": "mental_state",
+          "relation": "REQUIRES",
+          "expression": "knowingly"
+        },
+        {
+          "id": "information_scope",
+          "relation": "REQUIRES",
+          "expression": "confidential"
+        },
+        {
+          "id": "recipient_scope",
+          "relation": "REQUIRES",
+          "expression": "unauthorized_third_party"
+        }
+      ]
+    },
+    "B": {
+      "text": "No employee shall disclose information to a third party.",
+      "authority": "declared example",
+      "jurisdiction": "example scope",
+      "finding_status": "target statement; not truth-bit",
+      "authority_semantics": "SCOPED_FINDING_NOT_TRUTH_BIT",
+      "constraints": [
+        {
+          "id": "prohibition",
+          "relation": "IMPLIES",
+          "expression": "no_disclosure"
+        }
+      ]
+    }
+  },
+  "constitution": {
+    "double_edged_standard": "Criterion may return upon adjudicator when adjudicator lies in declared domain; exemptions require explicit scope/premise.",
+    "scoped_sealing": "Certified branch closed only under declared premises/rules/meaning/carrier; denunciation alone is not same-scope refutation.",
+    "authority_rule": "Recognized adjudication is recorded as a finding of its own scoped authority, not an unscoped truth-bit."
+  },
+  "challenge": {
+    "type": "NONE",
+    "note": "",
+    "refutational_status": "NONE"
+  },
+  "comparison": {
+    "preserved": [
+      {
+        "id": "prohibition",
+        "relation": "IMPLIES",
+        "expression": "no_disclosure"
+      }
+    ],
+    "lost": [
+      {
+        "id": "mental_state",
+        "relation": "REQUIRES",
+        "expression": "knowingly"
+      },
+      {
+        "id": "information_scope",
+        "relation": "REQUIRES",
+        "expression": "confidential"
+      },
+      {
+        "id": "recipient_scope",
+        "relation": "REQUIRES",
+        "expression": "unauthorized_third_party"
+      }
+    ],
+    "added": [],
+    "changed": [],
+    "exact_declared_registry_equal": false
+  },
+  "self_check": {
+    "status": "INSTRUMENT_CONSISTENCY_CHECK_PASSED"
+  },
+  "lean": {
+    "status": "NOT_RUN",
+    "claim_boundary": "Finite declared-registry facts only; natural-language bridge not kernel-certified."
+  }
+}
